@@ -1,0 +1,23 @@
+\documentclass[tikz,border=2mm]{standalone}
+\begin{document}
+	\begin{tikzpicture}
+		\draw[black,-] (0,1) -- (5,1);
+		\draw[black,-] (0,-1) -- (5,-1);
+		\draw[black,-,dashed] (2.5,2)--(2.5,-2);
+		\node at (2,2) {$\varepsilon_1$};
+		\node at (3,2) {$\varepsilon_2$};
+		\node at (2.7,-2) {$\sigma$};
+		
+		\begin{scope}[xscale=0.3, yscale=1]
+			\draw[black] (0,0) circle (1);
+			\draw[black] (16.66,0) circle (1);
+			\draw[black,dashed] (8.33,0) circle (1);
+		\end{scope}
+		\draw[black,->] (0,0)--(-1,0) node[above]{$\hat{n_1}$};
+		\draw[black,->] (5,0)--(6,0) node[above]{$\hat{n_2}$};
+		\node at (1.25,-1.5) {$L_1$};
+		\node at (3.75,-1.5) {$L_2$};
+		\node at (-0.7,-0.5) {$\Delta T_1$};		
+		\node at (5.7,-0.5) {$\Delta T_2$};
+	\end{tikzpicture}
+\end{document}

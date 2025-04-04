@@ -1,0 +1,15 @@
+\documentclass[tikz,border=2mm]{standalone}
+\begin{document}
+	\begin{tikzpicture}
+	\filldraw[black] (0,0) circle (1pt) node[below right]{$q_0$};
+	\filldraw[black] (6,4) circle (2pt) node[right]{$q_1$};
+	\filldraw[black] (-4,3) circle (2pt) node[above]{$q_2$};
+	\filldraw[black] (0,-3) circle (2pt) node[right]{$q_3$};
+	\draw[black,thick,->] (6,4) -- (0,0);
+	\draw[black,thick,->] (-4,3) -- (0,0);
+	\draw[black,thick,->] (0,-3) -- (0,0);
+	\node at (4,2) {$\vec{r}_{1,0}$};
+	\node at (-2,2) {$\vec{r}_{2,0}$};
+	\node at (0.5,-1.5) {$\vec{r}_{3,0}$};
+	\end{tikzpicture}
+\end{document}

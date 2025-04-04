@@ -1,0 +1,27 @@
+\documentclass[tikz,border=2mm]{standalone}
+\begin{document}
+	\begin{tikzpicture}
+		\begin{scope}[xscale=4, yscale=4]
+		\draw[black,thick] (0,0) circle (1);
+		\begin{scope}[xscale=1, yscale=0.2]
+			\draw[black,dashed,thick] (1,0) arc[start angle=0, end angle=180, radius=1];
+			\draw[black,thick] (-1,0) arc[start angle=180, end angle=360, radius=1];
+		\end{scope}
+		\begin{scope}[xscale=0.7, yscale=1]
+			\draw[black,thick] (1,0.36) arc[start angle=25, end angle=35, radius=1];
+			\draw[black,thick] (0.8,0.34) arc[start angle=25, end angle=35, radius=1];
+			\draw[black,thick] (0.6,0.4074) arc[start angle=35, end angle=27, radius=1];
+		\end{scope}
+		%\draw[-,very thin] (0,0) -- (0.2,0.2);
+		\draw[-,thick] (0.5,0.485) -- (0.64,0.51);
+		\draw[-,thick] (0.56,0.34) -- (0.7,0.36);
+		\draw[-,thick] (0.42,0.4074) -- (0.5,0.485);
+		\draw[-,thick] (0.467,0.29) -- (0.56,0.34);
+		\draw[-,thick] (0.595,0.308) -- (0.7,0.36);
+		\draw[-,thick] (0.467,0.29) -- (0.595,0.308);
+		\node[black,font=\fontsize{15}{18}\selectfont] at (0.3,0.4) {dV};
+		\draw[black,thick,->] (0.6,0.42) -- (3,0.3) node[below,font=\fontsize{15}{18}\selectfont]{$p$};
+		\node[font=\fontsize{15}{18}\selectfont] at (2,0.5) {$\vec{r}_p$};
+		\end{scope}
+ 	\end{tikzpicture}
+\end{document}

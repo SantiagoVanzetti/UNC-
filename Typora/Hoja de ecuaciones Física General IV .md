@@ -349,13 +349,13 @@ Este tipos de lentes cumple que $f<0$:
 + Lente plano-cóncava: $R_1=\infty$ y $R_2>0$.
 + Lente menisco-convexa: $R_1>0$ y $R_2>0$ con $R_1>R_2$.
 
-<img src="D:\Administrador\Escritorio\Typora\Typora Images\types-of-lenses-based-on-the-curvature-of-two-optical-surfaces-including-converging-and-diverging-lenses-physics-illustration-vector.jpg" alt="types-of-lenses-based-on-the-curvature-of-two-optical-surfaces-including-converging-and-diverging-lenses-physics-illustration-vector" style="zoom: 33%;" />
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\types-of-lenses-based-on-the-curvature-of-two-optical-surfaces-including-converging-and-diverging-lenses-physics-illustration-vector.jpg" alt="types-of-lenses-based-on-the-curvature-of-two-optical-surfaces-including-converging-and-diverging-lenses-physics-illustration-vector" style="zoom:33%;" />
 
 Hay que notar que debido a la fórmula (15) una lente que en un medio es convergente ($f>0$) si se cambia de medio esta puede llegar a comportarse como una lente divergente.
 
-#### Convección de signos
+#### Convención de signos
 
-![Captura de pantalla 2025-04-02 175712](D:\Administrador\Escritorio\Typora\Typora Images\Captura de pantalla 2025-04-02 175712.png)
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Convencion de signos.png" alt="Convencion de signos" style="zoom:67%;" />
 
 #### Formación de imágenes con trazado de rayos
 
@@ -373,9 +373,7 @@ Para una lente **divergente**:
 
 #### Imágenes formadas por lentes delgadas de objetos reales
 
-
-
-<img src="D:\Administrador\Escritorio\Typora\Typora Images\Captura de pantalla 2025-04-02 180544.png" alt="Captura de pantalla 2025-04-02 180544" style="zoom:150%;" />
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Captura de pantalla 2025-04-02 180544.png" alt="Captura de pantalla 2025-04-02 180544" style="zoom:150%;" />
 
 #### Magnificación transversal
 
@@ -407,4 +405,109 @@ Para trazar los rayos en un sistema con un objeto virtual los rayos no salen del
 
 + Aberraciones cromáticas: están dadas debido a que el coeficiente $n$ depende la longitud de onda.
 + Aberraciones monocromáticas: hay de dos tipos, primero aquellas que deterioran la imagen haciendo que esta pierda definición (aberración esférica, coma, astigmatismo); y aberraciones que deforman la imagen (campo de curvatura de Petzval y distorsión).
+
+#### Combinación de lentes delgadas
+
+Para resolver un sistema de varias lentes se resuelve una lente y se utiliza la imagen formada como objeto (real o virtual) de la siguiente lente. Para dos lentes se puede demostrar que:
+$$
+s_{i2}=\frac{f_2d-f_2\frac{s_{o1}f_1}{(s_{01}-f_1)}}{d-f_2-\frac{s_{o1}f_1}{(s_{01}-f_1)}}
+$$
+Usando que la distancias entre los lentes es $d$ y que por lo tanto la distancia imagen del 1 será el objeto de la siguiente lente de la siguiente forma:
+$$
+\boxed{s_{o2}=d-s_{i1}}\tag{21}
+$$
+
+#### Como graficar combinación de lentes
+
+![Captura de pantalla 2025-04-06 184631](D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Captura de pantalla 2025-04-06 184631.png)
+
+Se extiende el rayo hasta el plano formado por el foco del siguiente lente, se une el punto de intersección con el vértice del siguiente lente y el rayo que saldrá de la segunda lente será paralelo a esta recta que une $A_i$ con $O$ .
+
+#### Distancia focal posterior y frontal 
+
+**Distancia focal frontal** ($dff$): es la distancia del vértice de la primer superficie hasta el primer punto focal.
+$$
+dff=lim_{s_{i2}\rightarrow\infty}s_{o1}
+$$
+Es la distancia la que se debe colocar el objeto para que los rayos salgan paralelos de la segunda lente.
+
+**Distancia focal posterior** ($dfp$): es la distancia desde el vértice de la última superficie hasta el segundo punto focal.
+$$
+dfp=lim_{s_{o1}\rightarrow\infty}s_{i2}
+$$
+Es la distancia a la que se formara la imagen de la segunda lente si llegan rayos paralelos.
+
+Se tiene que:
+$$
+\boxed{dfp=\frac{f_2(d-f_1)}{d-(f1+f2)}}\tag{22}
+$$
+
+$$
+\boxed{dff=\frac{f_1(d-f_2)}{d-(f1+f2)}}\tag{23}
+$$
+
+Si $d=f_1+f_2$ entonces $dff$ y $dfp \rightarrow\infty$.
+
+#### Lentes en contacto
+
+En este caso se tiene que $d=0$, entonces:
+$$
+dff=dfp=\frac{f_1f_2}{f_1+f_2}
+$$
+En este caso la distancia focal efectiva del sistema es:
+$$
+\boxed{\frac{1}{f}=\frac{1}{f_1}+\frac{1}{f_2}}\tag{24}
+$$
+Se puede decir que se dos lentes están en contacto el sistema se comporta como una sola lente con distancia focal según la ecuación (24).
+
+Si se generaliza el resultado para $N$ lentes en contacto con distancias focales $f_j$:
+$$
+\frac{1}{f}=\sum_{j=1}^N \frac{1}{f_j}
+$$
+
+#### Magnificación lateral en un sistema de dos lentes
+
+Es el producto de las magnificaciones de cada lente
+$$
+M_T=M_{T1}M_{T2}\\
+\Rightarrow M_T=\bigg(-\frac{s_{i1}}{s_{o1}}\bigg)\bigg(-\frac{s_{i2}}{s_{o2}}\bigg)\\
+\Rightarrow M_T=\bigg(-\frac{f_1}{s_{o1}-f_1}\bigg)\bigg(-\frac{s_{i2}}{d-s_{i1}}\bigg)\\
+\Rightarrow M_T=\frac{f_1s_{i2}}{d(s_{o1}-f_1)-s_{o1}f_1} 
+$$
+
+#### Diafragma de apertura y de campo
+
+Diafragma de apertura (DA)(AS): determina la cantidad de luz que llega a la imagen.
+
+Diafragma de campo (DC)(FS): determina el campo de visión de un instrumento.
+
+#### Cámara fotográfica
+
+Una cámara fotográfica forma una imagen real, invertida. y en general disminuida de tamaño.
+
+La imagen adecuada es la energía por unidad de área que llega al detector la cuál debe de estar dentro de unos límites. Se puede demostrar que la irradiancia es proporcional a $\big(\frac{D}{f}\big)^2$ donde $D$ es el tamaño del diafragma y $f$ es el foco. Se define $\frac{D}{f}\equiv$ **apertura relativa**. Entonces:
+$$
+I\propto\bigg(\frac{D}{f}\bigg)^2\tag{25}
+$$
+También se define $f/\#=\frac{f}{D}$. Así una fotografía bien expuesta, es tal que le llega la cantidad de energía necesaria al sensor para formar una imagen:
+$$
+E=I\Delta t\propto\frac{\Delta t}{(f/\#)^2}\tag{26}
+$$
+
+#### Ojo humano
+
+El ojo humano tiene dos elementos refractores, la cornea y el cristalino, y es equivalente a una lente delgada convexa de foco variable. Algunos conceptos importante relacionados con el ojo:
+
++ Acomodación: es el enfoque fino que realiza el cristalino.
++ Punto próximo: es el punto más cercano al que un ojo puede enfocar.
+
+#### Miopía-Lente negativa
+
+El ojo forma la imagen antes de la retina cuando los rayos le llegan paralelos. El punto lejano es el punto para el cual el ojo ya no puede enfocar, entonces se necesita que la lente forme una imagen virtual a una distancia menor. Para una lente de contacto se realiza el cálculo directo para la potencia que necesita la lente para formar una imagen antes del punto lejano. En el caso de lentes aéreos se toma como un sistema de dos lentes delgadas separadas por $d=16mm$.
+
+#### Hipermetropía-Lente positiva
+
+En este caso el punto próximo esta mas lejos de lo normal, por lo que se utiliza una lente positiva para formar una imagen virtual mas lejana, Usando los datos de $s_o$ y $s_i$ se calcula la potencia que debe tener la lente.
+
+
 

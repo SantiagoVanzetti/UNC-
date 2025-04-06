@@ -265,7 +265,7 @@ $$
 
 Se utilizarán las ecuaciones de Maxwell $\nabla\cdot\vec D=\rho$ y $\nabla\times\vec E=-\par{\vec B}{t}=0$, en electrostática, si bien esto simplifica las cuentas, no es una condición necesaria y valdrá lo mismo si $\par{\vec B}{t}$ no es nulo. Se toma un cilindro sobre la interfase, suficientemente pequeño para suponer que la superficie que separa los dos medios es plana y el desplazamiento sobre el cilindro es constante.
 
-<img src="D:\Administrador\Escritorio\Typora\Typora Images\Empalme1_page-0001.jpg" alt="Empalme1_page-0001" style="zoom:67%;" />
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Empalme1_page-0001.jpg" alt="Empalme1_page-0001" style="zoom:67%;" />
 $$
 \oiint_{\partial V}\vec D\cdot \vec{dS}=\vec D_1\cdot\vec{\Delta T_1}+\vec D_2\cdot\vec{\Delta T_2}+\sum_i\vec D_1\cdot\vec{\Delta_i S_1}+\sum_i\vec D_2\cdot\vec{\Delta_i S_2}=\iiint_V\rho dV\\
 
@@ -279,7 +279,7 @@ De la igualdad (12) se deduce que las componentes normales a la interfase de los
 
 Si se realiza un proceso similar utilizando la ley de Ampere con un camino $C$ rectangular, se deduce:
 
-<img src="D:\Administrador\Escritorio\Typora\Typora Images\Empalme2_page-0001.jpg" alt="Empalme2_page-0001" style="zoom:67%;" />
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Empalme2_page-0001.jpg" alt="Empalme2_page-0001" style="zoom:67%;" />
 $$
 \oint_C\vec E\cdot\vec{d\mathscr{l}}=0\\
 \Rightarrow \hat{t}\cdot(\vec E_2-\vec E_1)=0 
@@ -300,7 +300,7 @@ Se toma el problema de una carga $q$ en el semi-espacio delimitado por el plano 
 $$
 \phi(\vec x)=\frac{1}{4\pi\varepsilon_0}\bigg[\frac{q}{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}-\frac{q}{\sqrt{(x-x')^2+(y-y')^2+(z+z')^2}}\bigg]
 $$
-<img src="D:\Administrador\Escritorio\Typora\Typora Images\GreenPlanoinf_page-0001.jpg" alt="GreenPlanoinf_page-0001" style="zoom: 25%;" />
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\GreenPlanoinf_page-0001.jpg" alt="GreenPlanoinf_page-0001" style="zoom:25%;" />
 
 Este potencial cumple que dentro de la región de interés $\nabla^2\phi=-\frac{q}{\varepsilon_0}\delta(\vec x-\vec x')$ lo cual es similar a lo que debe valer $\nabla^2G=-4\pi\delta(\vec x-\vec x')$. Si se propone que $\frac{q}{\varepsilon_0}=4\pi$ (por lo que $\frac{q}{4\pi\varepsilon_0}=1$) entonces se puede pensar que $G$ con la condición de Dirichlet, es el potencial de este sistema. Entonces para un el semi-espacio $z$ positivo (con borde igual al plano $xy$) la función de Green es:
 $$
@@ -316,5 +316,43 @@ Esta solución para la función de Green valdrá para cualquier sistema que teng
 
 Para calcular la densidad de carga que la carga induce sobre el plano se utiliza la condición de empalme (12) y se usa que el campo dentro del conductor $\vec D_2=0$:
 $$
-\sigma = -\hat{z}\cdot(-\varepsilon_0\vec E_1)=-\par{\phi}{z}\bigg|_S
+\sigma = -\hat{z}\cdot(-\varepsilon_0\vec E_1)=-\varepsilon_0\par{\phi}{z}\bigg|_S
+$$
+
+#### Función de Green para un esfera
+
+Si se tiene una esfera con radio $a$ con una carga en su exterior $q$ a una distancia del centro $d$, y la esfera es un conductor conectado a masa, es decir que $\phi|_S=0$, se puede resolver el potencial en todo el espacio fuera de la esfera usando el método de las imágenes. Se supone que hay una carga imagen $q_i$ en el interior sobre el eje formado por el centro de la esfera y la posición de la carga $q$ (es razonable suponer esto por la simetría del problema), y esta carga $q_i $ esta a una distancia $e<a$ del centro de la esfera. 
+
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Green_esf_page-0001.jpg" alt="Green_esf_page-0001" style="zoom:50%;" />
+
+Utilizando superposición se puede resolver el problema para las dos cargas y usando la condición de contorno se calcula las incógnitas $q_i$ y $e$:
+$$
+\phi=\frac{1}{4\pi\varepsilon_0}\bigg[\frac{q}{|\vec x-d\hat{z}|}+\frac{q_i}{|\vec x-e\hat{z}|}\bigg]
+$$
+Sobre la superficie:
+$$
+\phi|_S=\frac{1}{4\pi\varepsilon_0}\bigg[\frac{q}{|\vec x-d\hat{z}|}+\frac{q_i}{|\vec x-e\hat{z}|}\bigg]=0\tag{15}
+$$
+Por lo tanto $q_i<0$ entonces escribiremos $-q_i$.
+
+Usando que $|\vec x-d\hat{z}|^2=x^2+d^2-2dx\cos(\theta)$ y despejando de (15) se tiene:
+$$
+q^2[a^2+e^2-2ae\cos(\theta)]=q_i^2[a^2+d^2-2ad\cos(\theta)]\\
+\Rightarrow\begin{cases}
+q^2(a^2+e^2)=q_i^2(a^2+d^2)\\
+2aeq^2=2adq_i^2
+\end{cases}
+$$
+Del sistema de ecuaciones se calcula que:
+$$
+e=\frac{a^2}{d}\\
+q_i=\frac{a}{d}q
+$$
+Entonces el potencial en la zona de interés es:
+$$
+\boxed{\phi(\vec x)=\frac{q}{4\pi\varepsilon _0}\bigg[\frac{1}{|\vec x-d\hat{z}|}-\frac{a}{d|\vec x-\frac{a^2}{d}\hat{z}|}\bigg]}\tag{16}
+$$
+Usando lo mismo que en el caso del plano $\frac{q}{4\pi\varepsilon_0}=1$, la función de Green para la geometría esférica:
+$$
+\boxed{G(\vec x,\vec x')=\frac{1}{|\vec x-\vec x'|}-\frac{a}{|\vec x'|}\frac{1}{|\vec x-\frac{a^2}{|\vec x'|}\vec x'|}}\tag{17}
 $$

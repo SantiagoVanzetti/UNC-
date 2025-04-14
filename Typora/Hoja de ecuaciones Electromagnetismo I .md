@@ -2,7 +2,7 @@
 
 ## Ecuaciones de Maxwell 
 
-**Ecuaciones de vinculo (o estáticas)**: $\newcommand{par}[2]{\frac{\partial #1}{\partial #2}}$
+**Ecuaciones de vinculo (o estáticas)**: $\newcommand{par}[2]{\frac{\partial #1}{\partial #2}}$$\newcommand{der}[2]{\frac{d#1}{d#2}}$
 
 + $\nabla\cdot \vec D=\rho$, Ley de Gauss para el campo eléctrico.
 
@@ -354,5 +354,172 @@ $$
 $$
 Usando lo mismo que en el caso del plano $\frac{q}{4\pi\varepsilon_0}=1$, la función de Green para la geometría esférica:
 $$
-\boxed{G(\vec x,\vec x')=\frac{1}{|\vec x-\vec x'|}-\frac{a}{|\vec x'|}\frac{1}{|\vec x-\frac{a^2}{|\vec x'|}\vec x'|}}\tag{17}
+\boxed{G(\vec x,\vec x')=\frac{1}{|\vec x-\vec x'|}-\frac{a}{|\vec x'|}\frac{1}{|\vec x-\frac{a^2}{|\vec x'|^2}\vec x'|}}\tag{17}
 $$
+
+### Ecuación de Laplace en coordenadas cartesianas
+
+Si se tiene la ecuación de Poisson $\nabla^2\phi=-\rho/\varepsilon_0$ con condición de contorno $\phi |_S=\chi(\vec x)$, se puede pensar que la solución será superposición de dos funciones $\phi_q$ y $\phi_p$ tal que $\phi=\phi_q+\phi_p$. El potencial $\phi_q$ corresponderá a la solución del potencial para la distribución de carga $\rho(\vec x)$ en todo el espacio y $\phi_p$ será un **potencial de "perturbación"** que hará cumplir la C.C. Si se piensa así estos dos potenciales cumplirán que:
+$$
+\phi_q=\frac{1}{4\pi\varepsilon_0}\iiint_V\frac{\rho(\vec x')}{|\vec x-\vec x'|}dV'\\
+\Rightarrow \nabla^2\phi_q=-\frac{\rho}{\varepsilon_0}\tag{18}
+$$
+Por lo tanto:
+$$
+\nabla^2\phi_p=0\tag{19}
+$$
+Además $\phi_p$ debe cumplir las condiciones de contorno:
+$$
+\phi|_S=\phi_q|_S+\phi_p|_S\\
+\Rightarrow \phi_p|_S=\phi|_S-\phi_q|_S=\chi-\phi_q|_S=\zeta(\vec x)\tag{20}
+$$
+Por lo tanto si se quiere resolver la ecuación de Poisson con condiciones de contorno basta con resolver:
+$$
+\nabla^2\phi=0\\
+\phi|_S=\zeta(\vec x)\tag{21}
+$$
+Esta motivación para resolver la ecuación de Laplace valdrá de la misma forma si se tienen condiciones de Neumann.
+
+#### Resolución en coordenadas cartesianas
+
+Se tiene que:
+$$
+\nabla^2\phi=\par{^2\phi}{x^2}+\par{^2\phi}{y^2}+\par{^2\phi}{z^2}=0\tag{22}
+$$
+Supondremos que $\phi$ tiene las siguiente forma (**método de separación de variables**):
+$$
+\phi(x,y,z)=X(x)Y(y)Z(z)\tag{23}
+$$
+
+$$
+\Rightarrow\nabla^2\phi=X(x)Y(y)Z(z)\bigg[\frac{1}{X(x)}\der{^2X}{x^2}+\frac{1}{Y(y)}\der{^2Y}{y^2}+\frac{1}{Z(z)}\der{^2Z}{z^2}\bigg]=0\tag{24}
+$$
+
+Como cada sumando depende de una de las variables, cada uno debe ser una constante:
+$$
+\frac{1}{X(x)}\der{^2X}{x^2}=-\alpha^2\\\tag{25}
+\frac{1}{Y(y)}\der{^2Y}{y^2}=-\beta^2\\
+\frac{1}{Z(z)}\der{^2Z}{z^2}=\gamma^2
+$$
+Con la condición:
+$$
+\alpha^2+\beta^2=\gamma^2\tag{26}
+$$
+Entonces hay que resolver las tres ecuaciones diferenciales con las condiciones de contorno que le correspondan al problema:
+$$
+\der{^2X}{x^2}=-\alpha^2X(x)\\
+\der{^2Y}{y^2}=-\beta^2Y(y)\\
+\der{^2Z}{z^2}=\gamma^2Z(z)\tag{27}
+$$
+
+
+Si bien asumir que se puede hacer separación de variable en $\phi$ no es general nos servirá para primero obtener soluciones a cada ecuación diferencial de (27), con lo que obtendremos infinitas soluciones $X_\alpha(x)$, $Y_\beta(y)$ y $Z_{\alpha\beta}(z)$ ($\gamma$ depende de $\alpha$ y $\beta$ según (26)). A partir de estas soluciones las cuales serán ortogonales, es decir serán base del espacio de funciones en el intervalo de interés, podremos describir $\phi$ como combinación lineal de estas.
+
+Ahora cada ecuación diferencial es un problema de autovalores de **Sturm-Liouville**:
+$$
+\mathcal L[\chi(x)]=-\alpha^2\chi(x)\tag{28}
+$$
+Para resolverlo tomaremos funciones que sean de **cuadrado integrable**, es decir que cumplan:
+$$
+\int_a^b f^*(\xi)f(\xi)d\xi<\infty\tag{29}
+$$
+También se necesita tener la noción de ortogonalidad entre las funciones, ya que se quiere encontrar una base a partir de los autovectores $\{\chi_\alpha\}$ ortogonal con la cuál se pueda describir $\phi$ y sea solución de la ecuación diferencial. Entonces, se define un **producto punto** y una **norma** asociada tal que:
+$$
+f(\xi)\cdot g(\xi)=\int_a^bf^*(\xi)g(\xi)d\xi\tag{30}
+$$
+Así puedo encontrar una base ortogonal, y dividiendo por constante una **base ortonormal** de tal forma que pueda escribir una función arbitraria $f$ en el intervalo $(a,b)$ de la siguiente forma:
+$$
+f(x)=\sum_{n=1}^\infty a_n\chi_n(x)\tag{31}
+$$
+**Nota**: si bien la base de los $\chi_\alpha$ tendrá infinitas autofunciones, la cantidad es numerable pues es base de las funciones en un intervalo finito. En el caso de que el intervalo fuese infinito, la base no sería discreta. Este intervalo estará dado por las condiciones de contorno del problema.
+
+Ahora quiero encontrar los coeficientes $a_n$ que aproximen mejor a $f$. Para esto se debe minimizar la diferencia entre la aproximación y la función, entonces se minimiza la expresión:
+$$
+M_N=\int_a^b\bigg|f(\xi)-\sum_{n=1}^Na_n\chi_n(\xi)\bigg|^2d\xi\tag{32}
+$$
+ Derivando con respecto a cada $a_n$, y llevando $N\rightarrow\infty$ se obtiene que:
+$$
+\boxed{a_n=\int_a^bf(\xi)\chi_n^*(\xi)d\xi}\tag{33}
+$$
+**Nota**: los coeficientes $a_n$ son las proyecciones de $f$ en cada autofunción base.
+
+Así remplazando en (31) se tiene que:
+$$
+f(x)=\sum_{n=1}^\infty\int_a^bf(\xi)\chi^*_n(\xi)\chi_n(x)d\xi\tag{34}\\
+f(x)=\int_a^bf(\xi)\sum_{n=1}^\infty\bigg[\chi_n^*(\xi)\chi_n(x)\bigg]d\xi
+$$
+Para que la igualdad se cumpla entonces se debe cumplir que:
+$$
+\boxed{\sum_{n=1}^\infty\chi^*_n(\xi)\chi_n(x)=\delta(x-\xi)}\tag{35}
+$$
+Esta condición que encontramos para las autofunciones $\chi_n$ es la **relación de completitud**.
+
+Ahora si tenemos una base del espacio de funciones en el intervalo $(a,b)$, por lo que podemos escribir cualquier función como combinación lineal de la base, cuyo elementos cumplirán condiciones de contorno tal que, junto con los coeficientes de la combinación lineal, permitan cumplir las condiciones de la función que queremos describir. Esto se hace para cada ecuación diferencial y tendremos:
+$$
+\phi_{\alpha\beta\gamma}=X_\alpha(x)Y_\beta(y)Z_\gamma(z)\tag{36}
+$$
+Así podremos escribir la solución general como combinación lineal de las soluciones de (36):
+$$
+\phi=\sum_{\alpha\beta}\phi_{\alpha\beta\gamma}\tag{37}
+$$
+
+Volviendo a las ecuaciones diferenciales de (27) las autofunciones que describirán el potencial serán:
+$$
+X_\alpha(x)=A_\alpha e^{i\alpha x}+B_\alpha e^{-i\alpha x}\\
+Y_\beta(y)=C_\beta e^{i\beta y}+D_\beta e^{-i\beta y}\\
+Z_\gamma(z)=E_\gamma e^{\gamma z}+F_\gamma e^{-\gamma z}\tag{38}
+$$
+La solución general se escribe remplazando en (37).
+
+##### Problema: Cubo con una cara a potencial V
+
+Si se tiene un cubo con aristas $a$ (en la figura $a=b=c$), tal que todas sus caras están conectadas a tierra, excepto la superior que tiene un potencial $V(x,y)$, y se quiere resolver el potencial dentro del cubo.
+
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Cuboelectro.png" alt="Cuboelectro" style="zoom: 50%;" />
+
+Como quiero que las autofunciones cumplan las condiciones de contorno del problema elijo la forma de cada una de ellas para que así sea:
+$$
+X_\alpha(x)=D_\alpha\sin(\alpha x)\\
+Y_\beta(y)=B_\beta\sin(\beta y)\\
+Z_\gamma(z)=C_\gamma\sinh(\gamma z)\tag{39}
+$$
+Y se tiene la relación $\alpha^2+\beta^2=\gamma^2$.
+
+De las condiciones de contorno:
+$$
+X_\alpha(a)=0\Rightarrow \alpha=\frac{m\pi}{a}, \ m\in\N\\
+Y_\beta(a)=0\Rightarrow \beta=\frac{n\pi}{a},\ n\in\N\tag{40}
+$$
+La solución general:
+$$
+\phi=\sum_{n,m}^\infty\bigg[ A_{mn}\sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)\sinh(\gamma_{nm} z)\bigg]\tag{41}
+$$
+Los coeficientes $A_{mn}$ se obtienen imponiendo las condiciones de contorno. Utilizando las proyecciones de la función que describe a la C.C. (ecuación (33)). Las condiciones sobre todas las caras conectadas a masa ya se cumplen por la forma de las autofunciones. Ahora usando la condición sobre la cara superior:
+$$
+\phi|_{z=a}=\sum_m\sum_n A_{mn}\sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)\sinh(\gamma_{nm} a)=V(x,y)\tag{42}
+$$
+Ahora realizo la proyección en cada componente de la base y sustituyo $V$ usando (42):
+$$
+\int_0^a\int_0^a V(x,y) \sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{p\pi}{a}y\bigg)dxdy=\\
+
+\sum_m\sum_n A_{mn}\sinh(\gamma_{mn} a) \int_0^a\int_0^a\sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{p\pi}{a}y\bigg)\sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)dxdy\tag{43}
+$$
+Se puede comprobar que:
+$$
+\int_0^a\sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{m\pi}{a}x\bigg)dx=\frac{a}{2}\delta_{qm}\\
+\int_0^a\sin\bigg(\frac{p\pi}{a}y\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)dy=\frac{a}{2}\delta_{pn}\tag{44}
+$$
+Usando (44) en la ecuación (43):
+$$
+\int_0^a\int_0^a V(x,y) \sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{p\pi}{a}y\bigg)dxdy=\\
+\sum_m\sum_n A_{mn}\sinh(\gamma_{mn} a) \bigg(\frac{a}{2}\bigg)^2 \delta_{qm}\delta_{pn}=A_{qp}\sinh(\gamma_{qp}a)\bigg(\frac{a}{2}\bigg)^2\tag{45}
+$$
+Entonces despejando y usando que $\gamma=\sqrt{\alpha^2+\beta^2}=\frac{\pi}{a}\sqrt{m^2+n^2}$:
+$$
+A_{mn}=\frac{4}{a^2}\frac{1}{\sinh(\pi\sqrt{m^2+n^2})}\int_0^a\int_0^a V(x,y) \sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)dxdy\tag{46}
+$$
+La solución final será:
+$$
+\phi=\sum_m^\infty\sum_n^\infty\bigg[ A_{mn}\sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg) \sinh\bigg(\frac{\pi}{a} \sqrt{m^2+n^2}\cdot z\bigg)\bigg]\tag{47}
+$$
+Con coeficientes $A_{mn}$ escritos en (46).

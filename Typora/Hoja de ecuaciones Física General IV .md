@@ -129,7 +129,7 @@ $\bullet$ Relación de Maxwell: (para $\mu=\mu_0$) $n=\sqrt{\frac{\varepsilon}{\
 $\bullet$ **Ley de reflexión**: el rayo incidente, la normal a la superficie y el rayo reflejado se encuentran en el mismo plano, llamado plano de incidencia. Además, se cumple $\sin(\theta_i)=\sin(\theta_r)$. 
 $\bullet$ **Ley de refracción**: el rayo incidente, la normal a la superficie y el rayo refractado se encuentran en el mismo plano, llamado plano de incidencia. Además, se cumple la **Ley de Snell** $n_i\sin(\theta_i)=n_t\sin(\theta_t)$.
 $\bullet$ Principio de reversibilidad: en un sistema da igual la dirección del rayo se mantienen los mismo ángulos.
-$\bullet$ Al pasar de medio, la luz mantiene su frecuencia ($\nu=cte$). Entonces se cumple $\lambda_1=\frac{n_2}{n_2}\lambda_2$ .
+$\bullet$ Al pasar de medio, la luz mantiene su frecuencia ($\nu=cte$). Entonces se cumple $\lambda_1=\frac{n_2}{n_1}\lambda_2$ .
 $\bullet$ **Principio de Fermat**: los rayos de luz siguen la trayectoria que minimiza el tiempo o,equivalentemente, la trayectoria que minimiza la longitud del camino óptico.
 
 $\bullet$ $LCO\equiv$ **Longitud de camino óptico**, se define como:
@@ -137,7 +137,7 @@ $$
 LCO=\sum_{j=1}^N n_js_j\\
 LCO=\int_S^Pn(s)ds
 $$
-Donde $n_j$ es el índice de refracción de las distintas fases y $s_j$ es la longitud que recorre en cada medio. La longitud de camino óptico se corresponde a la distancia que recorrería la luz en el vacío en el tiempo en que paso a través de los distintos medios, es decir,$LCO=ct$. También se puede ver como la longitud tal que en el vacío hay la misma cantidad de longitud de ondas que en el sistema. 
+Donde $n_j$ es el índice de refracción de las distintas fases y $s_j$ es la longitud que recorre en cada medio. La longitud de camino óptico se corresponde a la distancia que recorrería la luz en el vacío en el tiempo en que paso a través de los distintos medios, es decir, $LCO=ct$. También se puede ver como la longitud tal que en el vacío hay la misma cantidad de longitud de ondas que en el sistema. 
 
 $\bullet$ La ley de reflexión y de Snell pueden ser deducidas a partir de las ecuaciones de Maxwell.
 
@@ -250,7 +250,7 @@ Para *espejos **cóncavos*** se tiene que:
 + Si $s_0=f$ entonces no se forma imagen ya que $s_i=\pm\infty$.
 + Si $s_0<f$ entonces $s_i<0$, $|s_i|>s_0$ y $M_T>1\ \Rightarrow$ imagen **virtual**, ***derecha*** y ***aumentada***.
 
-Para espejos ***convexos*** la imagen es siempre ***virtual*** ($s_i<0$), ***derecha*** y **disminuida** ($0<M_T<1$).
+Para espejos ***convexos*** la imagen es siempre ***virtual*** ($s_i<0$), ***derecha*** y **disminuida**.
 
 ### Imágenes por refracción
 
@@ -271,6 +271,10 @@ Se usa la siguiente **convención de signo para superficies esféricas refractor
 + $s_i>0$ imagen real.
 + $s_i<0$ imagen virtual.
 + $y, y'>0$, por encima del eje óptico.
+
+
+
+
 
 Para **luz proveniente desde la izquierda**:
 
@@ -306,8 +310,6 @@ Lentes **cóncavas**, divergente o **negativa**.
 
 Esta ecuación se deduce a partir de tratar una lente convexa (con cóncava también sale) como dos superficies refractoras de radios $R_1$ y $R_2$, con un espesor $d$ y coeficientes del medio $n_m$ y del lente $n_l$. Se resuelve primero una superficie, y se toma la imagen formada como objeto de la segunda superficie y se resuelve, teniendo en cuenta la separación entre los vértices de ambas curvas.
 
-![image-20250401221859232](C:\Users\Administrador\AppData\Roaming\Typora\typora-user-images\image-20250401221859232.png)
-
 Para la primer superficie usando (9) se obtiene:
 $$
 \frac{n_m}{s_{01}}+\frac{n_l}{s_{i1}}=\frac{n_l-n_m}{R_{1}}\tag{12}
@@ -320,6 +322,8 @@ Si se suma (12) y (13) y $d\rightarrow0$ (pues es un lente delgado) se llega a l
 $$
 \boxed{\frac{1}{s_0}+\frac{1}{s_i}=\bigg(\frac{n_l}{n_m}-1\bigg)\bigg(\frac{1}{R_1}-\frac{1}{R_2}\bigg)}\tag{14}
 $$
+
+![image-20250401221859232](C:\Users\Administrador\AppData\Roaming\Typora\typora-user-images\image-20250401221859232.png)
 
 #### Puntos y planos focales
 
@@ -341,13 +345,25 @@ Este tipo de lente cumple que $f>0$:
 + Lente plano-convexa: $R_1=\infty$ y $R_2<0.$
 + Lente menisco-convexa: $R_1>0$ y $R_2>0$ con $R_1<R_2$.
 
+
+
+
+
+
+
+
+
+
+
+
+
 #### Lentes divergentes
 
 Este tipos de lentes cumple que $f<0$:
 
 + Lente bicóncava: $R_1<0$ y $R_2>0$.
 + Lente plano-cóncava: $R_1=\infty$ y $R_2>0$.
-+ Lente menisco-convexa: $R_1>0$ y $R_2>0$ con $R_1>R_2$.
++ Lente menisco-cóncava: $R_1>0$ y $R_2>0$ con $R_1>R_2$.
 
 <img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\types-of-lenses-based-on-the-curvature-of-two-optical-surfaces-including-converging-and-diverging-lenses-physics-illustration-vector.jpg" alt="types-of-lenses-based-on-the-curvature-of-two-optical-surfaces-including-converging-and-diverging-lenses-physics-illustration-vector" style="zoom:33%;" />
 
@@ -364,6 +380,12 @@ Para una lente **convergente**:
 + Un rayo paralelo al eje óptico pasa por el foco imagen.
 + Un rayo que pasa por el foco objeto pasa paralelo al eje óptico.
 + Un rayo que pasa por el vértice no cambia de dirección.
+
+
+
+
+
+
 
 Para una lente **divergente**:
 
@@ -394,7 +416,8 @@ M_L\equiv \frac{dx_i}{dx_o}\tag{19}
 $$
 Usando (18) y que $M_T=\frac{f}{s_i-f}$:
 $$
-\boxed{M_L=-\frac{x_i}{x_o}=-\frac{f^2}{x_o^2}=-M_T^2}\tag{20}
+\boxed{M_L=-\frac{x_i}{x_o}=-\frac{f^2}{x_o^2}=-\frac{x_i^2}{f^2}=-M_T^2}\tag{20}\\
+\boxed{M_T=-\frac{f}{x_o}=-\frac{x_i}{f}}
 $$
 
 #### Objetos virtuales 
@@ -439,11 +462,11 @@ Es la distancia a la que se formara la imagen de la segunda lente si llegan rayo
 
 Se tiene que:
 $$
-\boxed{dfp=\frac{f_2(d-f_1)}{d-(f1+f2)}}\tag{22}
+\boxed{dfp=\frac{f_2(d-f_1)}{d-(f_1+f_2)}}\tag{22}
 $$
 
 $$
-\boxed{dff=\frac{f_1(d-f_2)}{d-(f1+f2)}}\tag{23}
+\boxed{dff=\frac{f_1(d-f_2)}{d-(f_1+f_2)}}\tag{23}
 $$
 
 Si $d=f_1+f_2$ entonces $dff$ y $dfp \rightarrow\infty$.
@@ -511,3 +534,115 @@ En este caso el punto próximo esta mas lejos de lo normal, por lo que se utiliz
 
 
 
+
+
+
+
+
+
+
+
+
+
+### Instrumentos ópticos
+
+#### Lupa 
+
+Es un instrumento que consiste de una **lente convergente** que aumenta el poder de refracción del ojo. Proporciona un **imagen virtual** de objetos más cercanos que el foco de la lente ($s_o<f$), lo que **genera una imagen derecha y aumentada**. Se define para la lupa el **aumento angular** ($M_A$) como el cociente entre el ángulo $\alpha_a$, sobre el ojo formado por la distancia hasta el ojo de la imagen y su altura, y $\alpha_u$ que sería el ángulo generado por el objeto y su distancia al ojo si no estuviese la lente, es decir:
+$$
+\boxed{M_A=\frac{\alpha_a}{\alpha_u}}
+$$
+Con ángulos tal que con aproximación paraxial:
+$$
+\tan(\alpha_a)\sim\alpha_a=\frac{y_i}{L}\\
+\tan(\alpha_u)\sim\alpha_a=\frac{y_o}{d_o}\\
+\Rightarrow M_A=-\frac{s_iL}{s_od_0}
+$$
+Con $L$ la distancia desde el ojo hasta la imagen formada y $d_0$ es la distancia al punto cercano del ojo.
+
+Entonces, usando la ecuación para las lentes y que $l$ es la distancia del ojo a la lupa se obtiene:
+$$
+\boxed{M_A=\frac{d_0}{L}\bigg[1+\frac{1}{f}(L-l)\bigg]}\tag{27}
+$$
+Usando (27) se pueden ver tres casos interesantes:
+
++ Si la distancia del ojo a la lente es la misma que el foco de la lupa $f=l\Rightarrow M_A=\frac{d_0}{f}$.
++ Si la lupa esta pegada al ojo $l=0\Rightarrow M_A=d_0(\frac{1}{L}+\frac{1}{f})$, además si $L=d_0\Rightarrow M_A=1+\frac{d_0}{f}$ es el **máximo valor**.
++ Si el objeto esta sobre el foco de la lente $s_o=f\Rightarrow L=\infty \Rightarrow M_A=\frac{d_0}{f}\ \forall l$.
+
+#### Microscopio compuesto
+
+Es un instrumento que consiste de dos lentes colocadas sobre el mismo eje óptico, el primer lente al que entra luz desde el objeto se llama **lente objetivo** y el segundo **lente ocular**, y su objetivo es aumentar objetos cercanos a la lente objetivo (los rayos incidentes al sistema no serán paralelos). El lente objetivo crea una imagen necesariamente entre el foco de la lente ocular y la lente ocular para que este funcione como una lupa y termine magnificando el objeto. Por esto es que la magnificación de un microscopio es la magnificación transversal de la lente objetivo por el aumento angular de la lente ocular:
+$$
+\boxed{M_P=M_{To}M_{Ae}\tag{28}}
+$$
+
+
+
+
+
+
+En el caso en que la imagen de la primer lente se forme en el foco de la segunda $s_{oe}=f_e$ entonces por lo visto en la lupa $M_A=\frac{d_0}{f_e}$. Además, usando la ecuación (20) obtenida de la ecuación de Newton se tiene que si $L=x_{io}$ (como la imagen se forma sobre el segundo foco $L$ es la distancia entre los focos de ambas lentes), entonces $M_T=-\frac{L}{f_o}$. Para este caso:
+$$
+M_P=-\frac{Ld_0}{f_of_e}
+$$
+
+#### Telescopio 
+
+Existen dos tipos de telescopios, los **telescopios refractores** los cuales son similares a los microscopios y utilizan un combinación de lentes, y los telescopios reflectores que usan un espejo curvo y una lente. La idea del telescopio es poder observar objetos grandes y distantes, por lo que **los rayos incidentes** al sistema serán siempre **paralelos**.
+
+Para un telescopio refractor las lentes se llaman igual que las de un microscopio. En un **telescopio afocal** los rayos que inciden y salen del sistema son paralelos, solamente los cambia de dirección para poder magnificar la imagen. En este caso se cumple que $d=f_o+f_e$ donde $d$ es la distancia entre los lentes y es llamada la longitud del telescopio. 
+
+Se define el aumento de manera similar al de un microscopio:
+$$
+\boxed{M_P=\frac{\alpha_a}{\alpha}}\tag{29}
+$$
+Donde $\alpha$ es el ángulo de incidencia de los rayos sobre el lente objetivo con respecto al eje óptico y $\alpha_a$ es el ángulo de salida de los rayos (salen paralelos) con respecto al eje óptico.
+
+![Telescopio](D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Telescopio.png)
+
+Utilizando aproximación paraxial $\alpha=-\frac{\overline{BC}}{f_o}$ y $\alpha_a=\frac{\overline{DE}}{f_e}$, como $\overline{BC}=\overline{DE}$ se llega a:
+$$
+\boxed{M_P=-\frac{fo}{f_e}}\tag{30}
+$$
+
+#### Prismas 
+
+Los prismas sirven como divisores de haces de luz, polarizadores e interferómetros. Hay dos tipos de prismas:
+
++ **Prisma dispersivo**: separa frecuencias constituyentes de la luz.
++ **Prisma reflectivo**: produce cambios en la orientación de la imagen o en la dirección de la luz.
+
+#### Prisma dispersivo
+
+Para un rayo de luz que atraviesa un prisma se define la **desviación angular** $\delta$ como el ángulo de diferencia entre el rayo incidente y el rayo que sale del prisma. Haciendo uso de geometría y la ley de Snell se tiene que:
+$$
+\delta=\theta_{i1}+\arcsin\bigg[\sin(\alpha)\sqrt{n^2-\sin^2(\theta_{i1})}-\cos(\alpha)\sin(\theta_{i1})\bigg]-\alpha\tag{31}
+$$
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\PrismaDispersor.png" alt="PrismaDispersor" style="zoom:50%;" />
+
+Se puede demostrar que existe un ángulo de incidencia que minimiza $\delta$. Si se deriva (31) se iguala la derivada a 0 y se remplaza se obtiene que:
+$$
+\delta_m=2\cdot \arcsin\bigg[n\sin\bigg(\frac{\alpha}{2}\bigg)\bigg]-\alpha\tag{32}
+$$
+De (32) se deduce que para un prisma con índice $n$ y ángulo $\alpha$ sumergido en un medio $n'$ se tiene que:
+$$
+\boxed{\frac{n}{n'}=\frac{\sin\bigg[\frac{(\delta_m+\alpha)}{2}\bigg]}{\sin(\frac{\alpha}{2})}}\tag{33}
+$$
+En caso que $\delta$ sea mínimo se cumple que:
+$$
+\theta_{t1}=\theta_{i2}=\frac{\alpha}{2}
+$$
+Es decir el rayo cuya desviación es la mínima atraviesa el prima de forma paralela a la base.
+
+Existen los llamados prismas de desviación constante que para cada $\lambda$ saldrá del prisma con una deviación distinta. 
+
+#### Prisma reflector
+
+El haz se hace incidir en el prisma de tal forma que se produzca al menos una reflexión total interna, con el propósito de cambiar la dirección de la luz.
+
+Para un prisma isósceles se tiene que:
+$$
+\delta=2\theta_{i1}+\alpha	
+$$
+Por lo que la desviación angular no dependerá ni del índice del prisma ni de la longitud de onda de la luz, es un prisma acromático.

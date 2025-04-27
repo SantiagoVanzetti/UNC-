@@ -22,6 +22,13 @@
 
 + $\vec F=q\vec E+q\vec v\times\vec B$
 
+**Condiciones de empalme:**
+
++ $\hat{n}\cdot(\vec D_2-\vec D_1)=\sigma$
++ $\hat{n}\times(\vec E_2-\vec E_1)=0$
++ $\hat{n}\cdot(\vec B_2-\vec B_1)=0$
++ $\hat{n}\times(\vec H_2-\vec H_1)=\vec k$
+
 $\bullet$ Suponemos para estas ecuaciones que nos encontramos en un medio homogéneo e isótropo,, y que las ecuaciones son lineales. Por lo que se vale el principio de superposición.
 
 ### Cambios de coordenadas
@@ -56,10 +63,9 @@ $x=r\cos(\theta)\\ y=r\sin(\theta)\\z=z$
 $\bullet$ Factores de escala: $h_r=1,\ h_{\theta}=r,\ h_z=1$.
 $\bullet$ Matriz de cambio de base de coordenadas cartesianas a cilíndricas $\mathbb{T}_c=\begin{bmatrix}\cos(\theta) & \sin(\theta) &0\\ -\sin(\theta) & \cos(\theta) & 0\\ 0&0&1\end{bmatrix}$, $\mathbb{T}_c\begin{bmatrix}v_x\\ v_y\\ v_z\end{bmatrix}= \begin{bmatrix}v_r\\ v_\theta\\ v_z\end{bmatrix}$
 
-$\bullet $ Tanto para coordenadas esféricas como para coordenadas cilíndricas, la matriz inversa es la **transpuesta**.
-
 $\bullet$ $\boxed{\nabla \cdot \vec F(r,\theta,z)=\frac{1}{r}\par{}{r}(rF_r)+\frac{1}{r}\par{}{\theta}(F_\theta)+\par{}{z}(F_z)}$
-$\bullet$ $\boxed{\nabla\times\vec F(r,\theta,z)=\frac{1}{h_1h_2h_3}
+
+ $\boxed{\nabla\times\vec F(r,\theta,z)=\frac{1}{h_1h_2h_3}
 \begin{array}{|c|}
 \hat{r} & r\hat{\theta} & \hat{k}\\
 \par{}{r} & \par{}{\theta} & \par{}{z}\\ 
@@ -103,6 +109,20 @@ $\bullet$ $\delta_{ij}=\begin{cases}1 & \text{si}& i=j\\ 0 & \text{si}& i\neq j\
 $\bullet$ $\varepsilon_{ijk}=\begin{cases}1& \text{si ijk es cualquier permutación par de 123}\\ 0& \text{si se repite indice}\\ -1& \text{si ijk es cualquir permutación impar de 123}\end{cases}$                ($i,j,k=1,2,3$)
 
 $\bullet$ Se cumple: $\varepsilon_{ijk}\cdot\varepsilon_{kmn}=\delta_{im}\cdot\delta_{jn}-\delta_{in}\cdot\delta_{jm}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### Teorema de Helmholtz 
 
@@ -294,6 +314,18 @@ Por lo que **la componente tangencial de $\vec E$ siempre será continua**, a pe
 
 Se define **carga imagen** como una carga fuera de la región de interés que representa las cargas inducidas sobre el borde. La cual se relaciona con la función F de la función de Green. La idea del método es colocar cargas fuera de la región en la que se quiere resolver el problema de tal manera que las condiciones del borde se cumplan, y se resuelve el potencial para una carga puntual lo que es equivalente a calcular la función de Green. El potencial se calcula usando superposición, y una vos obtenida $G$ puede ser utilizada par cualquier problema con la misma geometría de borde usando (4) o (5).
 
+
+
+
+
+
+
+
+
+
+
+
+
 #### Función de Green para un plano infinito 
 
 Se toma el problema de una carga $q$ en el semi-espacio delimitado por el plano $xy$, si la carga se encuentra en la posición $\vec x'=(x',y',z')$, y se le impone la condición $\phi|_{z=0}=0$ (condición de Dirichlet sobre lo que mas adelante será $G$). Se puede resolver por método de imágenes suponiendo que hay una carga del otro lado del plano $xy$ en la posición $\vec x''=(x',y',-z')$, por superposición y conociendo el potencial de una carga puntual se tiene que:
@@ -319,11 +351,33 @@ $$
 \sigma = -\hat{z}\cdot(-\varepsilon_0\vec E_1)=-\varepsilon_0\par{\phi}{z}\bigg|_S
 $$
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### Función de Green para un esfera
 
 Si se tiene una esfera con radio $a$ con una carga en su exterior $q$ a una distancia del centro $d$, y la esfera es un conductor conectado a masa, es decir que $\phi|_S=0$, se puede resolver el potencial en todo el espacio fuera de la esfera usando el método de las imágenes. Se supone que hay una carga imagen $q_i$ en el interior sobre el eje formado por el centro de la esfera y la posición de la carga $q$ (es razonable suponer esto por la simetría del problema), y esta carga $q_i $ esta a una distancia $e<a$ del centro de la esfera. 
 
-<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Green_esf_page-0001.jpg" alt="Green_esf_page-0001" style="zoom:50%;" />
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\Green_esf_page-0001.jpg" alt="Green_esf_page-0001" style="zoom: 25%;" />
 
 Utilizando superposición se puede resolver el problema para las dos cargas y usando la condición de contorno se calcula las incógnitas $q_i$ y $e$:
 $$
@@ -357,7 +411,15 @@ $$
 \boxed{G(\vec x,\vec x')=\frac{1}{|\vec x-\vec x'|}-\frac{a}{|\vec x'|}\frac{1}{|\vec x-\frac{a^2}{|\vec x'|^2}\vec x'|}}\tag{17}
 $$
 
-### Ecuación de Laplace en coordenadas cartesianas
+
+
+
+
+
+
+
+
+## Resolución de la Ecuación de Laplace utilizando separación de variables
 
 Si se tiene la ecuación de Poisson $\nabla^2\phi=-\rho/\varepsilon_0$ con condición de contorno $\phi |_S=\chi(\vec x)$, se puede pensar que la solución será superposición de dos funciones $\phi_q$ y $\phi_p$ tal que $\phi=\phi_q+\phi_p$. El potencial $\phi_q$ corresponderá a la solución del potencial para la distribución de carga $\rho(\vec x)$ en todo el espacio y $\phi_p$ será un **potencial de "perturbación"** que hará cumplir la C.C. Si se piensa así estos dos potenciales cumplirán que:
 $$
@@ -380,7 +442,7 @@ $$
 $$
 Esta motivación para resolver la ecuación de Laplace valdrá de la misma forma si se tienen condiciones de Neumann.
 
-#### Resolución en coordenadas cartesianas
+### Separación de variables en coordenadas cartesianas
 
 Se tiene que:
 $$
@@ -506,14 +568,20 @@ $$
 $$
 Se puede comprobar que:
 $$
-\int_0^a\sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{m\pi}{a}x\bigg)dx=\frac{a}{2}\delta_{qm}\\
-\int_0^a\sin\bigg(\frac{p\pi}{a}y\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)dy=\frac{a}{2}\delta_{pn}\tag{44}
+\boxed{\int_0^a\sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{m\pi}{a}x\bigg)dx=\frac{a}{2}\delta_{qm}}\\
+\boxed{\int_0^a\sin\bigg(\frac{p\pi}{a}y\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)dy=\frac{a}{2}\delta_{pn}\tag{44}}
 $$
 Usando (44) en la ecuación (43):
 $$
 \int_0^a\int_0^a V(x,y) \sin\bigg(\frac{q\pi}{a}x\bigg)\sin\bigg(\frac{p\pi}{a}y\bigg)dxdy=\\
 \sum_m\sum_n A_{mn}\sinh(\gamma_{mn} a) \bigg(\frac{a}{2}\bigg)^2 \delta_{qm}\delta_{pn}=A_{qp}\sinh(\gamma_{qp}a)\bigg(\frac{a}{2}\bigg)^2\tag{45}
 $$
+
+
+
+
+
+
 Entonces despejando y usando que $\gamma=\sqrt{\alpha^2+\beta^2}=\frac{\pi}{a}\sqrt{m^2+n^2}$:
 $$
 A_{mn}=\frac{4}{a^2}\frac{1}{\sinh(\pi\sqrt{m^2+n^2})}\int_0^a\int_0^a V(x,y) \sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg)dxdy\tag{46}
@@ -523,3 +591,309 @@ $$
 \phi=\sum_m^\infty\sum_n^\infty\bigg[ A_{mn}\sin\bigg(\frac{m\pi}{a}x\bigg)\sin\bigg(\frac{n\pi}{a}y\bigg) \sinh\bigg(\frac{\pi}{a} \sqrt{m^2+n^2}\cdot z\bigg)\bigg]\tag{47}
 $$
 Con coeficientes $A_{mn}$ escritos en (46).
+
+### Separación de variables en coordenadas cilíndricas con simetría de traslación
+
+En coordenadas cilíndricas:
+$$
+\nabla^2\phi(r,\varphi)=\frac{1}{r}\par{}{r}\bigg(r\par{\phi}{r}\bigg)+\frac{1}{r^2}\par{^2\phi}{\varphi^2}=0\tag{48}
+$$
+Se supone que:
+$$
+\phi=R(r)Q(\varphi)\tag{49}
+$$
+Remplazando (49) en (48) se obtiene:
+$$
+\frac{r}{R(r)}\par{}{r}\bigg(r\par{R}{r}\bigg)+\frac{1}{Q(\varphi)}\par{^2Q}{\varphi^2}=0\tag{50}
+$$
+Como cada sumando depende de una variable, cada término debe ser una constante. Se define que el primer termino es igual a $\nu^2$ y el segundo es $-\nu^2$, así se consiguen las siguientes ecuaciones diferenciales:
+$$
+\par{}{r}\bigg(r\par{R}{r}\bigg)=\nu^2\frac{R(r)}{r}\\\tag{51}
+$$
+
+$$
+\par{^2Q}{\varphi^2}=-\nu^2Q(\varphi)\tag{52}
+$$
+
+Si $\nu=0$:
+$$
+Q_0(\varphi)=C+D\varphi\\
+R_0(r)=A+B\ln (r)\tag{53}
+$$
+Si $\nu\neq0$ entonces, se puede resolver las ecuación (51) como una ecuación diferencial dimensionalmente consistente, y (52) tiene como solución una función armónica:
+$$
+Q_{\nu}(\varphi)=c_{\nu}\sin(\nu\varphi)+d_{\nu}\cos(\nu\varphi)\\
+R_{\nu}(r)=a_\nu r^\nu+\frac{b_\nu}{r^\nu}\tag{54}
+$$
+Por lo tanto, la **solución general** de la ecuación de Laplace para coordenadas cilíndricas con simetría de traslación sobre el eje z es:
+$$
+\boxed{\phi(r,\varphi)=[A+B\ln (r)]\cdot(C+D\varphi)+\sum_{\nu=1}^\infty \bigg(a_\nu r^\nu+\frac{b_\nu}{r^\nu}\bigg)\cdot[c_{\nu}\sin(\nu\varphi)+d_{\nu}\cos(\nu\varphi)]}\tag{55}
+$$
+
+##### Problema:
+
+Se tiene un cascarón cilíndrico infinito de radio $a$, concéntrico al eje $z$, a potencial $V(\varphi)=V_0\cos^2(\varphi)$. Se quiere calcular el potencial en al región interna. Por la simetría del problema se puede utilizar la ecuación (55). Como se requiere que la solución dentro sea regular (no diverja), se debe tener que $b_\nu=0$ siempre y $B=0$. El potencial sobre el cilindro debe ser periódico, por lo que $D=0$ y $\nu=m\in\N $. Entonces, la solución tendrá la forma:
+$$
+\phi=\sum_{m=0}^\infty r^m[A_m\sin(m\varphi)+B_m\cos(m\varphi)]
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+Usando las condición de contorno:
+$$
+\phi\bigg|_{r=a}=V_0\cos^2(\varphi)=\sum_{m=0}^\infty a^m[A_m\sin(m\varphi)+B_m\cos(m\varphi)]\\
+=\frac{V_0}{2}+\frac{V_0}{2}\cos(2\varphi)=\sum_{m=0}^\infty a^mA_m\sin(m\varphi)+\sum_{m=0}^\infty a^mB_m\cos(m\varphi)
+$$
+Por lo que $A_m=0\ \forall m$, y $B_m=0$ excepto para:
+$$
+B_0=\frac{V_0}{2}\\
+a^2B_2=\frac{V_0}{2}
+$$
+Entonces:
+$$
+\phi=\frac{V_0}{2}+r^2\frac{V_0}{2a^2}\cos(2\varphi)
+$$
+
+### Separación de variables es coordenadas esféricas 
+
+La ecuación de Laplace en esféricas:
+$$
+\nabla^2\phi=\frac{1}{r}\par{^2}{r}(r\phi)+
+\frac{1}{r^2\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{\phi}{\theta}\bigg)+
+\frac{1}{r^2\sin^2(\theta)}\par{^2\phi}{\varphi^2}=0\tag{56}
+$$
+Si se supone:
+$$
+\phi=\frac{U(r)}{r}Q(\varphi)P(\theta)\tag{57}
+$$
+Remplazando (57) en (56):
+$$
+\nabla^2\phi=\frac{PQ}{r}\par{^2U}{r^2}+
+\frac{UQ}{r^3\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)+
+\frac{UP}{r^3\sin^2(\theta)}\par{^2Q}{\varphi^2}=0\\
+
+\Rightarrow0=\nabla^2\phi=\frac{1}{R\ r}\par{^2U}{r^2}+
+\frac{1}{Pr^3\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)+
+\frac{1}{Qr^3\sin^2(\theta)}\par{^2Q}{\varphi^2}\\
+
+\Rightarrow0=\nabla^2\phi=\frac{r^2\sin^2(\theta)}{R}\par{^2U}{r^2}+
+\frac{\sin(\theta)}{P}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)+
+\frac{1}{Q}\par{^2Q}{\varphi^2}\\
+
+\Rightarrow0=\nabla^2\phi=r^2\sin^2(\theta)\bigg[\frac{1}{R}\par{^2U}{r^2}+
+\frac{1}{Pr^2\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)\bigg]+
+\frac{1}{Q}\par{^2Q}{\varphi^2}\\
+$$
+Entonces si:
+$$
+\frac{1}{Q}\par{^2Q}{\varphi^2}=-m^2\\
+\Rightarrow r^2\sin^2(\theta)\bigg[\frac{1}{R}\par{^2U}{r^2}+
+\frac{1}{Pr^2\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)\bigg]=m^2\tag{58}
+$$
+Así se puede definir:
+$$
+\frac{m^2}{\sin^2(\theta)}-\frac{1}{P\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)=l(l+1)\\
+\Rightarrow \frac{r^2}{R}\par{^2U}{r^2}=l(l+1)\tag{59}
+$$
+Usando (58):
+$$
+P\bigg[l(l+1)-\frac{m^2}{\sin^2(\theta)}\bigg]+\frac{1}{\sin(\theta)}\par{}{\theta}\bigg(\sin(\theta)\par{P}{\theta}\bigg)\tag{60}=0
+$$
+Se realiza el cambio de variable $x=\cos(x)$ se puede demostrar que se obtiene:
+$$
+\der{}{x}\bigg((1-x^2)\der{P(x)}{x}\bigg)+\bigg[l(l+1)-\frac{m^2}{1-x^2}\bigg]P(x)\tag{61}=0
+$$
+Esta ecuación tiene como solución a los polinomios de Legendre $P_m^l(x)$.
+
+#### Simetría acimutal
+
+Si se tiene simetría acimutal $m=0$, entonces las soluciones son los polinomios de Legendre de a forma $P_l(x)$
+
+**Polinomios de Legendre**:
+
+Estos polinomios cumplen:
+
++ Si 𝑙 es par el polinomio es par.
++ Si $l$ es impar el polinomio es impar.
+
+Fórmula de Rodrigues:
+$$
+P_l(x)=\frac{1}{2^ll!}\der{^l}{x^l}[(x^2-1)^l]\tag{62}
+$$
+Son ortogonales:
+$$
+\boxed{\int_{-1}^1P_l(x)P_n(x)dx=\frac{2}{2l+1}\delta_{lm}}\tag{63}
+$$
+Cumplen la siguiente relación de completitud:
+$$
+\boxed{\sum_l^\infty\frac{2l+1}{2}P_l(x)P_l(x')=\delta(x-x')}\tag{64}
+$$
+Cumplen que:
+$$
+P_{2k+1}(0)=0\\\tag{65}
+P_{2k}(0)=(-1)^k\frac{(2k)!}{2^{2k}(k!)^2}
+$$
+
+$$
+P_l(1)=1
+$$
+
+Se puede demostrar que para situaciones con simetría acimutal, la solución general para la ecuacion de Laplace es:
+$$
+\boxed{\phi(r,\theta)=\sum_{l=0}^\infty \bigg(a_l\ r^l+\frac{b_l}{r^{l+1}}\bigg) P_l[\cos(\theta)]}\tag{66}
+$$
+
+####  Solución general de la ecuación de Laplace en coordenadas esféricas
+
+$$
+\boxed{\phi(r,\theta,\varphi)=\sum_{l=0}^\infty\sum_{m=-l}^l \bigg(a_{lm}\ r^l+\frac{b_{lm}}{r^{l+1}}\bigg) \mathcal Y_{lm}(\theta,\varphi)}\tag{67}
+$$
+
+Tal que los **armónicos esféricos** son:
+$$
+\boxed{\mathcal Y_{lm}(\theta,\varphi)=\sqrt{\frac{2l+1}{4\pi}\frac{(l-m)!}{(l+m)!}}\ P_l^m[\cos(\theta)]\ e^{im\varphi}}\tag{68}
+$$
+Cumple que:
+$$
+\boxed{\mathcal Y_{l(-m)}(\theta,\varphi)=(-1)^m\mathcal Y^*_{lm}(\theta,\varphi)}\tag{69}
+$$
+
+**Relación de ortogonalidad:**
+$$
+\boxed{\iint \mathcal Y^*_{lm}(\theta,\varphi)\mathcal Y_{l'm'}(\theta,\varphi)\sin(\theta)d\theta d\varphi=\delta_{ll'}\delta_{mm'}}\tag{70}
+$$
+**Relación de completitud:**
+$$
+\boxed{\sum_{lm}^\infty\mathcal Y^*_{lm}(\theta',\varphi')\mathcal Y_{lm}(\theta,\varphi)=\delta(\varphi-\varphi')\delta(\cos(\theta)-\cos(\theta'))}\tag{71}
+$$
+
+#### Expansión de la función de Green en coordenadas esféricas
+
+Se puede demostrar a través de calcular el potencial de una carga puntual usando separación de variables en coordenadas esféricas que:
+$$
+\boxed{\frac{1}{|\vec x-\vec x'|}=4\pi\sum_{l=0}^\infty\sum_{m=-l}^l\frac{1}{2l+1}\frac{r^l_<}{r^{l+1}_>}\mathcal Y_{lm}(\theta',\varphi')\mathcal Y_{lm}(\theta,\varphi)}\tag{72}
+$$
+Donde $r_>$ y $r_<$ son el mayor y el menor, respectivamente, entre $r$ y $r'$.
+
+Usando la ecuación (17) y remplazando por la serie (72) se obtiene que la función de Green expandida en serie para coordenadas esféricas:
+$$
+G(\vec x,\vec x')=4\pi\sum_{l,m}\frac{1}{2l+1}\bigg[\frac{r^l_<}{r^{l+1}_>}-\frac{1}{a}\bigg(\frac{a^2}{rr'}\bigg)^{l+1}\bigg]\mathcal Y_{lm}(\theta',\varphi')\mathcal Y_{lm}(\theta,\varphi)\tag{73}
+$$
+
+### Ecuación de Laplace en coordenadas cilíndricas; funciones de Bessel
+
+En coordenadas cilíndricas la ecuación de Laplace se puede escribir:
+$$
+\nabla^2\phi(r,\varphi,z)=\par{^2\phi}{r^2}+\frac{1}{r}\par{\phi}{r}+\frac{1}{r^2}\par{^2\phi}{\varphi^2}+\par{^2\phi}{z^2}=0\tag{74}
+$$
+Si se supone que:
+$$
+\phi(r,\varphi,z)=R(r)Q(\varphi)Z(z)\tag{75}
+$$
+Y se remplaza en (74):
+$$
+\frac{1}{r^2}\bigg(\frac{r^2}{R}\par{^2R}{r^2}+\frac{r}{R}\par{R}{r}+\frac{1}{Q}\par{^2Q}{\varphi^2}\bigg)+\frac{1}{Z}\par{^2Z}{z^2}\tag{76}=0
+$$
+Si se define:
+$$
+\frac{1}{Z}\par{^2Z}{z^2}=k^2\\
+\frac{1}{Q}\par{^2Q}{\varphi^2}=-\nu^2\tag{77}
+$$
+Se obtiene la siguiente ecuación diferencial:
+$$
+\par{^2R}{r^2}+\frac{1}{r}\par{R}{r}+\bigg(k^2-\frac{\nu^2}{r^2}\bigg)R=0\tag{78}
+$$
+Claramente las ecuaciones de (77) tienen como solución:
+$$
+Z(z)=e^{\pm kz}\\
+Q(\varphi)=e^{\pm i\nu\varphi}\tag{79}
+$$
+La ecuación (78) se puede llevar a la siguiente expresión:
+$$
+\der{^2R}{x^2}+\frac{1}{x}\der{R}{x}+\bigg(1-\frac{\nu^2}{x^2}\bigg)R=0\tag{80}
+$$
+Tiene como solución las funciones de Bessel que se construyen de la siguiente forma:
+$$
+R(x)=x^\alpha\sum_{J=0}^\infty a_jx^j\tag{81}
+$$
+Con $\alpha=\pm\nu$ y coeficientes con una relación de recurrencia:
+$$
+a_{2j}=\frac{(-1)^j\ \Gamma(\alpha+1)}{2^{2j }j!\ \Gamma(j+\alpha+)}a_0\tag{82}
+$$
+Se elije que $a_0=[2^\alpha\Gamma(\alpha+1)]^{-1}$, por lo que queda:
+$$
+a_{2j}=\frac{(-1)^j\ }{2^{2j }j!\ \Gamma(j+\alpha+)}\frac{1}{2^\alpha}\tag{83}
+$$
+Entonces, las funciones de Bessel de primera especie son:
+$$
+J_\nu(x)=\bigg(\frac{x}{2}\bigg)^\nu\sum_{j=0}^\infty\frac{(-1)^j}{j!\ \Gamma(j+\nu+1)}\bigg(\frac{x}{2}\bigg)^{2j}\\
+J_{-\nu}(x)=\bigg(\frac{x}{2}\bigg)^{-\nu}\sum_{j=0}^\infty\frac{(-1)^j}{j!\ \Gamma(j-\nu+1)}\bigg(\frac{x}{2}\bigg)^{2j}\tag{84}
+$$
+Esas funciones son linealmente independientes si $\nu$ no es entero, si lo es ($\nu=m\in\Z$) son linealmente dependientes, de hecho se cumple:
+$$
+J_{-m}(x)=(-1)^mJ_m(x)\tag{84}
+$$
+
+
+
+
+Se debe encontrar una solución que sea LI para todo $\nu$. Esta es la función de Neumann:
+$$
+N_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu\pi)}\tag{85}
+$$
+Por costumbre se usa la función de Neumann junto con la función de Bessel de primera especie para describir la solución a la ecuación diferencial (80) aunque $\nu$ no sea entero.
+
+Para describir soluciones, también se definen las funciones de Henkel como combinación lineal de $J_\nu$ y $N_\nu$:
+$$
+H_\nu^{(1)}(x)=J_\nu(x)+iN_\nu(x)\\
+H_\nu^{(2)}(x)=J_\nu(x)-iN_\nu(x)\tag{86}
+$$
+La función de Bessel, la de Neumann y las de Henkel cumplen la siguiente relaciones de recurrencia:
+$$
+\Omega_{\nu-1}(x)+\Omega_{\nu+1}(x)=\frac{2\nu}{x}\Omega_{\nu}(x)\\
+\Omega_{\nu-1}(x)-\Omega_{\nu+1}(x)=2\der{}{x}\Omega_\nu(x)\tag{87}
+$$
+Si $\nu$ es real no negativo, el comportamiento de las funciones de Bessel y Neumann es el siguiente:
+
+Si $x<<1$:
+$$
+J_\nu(x)\rightarrow\frac{1}{\Gamma(\nu+1)}\bigg(\frac{x}2\bigg)^\nu\\
+N_\nu\rightarrow\begin{cases}\frac{2}{\pi}[\ln(\frac{x}{2})+...]\ \ \text{si }\ \nu=0\\ 
+-\frac{\Gamma(\nu)}{\pi}(\frac{2}{x})^\nu\ \ \text{si }\ \nu\neq0
+\end{cases}\tag{88}
+$$
+Si $x>>1$:
+$$
+J_\nu(x)\rightarrow\sqrt{\frac{2}{\pi x}}\cos(x-\frac{\nu\pi}{2}-\frac{\pi}{4})\\
+N_\nu(x)\rightarrow\sqrt{\frac{2}{\pi x}}\sin(x-\frac{\nu\pi}{2}-\frac{\pi}{4})\tag{89}
+$$
+Las funciones de Bessel tienen infinitos ceros:
+$$
+J_\nu(x_{\nu n})=0\tag{90}
+$$
+Es el 0 número n. Para n muy grandes se cumple:
+$$
+x_{\nu n}\simeq n\pi+\bigg(\nu-\frac{1}{2}\bigg)\frac{\pi}{2}\tag{91}
+$$
+Existe una **relación de ortogonalidad**:
+$$
+\boxed{\int_0^a J_\nu\bigg(x_{\nu n'}\frac{r}{a}\bigg)J_\nu\bigg(x_{\nu n}\frac{r}{a}\bigg)rdr=\frac{a^2}{2}[J_{\nu+1}(x_{\nu n})]^2\delta_{nn'}}\tag{92}
+$$
+Por lo que se puede expandir cualquier función en el intervalo $(0,a)$ como:
+$$
+f(r)=\sum_{n=1}^\infty A_{\nu n}J_\nu\bigg(x_{\nu n}\frac{r}{a}\bigg)\\
+A_{\nu n}=\frac{2}{a^2J^2_{\nu+1}(x_{\nu n})}\int_0^arf(r)J_\nu\bigg(x_{\nu n}\frac{r}{a}\bigg)dr\tag{93}
+$$
+También cumplen la siguiente propiedad:
+$$
+\int_0^\infty xJ_m(kx)J_m(k'x)dx=\frac{1}{k}\delta(k-k')\tag{94}
+$$

@@ -631,7 +631,7 @@ $$
 $$
 En caso que $\delta$ sea mínimo se cumple que:
 $$
-\theta_{t1}=\theta_{i2}=\frac{\alpha}{2}
+\theta_{t1}=\theta_{i2}=\frac{\alpha}{2}\tag{34}
 $$
 Es decir el rayo cuya desviación es la mínima atraviesa el prima de forma paralela a la base.
 
@@ -643,6 +643,154 @@ El haz se hace incidir en el prisma de tal forma que se produzca al menos una re
 
 Para un prisma isósceles se tiene que:
 $$
-\delta=2\theta_{i1}+\alpha	
+\delta=2\theta_{i1}+\alpha\tag{35}
 $$
 Por lo que la desviación angular no dependerá ni del índice del prisma ni de la longitud de onda de la luz, es un prisma acromático.
+
+## Óptica Física
+
+### Polarización
+
+#### Tipos de polarización
+
+**Luz linealmente polarizada** ($\mathcal P$): la dirección del campo eléctrico es constante aunque su magnitud y signo varían con el tiempo. Por lo que se puede definir un plano de vibración generado por el vector de propagación y el campo eléctrico.
+$$
+\vec E_x=\hat{i}E_{0x}\cos(kz-\omega t)\\
+\vec E_y=\hat{j}E_{0y}\cos(kz-\omega t+\varepsilon)\tag{36}
+$$
+Si $\varepsilon>0$ se dice que $E_y$ está retrasada respecto de $E_x$.
+Si $\varepsilon<0$ se dice que $E_y$ está adelantada respecto de $E_x$.
+
+Si $\varepsilon=\pm m\pi$ la onda esta linealmente polarizada.
+
+**Polarización circular **
+
+La **polarización circular a derecha** ($\mathcal R$) se da cuando $E_{0x}=E_{0y}=E_0$ y $\varepsilon =-\pi/2+2m\pi$, entonces queda:
+$$
+\vec E_x=\hat{i}E_0\cos(kz-\omega t)\\
+\vec E_y=\hat{j}E_0\sin(kz-\omega t)\\
+\Rightarrow \vec E=E_0[\hat{i}\cos(kz-\omega t)+\hat{j}\sin(kz-\omega t)]\tag{37}
+$$
+Si $\varepsilon=\pi/2+2m\pi$ se trata de una polarización circular a izquierda ($\mathcal L$) entonces queda:
+$$
+\vec E=E_0[\hat{i}\cos(kz-\omega t)-\hat{j}\sin(kz-\omega t)]\tag{38}
+$$
+
+#### Polarización elíptica $\mathcal E$
+
+En esta polarizacion el campo eléctric rota y cambia de magnitud, de manera que la punta del vector traza una elipse en un plano perpendicular a el vector propagación.
+
+De forma general:
+$$
+\vec E_x=\hat{i}E_{0x}\cos(kz-\omega t)\\
+\vec E_y=\hat{j}E_{0y}\cos(kz-\omega t+\varepsilon)\tag{39}
+$$
+
+
+Nota: la polarización lineal y circular son casos específicos de la polarización elíptica.
+
+A partir de las formas de la expresión (39) se puede deducir la ecuación de la elipse:
+$$
+\frac{E_x}{E_{0x}}=\cos(kz-\omega t)\\
+\frac{E_y}{E_{0y}}=\cos(kz-\omega t)\cos({\varepsilon})-\sin(kz-\omega t)\sin({\varepsilon})\\
+\Rightarrow \frac{E_y}{E_{0y}}- \frac{E_x}{E_{0x}}\cos(\varepsilon)=-\sin (kz-\omega t)\sin(\varepsilon)\tag{40}
+$$
+También se tiene que 
+$$
+\sin (kz-\omega t)=\sqrt{1-\cos^2(kz-\omega t)}=\sqrt{1-\bigg(\frac{E_x}{E_{0x}}\bigg)^2}\tag{41}
+$$
+Usando la expresión obtenida en (40):
+$$
+\bigg[\frac{E_y}{E_{0y}}- \frac{E_x}{E_{0x}}\cos(\varepsilon)\bigg]^2=\bigg[1-\bigg(\frac{E_x}{E_{0x}}\bigg)^2\bigg]\sin^2(\varepsilon)\tag{42}
+$$
+Se llega a que:
+$$
+\bigg(\frac{E_y}{E_{0y}}\bigg)^2+\bigg(\frac{E_x}{E_{0x}}\bigg)^2-2\bigg(\frac{E_x}{E_{0x}}\bigg)\bigg(\frac{E_y}{E_{0y}}\bigg)\cos(\varepsilon)=\sin^2(\varepsilon)\tag{43}
+$$
+Que es la ecuación para una elipse que forma un ángulo $\alpha $ con el sistema de coordenadas $(E_x,E_y)$:
+$$
+\tan(2\alpha)=\frac{2E_{0x}E_{0y}\cos(\varepsilon)}{E_{0x}^2-E_{0y}^2}\tag{44}
+$$
+La convención para saber si la polarización es a izquierda o a derecha es que si se mira a la fuente si gira en sentido **antihorario** es a **izquierda**, y si gira en sentido **horario** es a **derecha**.
+
+#### Luz Natural
+
+La luz natural, de una fuente de luz ordinaria tiene un gran numero de emisores atómicos orientados al azar, por lo que la polarización global cambia de manera impredecible y no es posible distinguir un estado de polarización resultante. Matemáticamente la luz natural se representa como dos ondas arbitrarias, de igual amplitud, linealmente polarizadas, ortogonales e incoherentes, es decir $\varepsilon (t)$ varia rapidamente y al azar.
+
+### Polarizadores 
+
+#### Dicroísmo o Polarización por absorción selectiva
+
+Existen sustancias llamadas dicroicas que transmiten las ondas cuyo campo eléctrico es paralelo a determinada dirección, y absorbe el campo que vibre en cualquier otra dirección.
+
+En un **polarizador ideal** la intensidad transmitida es la mitad de la incidente, y solo la luz cuyo campo eléctrico sea paralelo al eje de transmisión será transmitida.
+
+Si se tienen dos polarizadores por absorción selectiva tales que sus ejes de transmisión forman un ángulo $\theta$, la intensidad que saldrá del segundo polarizador vendrá dada por la **ley de Malus**:
+$$
+I(\theta)=I_1\cos^2(\theta)\tag{45}
+$$
+Donde $I_1$ es la intensidad luego del primer polarizador.
+
+#### Polarización por reflexión
+
+Por las leyes de Fresnel existe un ángulo de incidencia para el cual el campo eléctrico paralelo al plano de incidencia (formado por el rayo y la normal) reflejado se anula. Este ángulo es llamado ángulo de Brewster y cumple la **ley de Brewster**:
+$$
+\tan(\theta_p)=\frac{n_t}{n_i}\tag{46}
+$$
+Por lo que la luz reflectada está linealmente polarizada en dirección perpendicular al plano de incidencia. El problema de este polarizador es que la luz reflejada es muy débil. Para luz natural se cumple que:
+$$
+R=\frac{I_r}{I_i}=\frac{I_{r\parallel}+I_{r\perp}}{I_i}=\frac{1}{2}(R_\parallel+R_\perp)\tag{47}
+$$
+Donde:
+$$
+R_\parallel=r^2_\parallel\\
+R_\perp=r^2_\perp\tag{48}
+$$
+Según las expresiones (5) y (6) de las ecuaciones de Fresnel.
+
+#### Birrefringencia o polarización por doble refracción
+
+Hay sustancias solidas que debido a que son cristalinas son ópticamente anisotrópicas, por lo que presentan mas de un índice de refracción. Si se tienen dos índices de refracción se define un eje óptico, tal que las ondas **paralelas** tienen un índice de refracción llamado **extraordinario** y las ondas **perpendiculares** tienen otro índice que se denomina **ordinario**:
+$$
+n_o=\frac{c}{v_\perp}\\
+n_e=\frac{c}{v_\parallel}\tag{49}
+$$
+Se define la **medida de birrefringencia** como:
+$$
+\Delta n=(n_e-n_o)\tag{50}
+$$
+
+#### Polarización por Dispersión, Esparcimiento o Scattering
+
+El scattering es un fenómeno producido por la absorción de luz por una molécula, y la posterior emisión de la onda en una cierta dirección. Esto genera que la luz que llega de una fuente se disperse en todas las direcciones, como pasa en la atmósfera terrestre.
+
+Se tienen distintos tipos de scattering, que dependen del valor de el radio de las partículas y de l longitud de onda de la luz que llega:
+$$
+x=\frac{2\pi r}{\lambda}\tag{51}
+$$
+Dependiendo del valor de $x$ se tienen distintos tipos de dispersión. Se tiene que si $x$ es cercano a 1 se tiene el scattering de Mie, el cual no depende de la longitud de onda que le llega. Para valores menores se tiene scattering de Rayleigh, en el cual la dispersión si depende de $\lambda $ y es el que produce que el cielo sea azul. Para valores de $x$ mas pequeños la dispersión se puede considerar nula, y para valores mas altos se puede trabajar con óptica geométrica.
+
+Hay una dirección para la cual una partícula emite luz polarizada, por lo que se puede aprovechar este fenómeno como polarizador.
+
+#### Retardadores
+
+Los retardadores son dispositivos ópticos que sirven para cambiar la polarización de la onda incidente. Estos están hechos de materiales birrefringentes cuyo eje óptico es paralelo a la cara en donde incide la luz de forma perpendicular. Por lo tanto, los rayos ordinario y extraordinario se propagan en la misma dirección pero con velocidades diferentes, lo que genera un diferencia de fase, la cual dependerá del espesor de la lámina y de la longitud de onda de la onda incidente. La onda resultante será la superposición de la onda o y e que tienen una diferencia de fase relativa de $\Delta \phi$.
+
+La diferencia de camino óptico entre ambos rayos esta dad por:
+$$
+\Lambda=d|n_o-n_e|\tag{52}
+$$
+Por lo que la diferencia de fase relativa es:
+$$
+\Delta \phi=k_0\Lambda=\frac{2\pi}{\lambda_0}d|n_o-n_e|\tag{53} 
+$$
+El estado de polarización de la onda dependerá de el $\Delta \phi$ y de la amplitud de cada componente.
+
++ Si $\Delta\phi=2\pi$ el retardado es igual una longitud de onda, por lo que no se desfasan, y no hay cambio en la polarización.
+
++ Si $\Delta\phi=\pi$ el retardo es igual a media longitud de onda, y se puede demostrar que rota luz polarizada con un ángulo $\theta $ con respecto al eje con la velocidad de propagación de la luz mas rápida, en un ángulo $2\theta$. Además, invierte el sentido de rotación de la luz circular o elípticamente polarizada.
++ Si $\Delta\phi=\pi/2$ el retardo relativo es de un cuarto de longitud de onda, y se observa que si incide una onda linealmente polarizada se obtiene una onda elípticamente o circularmente polarizada.
+
+Si incide luz natural sobre un retardador no se observa ningun efecto, ya que la luz natural se considera como dos componentes ortogonales con diferencia de fase aleatoria, por lo que sumarle un desfase relativo sigue produciendo una diferencia de fase aleatoria.
+
+Si incide luz linealmente polarizada paralela a los ejes principales tampoco se verá afectada por el retardador.

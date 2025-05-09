@@ -725,6 +725,16 @@ Estos polinomios cumplen:
 + Si 𝑙 es par el polinomio es par.
 + Si $l$ es impar el polinomio es impar.
 
+Los primeros polinomios de Legendre son:
+$$
+P_0(x)=1\\
+P_1(x)=x\\
+P_2(x)=\frac{1}{2}(3x^2-1)\\
+P_3(x)=\frac{1}{2}(5x^3-3x)\\
+P_4(x)=\frac{1}{8}(35x^4-30x^2+3)
+$$
+
+
 Fórmula de Rodrigues:
 $$
 P_l(x)=\frac{1}{2^ll!}\der{^l}{x^l}[(x^2-1)^l]\tag{62}
@@ -884,7 +894,9 @@ Es el 0 número n. Para n muy grandes se cumple:
 $$
 x_{\nu n}\simeq n\pi+\bigg(\nu-\frac{1}{2}\bigg)\frac{\pi}{2}\tag{91}
 $$
-Existe una **relación de ortogonalidad**:
+A partir de estos ceros se puede generar una familia de autofunciones ortogonales que pueden expandir el espacio de funciones, la familia de las $\{J_\nu(x_{\nu n} \frac{r}{a}\}$. De igual forma se puede hacer con las demás funciones definidas.
+
+Existe una **relación de ortogonalidad** para estas autofunciones, la cual se puede luego extender de forma similar a las demás funciones:
 $$
 \boxed{\int_0^a J_\nu\bigg(x_{\nu n'}\frac{r}{a}\bigg)J_\nu\bigg(x_{\nu n}\frac{r}{a}\bigg)rdr=\frac{a^2}{2}[J_{\nu+1}(x_{\nu n})]^2\delta_{nn'}}\tag{92}
 $$
@@ -897,3 +909,10 @@ También cumplen la siguiente propiedad:
 $$
 \int_0^\infty xJ_m(kx)J_m(k'x)dx=\frac{1}{k}\delta(k-k')\tag{94}
 $$
+En caso de que las condiciones de contorno del problema requieran que haya senos o cosenos en la descripción del potencial en el eje z, se tiene que pedir la condición que $k^2<0$, por lo que $k$ será imaginario. Para este caso se deben usar las funciones $I$ y $K$ de Bessel:
+$$
+I_\nu(x)=i^{-\nu}J_\nu(ix)\\
+K_\nu(x)=\frac{\pi}{2}i^{\nu+1}H^{(1)}_\nu(ix)\tag{95}
+$$
+
+

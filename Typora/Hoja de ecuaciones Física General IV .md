@@ -794,3 +794,7 @@ El estado de polarización de la onda dependerá de el $\Delta \phi$ y de la amp
 Si incide luz natural sobre un retardador no se observa ningun efecto, ya que la luz natural se considera como dos componentes ortogonales con diferencia de fase aleatoria, por lo que sumarle un desfase relativo sigue produciendo una diferencia de fase aleatoria.
 
 Si incide luz linealmente polarizada paralela a los ejes principales tampoco se verá afectada por el retardador.
+
+### Interferencia
+
+La interferencia es la interacción de dos o mas ondas de luz que producen una irradiancia que se desvía de la suma de las irradiancias de las componentes. Se considerarán casos en los que haya dos fuentes puntuales de ondas monocromáticas de la misma frecuencia, un medio de propagación homogéneo, la separación entre las fuentes debe ser mucho mayor a la longitud de onda ($a\gg\lambda$), problemas en los que el punto de observación sea lo suficientemente lejano para que los frentes de onda puedan ser considerados como planos, y que las ondas estarán linealmente polarizadas.

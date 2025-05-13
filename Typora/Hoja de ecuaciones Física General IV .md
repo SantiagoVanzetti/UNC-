@@ -798,3 +798,77 @@ Si incide luz linealmente polarizada paralela a los ejes principales tampoco se 
 ### Interferencia
 
 La interferencia es la interacción de dos o mas ondas de luz que producen una irradiancia que se desvía de la suma de las irradiancias de las componentes. Se considerarán casos en los que haya dos fuentes puntuales de ondas monocromáticas de la misma frecuencia, un medio de propagación homogéneo, la separación entre las fuentes debe ser mucho mayor a la longitud de onda ($a\gg\lambda$), problemas en los que el punto de observación sea lo suficientemente lejano para que los frentes de onda puedan ser considerados como planos, y que las ondas estarán linealmente polarizadas.
+
+La irradiancia en caso de interferencia tendrá un término mas en la suma de las irradiancias de cada onda:
+$$
+I_T=I_1+I_2+I_{12}\\
+\boxed{I_{12}=2\varepsilon v\langle\vec E_1\cdot\vec E_2\rangle_T}\tag{54}
+$$
+$I_{12}$ se llama **término de interferencia**.
+
+Se puede demostrar que:
+$$
+\boxed{I_{12}=\varepsilon v\vec E_{01}\cdot \vec E_{02}\cos(\delta)}\tag{55}
+$$
+Donde $\delta$ es la diferencia de fase dada por la diferencia de camino óptico:
+$$
+\delta=(\vec k_1-\vec k_2)\cdot \vec r+(\varepsilon_1-\varepsilon_2)\tag{56}
+$$
+Si tienen el mismo número de onda:
+$$
+\boxed{\delta=k\Lambda+(\varepsilon_1-\varepsilon_2)}\tag{57}
+$$
+La ecuación (57) vale para onda esféricas.
+
++ Si $\vec E_1 \perp\vec E_2\Rightarrow I_{12}=0$.
++ Si $\vec E_1 \parallel\vec E_2\Rightarrow I_{12}=2\sqrt{I_1 I_2}\cos(\delta)$
+
+De este ultimo caso si se tienen dos campos paralelos (como será el caso las rendijas), se puede ver que:
+
++ Si $\delta= 2m\pi$ se tiene un máximo de irradiancia.
++ Si $\delta= (2m+1)\pi$ se tiene un mínimo en la irradiancia .
+
+Si se tienen dos campos con amplitudes iguales, la irradiancia mínima será 0 y la máxima 4 veces la de una sola de las ondas.
+
+##### Condiciones para la interferencia
+
++ Las ondas deben tener la misma frecuencia.
++ Las ondas deben ser monocromáticas y de igual longitud de onda.
++ Las ondas deben tener igual amplitud para obtener un patrón de máximo contraste.
++ Las fuentes deben ser coherentes.
+
+#### Interferómetros de división de frente de onda
+
+##### Experimento de Young
+
+La m-ésima franja brillante:
+$$
+y_m\simeq m\lambda \frac{s}{a}
+$$
+Donde $s$ es la distancia de las rendijas a la pantalla y $a$ es la separación entre las rendijas.
+$$
+\Delta y\simeq \frac{\lambda s}{a}
+$$
+
+##### Doble espejo y biprisma de Fresnel
+
+En ambos casos se traslada el problema a uno de Young, en el doble espejo de Fresnel se usa que el ángulo entre las imágenes de los espejos medido desde el punto de unión es 2 veces el ángulo formado entre horizontal y el segundo espejo. 
+
+En ambos vale que :
+$$
+\Delta y\simeq \frac{\lambda s}{a}
+$$
+En el biprisma de Fresnel:
+$$
+a=2\alpha(n-1)d
+$$
+Donde $\alpha$ es el ángulo del prisma, $d$ es la distancia del prima a la fuente puntual, y $n$ es el índice de refracción del prisma.
+
+##### Espejo de Lloyd
+
+La diferencia de fase en este interferómetro se le suma $\pi$ debido a las leyes de Fresnel. La m-ésima franja oscura es:
+$$
+y_m\simeq m\lambda \frac{s}{a}
+$$
+Por lo que su patrón será el complementario al de Young.
+

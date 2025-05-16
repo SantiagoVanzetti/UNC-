@@ -843,11 +843,11 @@ Si se tienen dos campos con amplitudes iguales, la irradiancia mínima será 0 y
 
 La m-ésima franja brillante:
 $$
-y_m\simeq m\lambda \frac{s}{a}
+y_m\simeq m\lambda \frac{s}{a}\tag{58}
 $$
 Donde $s$ es la distancia de las rendijas a la pantalla y $a$ es la separación entre las rendijas.
 $$
-\Delta y\simeq \frac{\lambda s}{a}
+\Delta y\simeq \frac{\lambda s}{a}\tag{59}
 $$
 
 ##### Doble espejo y biprisma de Fresnel
@@ -856,11 +856,11 @@ En ambos casos se traslada el problema a uno de Young, en el doble espejo de Fre
 
 En ambos vale que :
 $$
-\Delta y\simeq \frac{\lambda s}{a}
+\Delta y\simeq \frac{\lambda s}{a}\tag{60}
 $$
 En el biprisma de Fresnel:
 $$
-a=2\alpha(n-1)d
+a=2\alpha(n-1)d\tag{61}
 $$
 Donde $\alpha$ es el ángulo del prisma, $d$ es la distancia del prima a la fuente puntual, y $n$ es el índice de refracción del prisma.
 
@@ -868,7 +868,95 @@ Donde $\alpha$ es el ángulo del prisma, $d$ es la distancia del prima a la fuen
 
 La diferencia de fase en este interferómetro se le suma $\pi$ debido a las leyes de Fresnel. La m-ésima franja oscura es:
 $$
-y_m\simeq m\lambda \frac{s}{a}
+y_m\simeq m\lambda \frac{s}{a}\tag{62}
 $$
 Por lo que su patrón será el complementario al de Young.
+
+#### Interferómetros de división de amplitud
+
+En este tipo de interferómetros la onda que incide sobre un espejo, parte se refleja y parte se transmite, y la onda transmitida vuelve a reflejarse. Así se divide la amplitud de una onda incidente. En este caso habrá interferencia siempre y cuando no se haya destruido la coherencia entre las dos ondas.
+
+##### Películas dieléctricas. Interferencia de dos haces
+
+Si se tiene una película de espesor $d$, de alguna sustancia con índice de refracción $n_f$ entre dos medios caracterizados por lo índices $n_1$ (incidente), y $n_2$ (posterior); si incide luz con un ángulo $\theta _i$ y se transmite con un ángulo $\theta_t$. La diferencia de camino óptico será:
+$$
+\Lambda=2n_f d\cos(\theta_t)\tag{63}
+$$
+Si la película esta sumergida en un solo medio ($n_1=n_2$), entonces por las ecuaciones de Fresnel la diferencia de fase entre las ondas se le debe sumar o restar $\pi$ en caso de que $\theta<30°$:
+$$
+\delta=k_0\Lambda\pm\pi\tag{64}
+$$
+Entonces el máximo de interferencia:
+$$
+d\cos(\theta_t)=(2m+1)\frac{\lambda_0}{4n_f}\tag{65}
+$$
+Y el mínimo:
+$$
+d\cos(\theta_t)=2m\frac{\lambda_0}{4n_f}\tag{66}
+$$
+Si el ángulo de incidencia es cercano a 0 se forman las **franjas de Haidinger**.
+
+##### Franjas de igual espesor
+
+Se colocan 3 materiales de distinto índice de refracción en forma de cuña, si incide luz con un ángulo cercano a 0, se forman las **Franjas de Fizeau**. Si la cuña tiene ángulo pequeño $\alpha$, y el índice del material del medio es $n_f$:
+$$
+\Lambda=2n_fd\cos(\theta_t)\simeq2n_fd\tag{67}
+$$
+Como $\alpha$ pequeño, con $x$ la distancia al vértice de la cuña:
+$$
+\tan(\alpha)\simeq\alpha=\frac{d}{x}\\
+\Rightarrow \delta=\frac{4\pi}{\lambda_0}n_fx\alpha-\pi\tag{68}
+$$
+
+##### Anillos de Newton
+
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\AnillosdeNewton.png" alt="AnillosdeNewton" style="zoom: 50%;" />
+
+Si se tiene la situación de la imagen se usa la expresión del radio de la lente $R$, usando que $R\gg d$ y la ecuación (67) se obtienen las siguientes expresiones para el radio de las franjas de máximo y mínimo:
+$$
+x_{max}=\bigg[\bigg(m+\frac{1}{2}\lambda_fR\bigg)\bigg]^{1/2}\\
+x_{min}=(m\lambda_fR)^{1/2}\tag{69}
+$$
+En los anillos de Newton (franjas de Fizeau) $m$ disminuye hacia el centro, y en las franjas de Haidinger $m$ aumenta hacia el centro.
+
+#### Interferómetros con espejos: de Michelson
+
+
+
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\InterfMichelson1.png" alt="InterfMichelson1" style="zoom:67%;" />
+
+<img src="D:\Administrador\Escritorio\UNC-\Typora\Typora Images\InterfMichelson2.png" alt="InterfMichelson2" style="zoom:67%;" />
+
+El interferómetro de Michelson se puede construir geométricamente, y de esta forma resolver el patrón de interferencia:
+$$
+\Lambda=2d\cos(\theta)\\
+\Rightarrow \delta=\
+k_02d\cos(\theta)+\pi\tag{70}
+$$
+Si se cuentan el número de franjas $N$ que pasan en una distancia $\Delta d$:
+$$
+\Delta d=N\frac{\lambda_0}{2}\tag{71}
+$$
+La franja oscura central cumple:
+$$
+2d=m_0\lambda_0\tag{72}
+$$
+
+#### Recubrimientos antirreflectantes
+
+Si se tiene un película dieléctrica de índice $n_f$ sobre un sustrato de índice $n_s$ en un medio de índice $n_0$, en situación de incidencia normal ($\theta_i\simeq 0$):
+$$
+[r_\parallel]_{\theta_i=0}=[-r_\perp]_{\theta_i=0}=\frac{n_t-n_i}{n_t+n_i}\tag{73}
+$$
+Entonces la reflectancia es:
+$$
+R_1=\frac{(n_0n_s-n_f^2)^2}{(n_0n_s+n_f^2)}\tag{74}
+$$
+Si se quiere que sea antirreflectante $R_1\simeq0$.
+
+El espesor de la película esta dado por:
+$$
+e=\frac{\lambda_0}{4}\tag{75}
+$$
+
 

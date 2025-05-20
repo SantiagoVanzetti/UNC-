@@ -678,7 +678,7 @@ $$
 
 #### Polarización elíptica $\mathcal E$
 
-En esta polarizacion el campo eléctric rota y cambia de magnitud, de manera que la punta del vector traza una elipse en un plano perpendicular a el vector propagación.
+En esta polarización el campo eléctrico rota y cambia de magnitud, de manera que la punta del vector traza una elipse en un plano perpendicular a el vector propagación.
 
 De forma general:
 $$
@@ -914,7 +914,7 @@ $$
 
 Si se tiene la situación de la imagen se usa la expresión del radio de la lente $R$, usando que $R\gg d$ y la ecuación (67) se obtienen las siguientes expresiones para el radio de las franjas de máximo y mínimo:
 $$
-x_{max}=\bigg[\bigg(m+\frac{1}{2}\lambda_fR\bigg)\bigg]^{1/2}\\
+x_{max}=\bigg[\bigg(m+\frac{1}{2}\bigg)\lambda_fR\bigg]^{1/2}\\
 x_{min}=(m\lambda_fR)^{1/2}\tag{69}
 $$
 En los anillos de Newton (franjas de Fizeau) $m$ disminuye hacia el centro, y en las franjas de Haidinger $m$ aumenta hacia el centro.
@@ -950,7 +950,7 @@ $$
 $$
 Entonces la reflectancia es:
 $$
-R_1=\frac{(n_0n_s-n_f^2)^2}{(n_0n_s+n_f^2)}\tag{74}
+R_1=\frac{(n_0n_s-n_f^2)^2}{(n_0n_s+n_f^2)^2}\tag{74}
 $$
 Si se quiere que sea antirreflectante $R_1\simeq0$.
 
@@ -959,4 +959,156 @@ $$
 e=\frac{\lambda_0}{4}\tag{75}
 $$
 
+### Difracción 
 
+La difracción es un fenómeno producido por la interferencia dada por la combinación de muchas ondas luminosas. Además, en general se da por la desviación de la luz cuando esta se encuentra con un obstáculo o rendija, es decir la difracción es un fenómeno de borde. Se puede explicar este fenómeno con el principio de Huygens-Fresnel, cada punto sin obstrucción (sobre la rendija) sirve como fuente de ondas esféricas, y el campo en un punto es la superposición de todas estas ondas secundarias.
+
+Existen dos tipos de difracción, la **difracción es de Fresnel** o de campo cercano, que se da cuando la fuente puntual y la pantalla están relativamente cerca de del obstáculo, por lo que las ondas que llegan no se pueden considerar planas. En la **difracción de Fraunhofer** o de campo lejano, la fuente de luz y la pantalla están lo suficientemente lejos como para considerar que las ondas que llegan son de frente plano. Solo se trataran situaciones en las que se de la difracción de Fraunhofer. 
+
+Se considera que la difracción es de Fraunhofer si para $R$ la distancia menor entre la fuente y la rendija o la pantalla y la rendija, y $b$ la dimensión más grande de la abertura se cumple:
+$$
+R>\frac{b^2}{\lambda}\ / \ R\gg \frac{b^2}{2\lambda}
+$$
+
+#### Múltiples osciladores coherentes 
+
+Si se tienen $N$ osciladores separados por una distancia $d$ sobre una misma recta, y se observa el campo eléctrico en un punto $P$ muy lejano tal que es mucho mayor a la extensión del conjunto de osciladores, y la amplitud del campo de cada oscilador es la misma. Se puede deducir que si la intensidad de cada oscilador es $I_0$, la intensidad es:
+$$
+\boxed{I=I_0\bigg[\frac{\sin(N\frac{\delta}{2})}{\sin(\frac{\delta}{2})}\bigg]^2}\tag{76}
+$$
+Con:
+$$
+\delta=kd\sin(\theta)\tag{77}
+$$
+Y la irradiancia en los máximos es:
+$$
+I_N=N^2I_0\tag{78}
+$$
+
+#### Una rendija 
+
+Un ranura con una abertura $b$ mucho menor que la longitud de la onda, se puede ver como una fuente lineal de osciladores ideales, como las fuentes secundarias del principio de Huygens-Fresnel. Cada punto emite una onda secundaria esférica. En este caso el módulo del campo eléctrico es:
+$$
+E=\frac{\epsilon_0}{r}\sin(\omega t-kr)\tag{79}
+$$
+Donde $\epsilon_0$ es le eficacia de la fuente. 
+
+Si se tienen un numero $N$ de osciladores por unidad de longitud, en un pequeño segmento $\Delta y_i$ hay $\Delta y_i \frac{N}{b}$ osciladores. Si se divide la rendija en $M$ segmentos iguales, el i-ésimo segmento aporta a la intensidad:
+$$
+E_i=\frac{\epsilon_0}{r_i}\sin(\omega t-kr_i)\bigg(\frac{N\Delta y_i}{b}\bigg)\tag{80}
+$$
+El campo total será:
+$$
+E=\sum^M_{i=1}\frac{\epsilon_L}{r_i}\sin(\omega t-kr_i)\Delta y_i\tag{81}
+$$
+
+
+
+
+
+
+Con $\epsilon_L$ la eficacia por unidad de longitud. Entonces, para una rendija de apertura $b$:
+$$
+E=\epsilon _l\int_{-\frac{b}{2}}^{\frac{b}{2}}\frac{1}{r}\sin(\omega t-kr)dy\tag{82}
+$$
+
+
+Ahora haciendo uso de la integral, para una rendija de apertura $b$ se deduce que la irradiancia esta dada por:
+$$
+\boxed{I(\theta)=I(0)\bigg(\frac{\sin(\beta)}{\beta}\bigg)^2}\\
+\boxed{\beta=\frac{b\pi}{\lambda}\sin(\theta)}\tag{83}
+$$
+La anchura (extensión angular) del máximo central esta dada por:
+$$
+\theta_1=\frac{\lambda}{b}\tag{}\tag{84}
+$$
+
+#### Una ranura rectangular alargada
+
+Haciendo la integral (82) se obtiene que para una ranura alargada de ancho $b\sim\lambda$, y una largo $l\sim cm$, la irradiancia es:
+$$
+I(\theta)=I(0)\bigg[\frac{\sin(\beta)}{\beta}\bigg]^2\tag{85}
+$$
+Con $\beta$ igual a (83).
+
+Si $b$ es chico, entonces $\beta$ es chico entonces $I$ decae rápido a 0. Aunque, se pueden observar máximos subsidiarios.
+
+La **irradiancia mínima** se da cuando:
+$$
+\beta=m\pi\\
+\Rightarrow b\sin(\theta)=m\lambda\tag{86}
+$$
+La **irradiancia máxima** se da cuando:
+$$
+\tan(\beta)=\beta\tag{87}
+$$
+
+#### Doble rendija
+
+Para dos rendijas de ancho $b$, con separación entre los centros igual a $a$, si se realiza la integral (82) se obtiene que la irradiancia para un punto con apertura angular $\theta$ medido desde una de las rendijas es:
+$$
+\boxed{I(\theta)=4I_0\bigg[\frac{\sin(\beta)}{\beta}\bigg]^2\cdot \cos^2(\alpha )}\\
+\boxed{\alpha=\frac{\pi a}{\lambda}\sin(\theta)}\\
+\boxed{\beta=\frac{\pi b}{\lambda}\sin(\theta)}\tag{88}
+$$
+Se tendrán los **mínimos de difracción** en $\beta=\pm m\pi\ /\ m\neq0$, y los **mínimos de interferencia** en $\alpha =(2m+1)\frac{\pi}{2}$.
+
+#### Múltiples ranuras
+
+Cuando se tienen $N$ ranuras de ancho $b$ separadas por una distancia $a$, la irradiancia es:
+$$
+\boxed{I(\theta)=I_0\bigg[\frac{\sin(\beta)}{\beta}\bigg]^2\bigg[\frac{\sin(N\alpha)}{\sin(\alpha)}\bigg]^2}\tag{89}
+$$
+ Con:
+$$
+\beta=\frac{b\pi}{\lambda}\sin(\theta)\\
+\alpha=\frac{a\pi}{\lambda}\sin(\theta)\tag{90}
+$$
+Los máximos principales dados por la interferencia cumplirán:
+$$
+\alpha =m\pi/ \ m\in\Z\tag{91}
+$$
+Entre cada máximo principal hay $N-1$ mínimos cuando:
+$$
+\alpha =\pm\frac{\pi}{N},\pm\frac{2\pi}{N},...,\pm\frac{(N-1)\pi}{N},\pm\frac{(N+1)\pi}{N}\tag{92}
+$$
+Entre cada mínimo subsidiario hay un máximo subsidiario, entonces hay $N-2$ máximos:
+$$
+\alpha=\pm\frac{3\pi}{2N},\pm\frac{5\pi}{2N},...\tag{93}
+$$
+
+#### Red de difracción 
+
+Una red de difracción es un conjunto repetitivo de elementos difractores. 
+
+Para dos rayos que inciden sobre una red de difracción separados por una distancia $a$:
+$$
+a[\sin(\theta_m)-\sin(\theta_i)]=m\lambda\tag{94}
+$$
+Donde $m$ es el orden del máximo.
+
+Para incidencia normal se tiene que:
+$$
+a\sin(\theta_m)=m\lambda\tag{95}
+$$
+El valor del ángulo $\theta_m$ depende de la longitud de onda.
+
+#### Espectroscopia con redes 
+
+Las redes de difracción se utilizan para determinar el espectro de luz con el que emite una fuente. Se define la resolución del espectrómetro ($R$), y determina la capacidad del dispositivo de distinguir longitudes de onda que difieren muy poco entre sí:
+$$
+R=\frac{\lambda}{\Delta\lambda}\tag{96}
+$$
+Donde $\lambda$ es la longitud de onda media y $\Delta\lambda$ es el límite de resolución. El criterio para decidir la resolución es que la distancia angular entre el mínimo adyacente a un máximo principal y el otro máximo, debe cumplir:
+$$
+\Delta\alpha=\frac{\pi}{N}\tag{97}
+$$
+
+
+
+
+Entonces:
+$$
+\boxed{R=\frac{\lambda}{\Delta\lambda}=mN}\tag{98}
+$$
+Donde N es la cantidad de líneas de la red y $m$ es el orden del máximo que se toma para calcular la resolución.

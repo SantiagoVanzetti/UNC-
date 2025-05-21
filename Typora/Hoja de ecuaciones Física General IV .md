@@ -1072,10 +1072,22 @@ Entre cada máximo principal hay $N-1$ mínimos cuando:
 $$
 \alpha =\pm\frac{\pi}{N},\pm\frac{2\pi}{N},...,\pm\frac{(N-1)\pi}{N},\pm\frac{(N+1)\pi}{N}\tag{92}
 $$
-Entre cada mínimo subsidiario hay un máximo subsidiario, entonces hay $N-2$ máximos:
+Entre cada mínimo subsidiario hay un máximo subsidiario, entonces hay $N-2$ máximos que se dan aproximadamente cuando:
 $$
-\alpha=\pm\frac{3\pi}{2N},\pm\frac{5\pi}{2N},...\tag{93}
+\alpha=\pm\frac{3\pi}{2N},\pm\frac{5\pi}{2N},...\tag{93}
 $$
+
+Vale para $N$ rendijas que para un ángulo $\theta _m$ en el que hay mínimo:
+$$
+r\sin(\theta_m)=\frac{m\lambda}{2}\tag{94}
+$$
+Donde $r$ será $a$ si se quiere un mínimo de interferencia o $b$ si es para difracción.
+
+Para un máximo principal de interferencia vale que:
+$$
+a\sin(\theta_M)=m\lambda\tag{95}
+$$
+Como el seno tiene que ser menor a 1, existirán una cantidad de $m$'s limitados.
 
 #### Red de difracción 
 
@@ -1083,13 +1095,13 @@ Una red de difracción es un conjunto repetitivo de elementos difractores.
 
 Para dos rayos que inciden sobre una red de difracción separados por una distancia $a$:
 $$
-a[\sin(\theta_m)-\sin(\theta_i)]=m\lambda\tag{94}
+a[\sin(\theta_m)-\sin(\theta_i)]=m\lambda\tag{96}
 $$
 Donde $m$ es el orden del máximo.
 
 Para incidencia normal se tiene que:
 $$
-a\sin(\theta_m)=m\lambda\tag{95}
+a\sin(\theta_m)=m\lambda\tag{97}
 $$
 El valor del ángulo $\theta_m$ depende de la longitud de onda.
 
@@ -1097,11 +1109,11 @@ El valor del ángulo $\theta_m$ depende de la longitud de onda.
 
 Las redes de difracción se utilizan para determinar el espectro de luz con el que emite una fuente. Se define la resolución del espectrómetro ($R$), y determina la capacidad del dispositivo de distinguir longitudes de onda que difieren muy poco entre sí:
 $$
-R=\frac{\lambda}{\Delta\lambda}\tag{96}
+R=\frac{\lambda}{\Delta\lambda}\tag{98}
 $$
 Donde $\lambda$ es la longitud de onda media y $\Delta\lambda$ es el límite de resolución. El criterio para decidir la resolución es que la distancia angular entre el mínimo adyacente a un máximo principal y el otro máximo, debe cumplir:
 $$
-\Delta\alpha=\frac{\pi}{N}\tag{97}
+\Delta\alpha=\frac{\pi}{N}\tag{99}
 $$
 
 
@@ -1109,6 +1121,6 @@ $$
 
 Entonces:
 $$
-\boxed{R=\frac{\lambda}{\Delta\lambda}=mN}\tag{98}
+\boxed{R=\frac{\lambda}{\Delta\lambda}=mN}\tag{100}
 $$
 Donde N es la cantidad de líneas de la red y $m$ es el orden del máximo que se toma para calcular la resolución.

@@ -30,7 +30,7 @@ for i in range(np.size(x_dato)):
     else:
         plt.plot(x_dato[:i+1],y_dato[:i+1],"-o", c="b")
     plt.title(f"Paso {i}")
-    #plt.xscale("log")
+    plt.xscale("log")
     plt.pause(0.2)
     plt.xlim(0.38,40)
     plt.ylim(0,1)

@@ -17,8 +17,8 @@ def dip_f(q,rq,ro):
         E = k*q*vp.norm(rt)/vp.mag(rt)**2
         return E
 
-d = 0.1
-lim = 10
+d = 1
+lim = 2
 
 x = np.linspace(-lim,lim,16)
 y = np.linspace(-lim,lim,16)

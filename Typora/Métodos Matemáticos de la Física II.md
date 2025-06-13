@@ -2,7 +2,7 @@
 
 ## Espacios lineales 
 
-Un espacio vectorial (EV) o lineal es un conjunto de vectores $V=\{\vec v\}$ asociado a un cuerpo $\mathbb C$ que es **cerrado** bajo las operaciones de suma y el producto escalar que cumplan con las propiedades:
+Un espacio vectorial (EV) o lineal es un conjunto de vectores $V=\{\vec v\}$ asociado a un cuerpo $\mathbb C$ que es **cerrado** bajo las operaciones de suma y el producto escalar que cumplan con las propiedades: $\newcommand {\ra} [1] {\langle #1 \rangle}$
 
 + $(\vec a+\vec b)+\vec c=\vec a +(\vec b +\vec c)$
 + $\vec a+\vec b =\vec b+\vec a $
@@ -46,7 +46,7 @@ $W$ es subespacio de $V$ si $\forall\vec x\in W\Rightarrow \vec x \in V$, y $W$ 
 Si se tiene una colección finita de subespacios $V_i$ de $V$ **disjuntos** y $\forall \vec x \in V\ \exists!\vec x_i/\vec x=\vec x_i$, entonces $V$ es suma directa de los subespacios $V_i$:
 $$
 V=\oplus_{i=1}^rV_i\\
-\text{dim}(V)=\sum\text{dim}(V_i)
+\text{dim}(V)=\sum\text{dim}(V_i)
 $$
 
 Donde la suma direct se define como $U\oplus W=\{\vec x+\vec y /\vec x \in U \and \vec y \in W\}$ y $U\cap W=\{\vec 0\}$.
@@ -127,7 +127,7 @@ $$
 f(A)=\sum_{n=0}^\infty a_n A^n
 $$
 
-### Transformaciones de coordenadas
+## Transformaciones de coordenadas
 
 Para dos bases de $V$, $\vec e_i$ y $\vec e_j'$, como la base primada es un vector de $V$ se puede escribir como combinación de la base no primada:
 $$
@@ -225,7 +225,7 @@ Se define la métrica como $g_{ij}=\Phi(\vec e_i,\vec e_j)$. Y la matriz métric
 
 Se puede aplicar:
 $$
-\vec x\cdot \vec y=\mathbb x^{\dagger}g\mathbb y
+\vec x\cdot \vec y=\mathbb x^{\dagger}g\mathbb y
 $$
 La métrica es hermitiana y definida positiva.
 
@@ -457,7 +457,7 @@ $$
 \vec u\times \vec v=\overline{\vec u\and \vec v}
 $$
 
-### Coordenadas curvilíneas
+## Coordenadas curvilíneas
 
 #### Cambio de coordenadas locales 
 
@@ -731,4 +731,475 @@ $$
 \boxed{\nabla \times \vec u=\varepsilon_{ijk}\frac{h_i}{J}(h_ku_k)_{,j}\hat{e_i}}\\
 \boxed{\nabla\cdot \vec u=\frac{1}{J}\bigg(\frac{J}{h_i}u_i\bigg)_{,i}}\\
 \boxed{\nabla^2\varphi=\frac{1}{J}\bigg(\frac{J}{h_i^2}\varphi_{,i}\bigg)_{,i}}
+$$
+
+## Distribuciones y espacios $\mathcal L^2$
+
+#### Funciones de prueba
+
+Una función de prueba se define como $\varphi:\R^n\rightarrow\C$ tal que $\varphi(\vec x)\in \mathcal C^\infty[\R^n]$ y es de soporte compacto ($\mathcal C_0^\infty$) $\exist a<\infty/\ \varphi(\vec x)=0$ si $||\vec x||\geq a$, o es una función de Schwartz ($\mathcal S$) que significa que $\varphi$ tiende más rápido a 0 que cualquier polinomio. 
+
+Propiedades básicas:
+
++ Tanto los conjuntos de las funciones de soporte compacto como las de Schwartz son espacios lineales.
++ Si $\varphi \in \mathcal C_0^\infty$ y $f(\vec x)\in \mathcal C^\infty $ entonces el producto también es de soporte compacto.
++ Si $\varphi \in \mathcal S $ y $f(\vec x)\in p_N $ entonces el producto también es de Schwartz.
++ Si $\varphi$ es de soporte compacto o de Schwartz sus derivadas pertenecen al mismo conjunto.
+
+#### Funciones lineales
+
+Dado un espacio lineal $V=\{\varphi:\R^n\rightarrow \C\}$, un **funcional** es cualquier aplicación $F$ de $V$ al cuerpo escalar. Es decir, un funcional es una forma sobre $V$.
+
+Dada $f\in \mathcal C^\infty$ y $\varphi\in\mathcal C_0^\infty, \mathcal S$, el funcional lineal asociado a f como:
+$$
+F[\varphi]=\langle f,\varphi \rangle:=\int...\int_{-\infty}^\infty f(\vec x)\varphi(\vec x)d^nx
+$$
+ Propiedades fundamentales:
+
++ Bilinealidad $\langle af+bg,\varphi\rangle=a\langle f,\varphi \rangle +b\langle g,\varphi \rangle$.
++ $\langle \psi f,\varphi \rangle=\langle f,\psi\varphi \rangle$
++ $\langle f^*,\varphi \rangle=\langle f,\varphi^* \rangle^*$
+
+### Distribuciones 
+
+Se define una distribución como un funcional lineal tal que:
+$$
+\langle  f,\cdot \rangle:\mathcal C_0^\infty, \mathcal S\rightarrow\C
+$$
+
+##### Convergencia de Schwartz 
+
+Se define la convergencia Schwartz (o continuidad de Schwartz) dadas $\psi, \varphi_j\in\mathcal C_0^\infty$ se dice que $\varphi_j\overset{\mathcal D} \rightarrow \psi$ siempre que:
+
++ $\exist B\sub \R^n $ acotado tal que $\varphi_j(\vec x)=0 \ \forall \vec x \notin B \forall j $, es decir $B$ contiene el soporte de todas las $\varphi_j $.
++ $\varphi_j(\vec x)$ tiende a $\psi(\vec x)$ uniformemente $\forall \vec x\in B$
++ Toda derivada de $\varphi_j $ converge uniformemente a la correspondiente derivada de $\psi$.
+
+Entonces, si $\langle f,\varphi_j\rangle \rightarrow \langle f,\psi\rangle $ siempre que $\varphi_j\overset{\mathcal D}\rightarrow \psi$ se tiene una **distribución de Schwartz**.
+
+Se puede definir otro tipo de convergencias, dadas $\psi,\varphi_j \in\mathcal C_0^\infty\ \or \in\mathcal S $, se dice que $\varphi_j \overset{\mathcal S}\rightarrow \psi$ siempre que para todo $p$ y para todo $k$:
+$$
+\sup|x^p(\varphi_j^{(k)}-\psi^{(k)}|\underset{j\rightarrow \infty }\rightarrow 0
+$$
+si $\langle f,\varphi_j\rangle \rightarrow \langle f,\psi\rangle $ siempre que $\varphi_j\overset{\mathcal S}\rightarrow \psi$ se tiene una **distribución temperada**.
+
+#### La delta de Dirac
+
+Se define el funcional $\ra{\delta,\cdot} $ con la propiedad:
+$$
+\ra{\delta,\phi}=\phi(0)\\
+\ra{\delta(x),\phi(x)}=\int_{-\infty}^\infty\delta (x)\phi(x)dx
+$$
+ Cumple $\forall\phi\in \mathcal C_0^\infty ,\mathcal S$:
+$$
+\ra{\delta(x-a),\phi(x)}=\phi (a)
+$$
+
+$$
+\ra{\delta (ax+b),\phi}=\frac{1}{a}\phi(-b/a)
+$$
+
+$$
+\ra{(x-x_0)\delta(x-x_0),\phi(x)}=0
+$$
+
+##### Derivadas de la delta de Dirac
+
+$$
+\ra{\delta ^{(n)},\phi}:=(-1)^n\ra{\delta ,\phi^{(n)}}=(-1)^n\phi^{(n)}(0)
+$$
+
+##### Delta de Dirac multidimensional
+
+$$
+\ra{\delta (\vec x),\phi(\vec x)}=\phi(\vec 0)
+$$
+
+Y se puede escribir:
+$$
+\delta (\vec x)=\delta (x)\delta (y)\delta (z)
+$$
+Análogamente:
+$$
+\ra{\delta (\vec x-\vec x_0),\phi(\vec x)}=\phi(\vec x_0)
+$$
+
+$$
+\ra{\part_x^n\part_y^m\part_z^l\delta (\vec x-\vec x_0),\phi(\vec x )}=(-1)^{n+m+l}\part_x^n\part_y^m\part_z^l\phi(\vec x_0)
+$$
+
+#### Sucesiones de distribuciones 
+
+Si $\{f_n\}$ es una sucesión de funciones tal que el limite de $\int^\infty_{-\infty}f_n\varphi dx$ existe para toda función de prueba $\varphi$ entonces se dice que la sucesión de funciones $\ra{f_n,\varphi}$ converge a la distribución:
+$$
+\ra{f,\varphi}:=\lim _{n\rightarrow\infty}\int_{-\infty}^\infty f_n(x)\varphi(x)dx
+$$
+Tipos de distribuciones:
+
++ $\ra{f,\cdot }$ es **regular** si $f$ es una función localmente integrable. Lo que se puede resumir en que $f$ debe ser continua exepto en un número finito de puntos y $\ra{f,\varphi}=\int_{-\infty}^\infty f(x)\varphi (x)dx$ existe y es finita par toda función de prueba.
++ Una distribución $\ra{f,\cdot }$ es **singular** si la función $f(x)$ es singular.
+
+
+
+Teorema: toda distribución $f$ es el limite de una sucesión de distribuciones regulares $f_n$.
+
+##### Derivación 
+
+Se define la derivada de una distribución como:
+$$
+\ra{f',\varphi }=-\ra{f,\varphi'}
+$$
+A partir de esto se puede demostrar que la función de Heaviside $\Theta$ cumple:
+$$
+\Theta'=\delta 
+$$
+
+##### Integración
+
+Dada una distribución $g$ sobre $\R$ existe otra distribución $f$ tal que $f'=g$ y es única a menos de una constante aditiva. Si:
+$$
+\varphi(x)=-\int_{-\infty}^\infty\psi(x')dx'
+$$
+Entonces si $\varphi'=-\psi$ y $\psi$ es continuamente diferenciable:
+$$
+\ra{f,\psi}=\ra{g,\varphi}
+$$
+
+##### Cambios de variable
+
+Llevando a la forma integral:
+$$
+\ra{f,\varphi}=\int f(\vec x )\varphi(\vec x)d^nx=\int f(\vec x(\vec y))\varphi(\vec x(\vec y))Jd^ny=\int g(\vec y )\psi(\vec y)d{^ny}
+$$
+Entonces se define:
+$$
+g(\vec y )=J\vec f(\vec x(\vec y ))\\
+\psi(\vec x)=\varphi(\vec x (\vec y ))
+$$
+Se puede decir que las distribuciones transforman como densidades escalares de peso 1.
+
+### Espacios $\mathcal L^2$ 
+
+Si tomamos un espacio lineal de funciones en un intervalo $[a,b]$ a valores complejos, y se define un **producto interno** como:
+$$
+\ra{f,g}=\int_a^bf^*(x)g(x)dx 
+$$
+En base a esta se define una **norma**:
+$$
+||f||:=\sqrt{\ra{f,f}}=\sqrt{\int_a^b|f(x)|^2dx}
+$$
+Se define:
+$$
+\mathcal L^2[a,b]=\{f:[a,b]\rightarrow \C /||f||<\infty\}
+$$
+Por la definición de $\mathcal L^2$ es directo que $\mathcal L^2[a,b]=\mathcal L^2(a,b]=\mathcal L^2[a,b)=\mathcal L^2(a,b)$.
+
+Propiedades:
+
++ Desigualdad de Cauchy-Schwartz: $|\ra{f,g}|\leq||f||\cdot||g||$
++ Desigualdad triangular: $||f+g||\leq ||f||+||g||$
+
+Luego a partir de la noción de **distancia** $||f-g||$ se puede definir la igualdad en $\mathcal L^2$ como:
+$$
+f\overset{\mathcal L^2} =g \Longleftrightarrow||f-g||=0
+$$
+
+Dos funciones $f$ y $g$ son **ortogonales** si:
+$$
+\ra{f,g}=0
+$$
+
+#### Espacio $\mathcal L^2_\rho$
+
+Se puede pensar en un espacio similar que $\mathcal L^2$ solo que el producto interno este definido a partir de una función peso $\rho$ :
+$$
+\ra{f,g}_\rho:=\int_a^bf^*(x)g(x)\rho(x)dx
+$$
+Entonces la norma se define como:
+$$
+||f||_\rho=\sqrt {\ra{f,f}_\rho}
+$$
+
+#### Convergencia
+
+**Convergencia puntual**:
+$$
+f_n\rightarrow f\text{ si } \lim_{n\rightarrow\infty }f_n(x)=f(x)\ \ \forall x\in [a,b]
+$$
+**Convergencia uniforme**:
+$$
+f_n\overset{u}\rightarrow f\text{ si }\forall \epsilon>0\ \exist N/ \ n\geq N\Rightarrow|f_n(x)-f(x)|<\epsilon \ \forall x\in[a,b]
+$$
+**Convergencia en $\mathcal L^2$**:
+$$
+f_n\overset{\mathcal L^2}\rightarrow f\text{ si } \lim_{n\rightarrow\infty }||f_n-f||=0 
+$$
+La convergencia uniforme implica la puntual y en $\mathcal L^2$, pero no al revés. 
+
+La convergencia en $\mathcal L^2$ no implica la puntual ni al revés. Pero si una sucesión converge en $\mathcal L^2$ y puntualmente lo hace al mismo límite.
+
+#### Sucesión de Cauchy
+
+Un sucesión es de Cauchy si:
+$$
+\forall \epsilon>0\ \exist N/\ n,m\geq N\Rightarrow ||f_n-f_m||<\epsilon 
+$$
+Y se cumple que toda sucesión convergente en $\mathcal L^2$ es de Cauchy. Además, para toda sucesión de Cauchy $f_n \in\mathcal L^2$ existe una función en $f\in\mathcal L^2$ tal que $f_n\overset{\mathcal L^2}\rightarrow f$ . Se puede demostrar que el conjunto de funciones continuas en $[a,b]$ es denso en $\mathcal L^2$.
+
+#### Funciones ortogonales 
+
+Dado un conjunto $\{\varphi_k\}^\infty_{k=1}$ todas ortogonales entre si, se cumple la desigualdad de Bessel:
+$$
+\sum_{k=1}^\infty\frac{|\ra{\varphi_k,f}|^2}{\ra{\varphi_k,\varphi_k}}\leq||f||^2
+$$
+ Si se cumple la igualdad el conjunto $\{\varphi_k\}$ se dice que es **completo** en $\mathcal L^2$ y forma una base para $\mathcal L^2$. Si esto sucede se cumple que para toda función $f\in \mathcal L^2$:
+$$
+\sum_{k=1}^\infty\frac{\ra{\varphi_k,f}}{\ra{\varphi_k,\varphi_k}}\varphi_k\overset{\mathcal L^2}=f
+$$
+Y se cumple la **relación de Parseval o de completitud**:
+$$
+||f||^2=\sum_{k=1}^\infty\frac{|\ra{\varphi_k,f}|^2}{\ra{\varphi_k,\varphi_k}}
+$$
+Teorema de Parseval: Un conjunto ortogonal $\{\varphi_k\}_{k=1}^\infty$ es completo en $\mathcal L^2$ si y solo si satisface la relación de Parseval para toda $f\in\mathcal L^2$. 
+
+## Condiciones de contorno
+
+#### Problemas de valores iniciales
+
+Dada un EDO $y''+r(x)y'+s(x)y=f(x)/x\in I$ si las funciones $s$, $r$ y $f$ son continuas en $I$ y se da el valor de la derivada y la función en un punto $x_0\in I$, existe una única solución que cupla las condiciones.
+
+##### Ceros aislados 
+
+Teorema: Si $y$ es una solución no trivial de la ecuación $y''+r(x)y'+s(x)y=f(x)/x\in I$ homogénea entonces todo cero de y en $I$ es aislado.
+
+Alternancia de ceros:
+
+**Teorema de separación de Sturm**: Si $y_1$ e $y_2$ son dos soluciones de la ecuación $y''+r(x)y'+s(x)y=f(x)/x\in I$ homogénea y son LI en $I$ entonces los ceros de $y_1$ e $y_2$ son diferentes y se alternan.
+
+#### Reducción a la forma normal de Liouville
+
+Si tenemos la ecuación diferencial:
+$$
+y''+r(x)y'+s(x)y=f(x)/x\in I
+$$
+Se toma:
+$$
+y(x)=u(x)v(x)
+$$
+Si se elije:
+$$
+v(x)=\exp \bigg(-\frac{1}{2}\int^x r(x')dx'\bigg)
+$$
+Y si se define:
+$$
+\rho(x)=s(x)-\frac{1}{4}r^2(x)-\frac{1}{2}r'(x)
+$$
+Entonces la ecuación diferencial para $u$ queda:
+$$
+u''+\rho(x)u=0
+$$
+Y es llamada **forma normal de Liouville**.
+
+**Teorema de comparación de Sturm**: sean $\varphi$ y $\psi$ soluciones no triviales de:
+$$
+y''+\rho_1(x)y=0\\
+y''+\rho_2(X)y=0
+$$
+Respectivamente, si $\rho_1(x)\geq\rho_2(x)\ \forall x\in I$, entonces $\varphi$ tiene al menos un cero entre cada par ceros consecutivos de $\psi $. 
+
+### Problemas de contorno
+
+Si se tiene la ecuación diferencial con operador diferencial $L$:$\newcommand{der}[2] {\frac{d#1}{d#2}}$
+$$
+p(x)y''+q(x)y'+r(x)y=0\\
+Ly=0\\
+L=p(x)\der{^2}{x^2}+q(x)\der{}{x}+r(x)
+$$
+Se define el operador adjunto formal de $L$ como:
+$$
+L^\dagger=p^*\der{^2}{x^2}+(2p'^{*}-q^*)\der{}{x}+(p''^*q'^*+r^*)
+$$
+El operador L se dice **formalmente autoadjunto** cuando $L^\dagger=L$, y esto se cumple cuando $p$, $q$ y $r$ son reales y $p'=q$.
+
+#### Reducción a un operador formalmente autoadjunto
+
+Si se tiene el operador:
+$$
+\tilde{L}y=a_0(x)y''+a_1(x)y'+a_2(x)y=f(x) \ \ \ x\in(a,b)
+$$
+Para llevarlo a la forma formalmente autoadjunto se multiplica por:
+$$
+\rho(x)=\frac{c}{a_0(x)}\exp\bigg(\int^x\frac{a_1(x')}{a_0(x')}dx'\bigg)
+$$
+Y queda de la forma deseada:
+$$
+L(y)=\rho(x)f(x)
+$$
+Con:
+$$
+\rho\tilde{L}=L
+$$
+
+#### Clasificación y tipo de condiciones de contorno
+
+Dado un operador formalmente autoadjunto:
+$$
+L(y)=\der{}{x} \bigg[p(x)\der{y}{x}\bigg]-q(x)y=f(x)\ \ \ -\infty\leq a<x<b\leq \infty
+$$
+Con $a$ y $b$ puntos regulares.
+
+La condiciones de contorno (CC) pueden ser **separadas** donde una solo involucra condiciones sobre $a$ y otra sobre $b$, o **no separadas** si involucran ambos extremos. Las mas comunes:
+
++ CC de Dirichlet: separada, $y(a)=u_1$ o  $y(b)=u_2$.
++ CC de Neumann: separada, $y'(a)=u_1$ o $y'(b)=u_2$.
++ CC de Robin: separada, $y'(a)+c_1y(a)=u_1$ o $y'(b)+c_2y(b)=u_2$.
++ CC periódicas: no separada, $y(a)=y(b)$ e $y'(a)=y'(b)$.
++ CC de función finita: separada, $\lim_{x\rightarrow a^+}|y(x)|<\infty$ o $\lim_{x\rightarrow b^-}|y(x)|<\infty$.
+
+Además,  las CC se clasifican en CC **homogéneas** si $u_i=0$ o **inhomogéneas** si es distinto de cero. Las CC periódicas y de función finita se tratan como condiciones homogéneas.
+
+En un mismo problema se pueden tener un tipo de condición sobre $a$ y otra sobre $b$, si sucede se llaman condiciones de contorno **mixtas**.
+
+Un problema de contorno es:
+
++ **Homogéneo**: si $f(x)\equiv 0$ y las CC homogéneas.
++ **Inhomogéneo**: si $f(x)\neq 0$ y/o al menos una CC es inhomogénea.
+
+#### Homogeneización de las CC
+
+Para homogeneizar las condiciones de contorno basta con encontrar una función $g$ que cumpla las CC y se define la nueva variable de la ecuación como $\tilde{y}(x):=y(x)-g(x)$.
+
+#### Identidad de Lagrange y fórmula de Green
+
+Dadas dos funciones $y$ y $z$ que cumplen:
+$$
+L(y)=f(x)\\
+L(z)=g(x)
+$$
+La identidad de Lagrange es:
+$$
+\der{}{x}\bigg[p(x)\bigg( z\der{y}{x}-y\der{z}{x} \bigg)\bigg]=f(x)z(x)-g(x)y(x)
+$$
+Y la fórmula de Green:
+$$
+\int_a^b[zL(y)-yL(z)]dx=\bigg[p(x)\bigg( z\der{y}{x}-y\der{z}{x} \bigg)\bigg]_a^b=\int_a^b[f(x)z(x)-g(x)y(x)]dx
+$$
+
+### Problemas de Sturm-Liouville 
+
+Dado un operador formalmente autoadjunto $L$:
+$$
+L(y)=\der{}{x}\bigg(p(x)\der{y}{x}\bigg)-q(x)y
+$$
+Con $p\in\mathcal C^1(a,b)$ y$q\in\mathcal C^0(a,b)$ reales, y $p(x)$ positivo. Si el conjunto de las funciones que cumplen las CC cumplen que:
+$$
+[p(f^*g'-f'^*g)]_a^b=0
+$$
+Es decir las condiciones de contorno son Hermitianas.
+
+El **problema de Sturm-Liouville (PSL)**, es el problema de contorno:
+$$
+L(y)+\lambda\rho(x)y=0,\ \ \ a<x<b
+$$
+Con $L$ formalmente autoadjunto, $\rho\in\mathcal C[a,b]$, y CC hermitianas para $L$.
+
+ Si $[a,b]$ no contiene puntos singulares de $L $ se dice que el PSL es **regular**, en caso contrario se lo llama **singular**. Toda constante $\lambda $ para la que exista solución **no trivial** se llama **autovalor** del problema.
+
+**Propiedades**:
+
++ Los autovalores de un PSL son reales.
+
+##### **Subespacio característico**
+
++ Dado un autovalor $\lambda $ este tiene asociado a lo sumo dos autofunciones LI, es decir $\dim(\ker(L+\rho\lambda))\leq 2$. Si las CC son separadas cada autovalor tiene asociada una sola autofunción, $\dim(\ker(L+\lambda\rho))=1$.
+
+**Ortogonalidad de las autofunciones**
+
++ Las autofunciones de un PSL correspondientes autovalores diferentes son ortogonales en $\mathcal L_\rho^2(a,b)$. En caso de autovalores degenerados las autofunciones LI correspondientes a un mismo autovalor pueden ortogonalizarse.
+
+**Espectro de autovalores **
+
++ El espectro de autovalores es generalmente acotado por debajo.
++ El espectro de autovalores en general puede contener una parte continua y una discreta.
+
+**Completitud de las autofunciones**
+
++ Las autofunciones $\varphi_\lambda$ correspondientes a los diferentes autovalores del PSL forman un conjunto completo en $\mathcal L^2_\rho(a,b)$ entonces:
+
+$$
+f \overset{\mathcal L_\rho^2} = \sum_\lambda \frac{\ra{\varphi_\lambda ,f}_\rho}{\ra{\varphi_\lambda,\varphi_\lambda}_\rho} \varphi_\lambda
+$$
+
+#### Notación de Dirac
+
+Se piensa el corchete $\ra{f,g}$ como una conjunción entre el bra $\bra f$ y el ket $\ket g$, así se tiene:
+$$
+\int_a^b f^*(x)g(x)\rho(x)dx=\ra{f,g}=\bra f \ket g=\ra{f|g}
+$$
+De esta forma se puede pensar un operador diferencial como un operador de un espacio vectorial, el bra como un elemento del espacio dual y el ket como un elemento del espacio. Si $L$ es hermitiano:
+$$
+\ra{Lf,g}=\ra{f,Lg}=\bra fL\ket g
+$$
+ Y se puede pensar que $L$ actúa hacia delante o hacia atrás.
+
+Desarrollando en autofunciones normalizadas $\psi_\lambda $ se puede deducir el desarrollo para el operador identidad, la delta de Dirac y la proyección:
+$$
+P_\lambda=\ket{\psi_\lambda}\bra{\psi_\lambda}\\
+I=\sum_\lambda \ket{\psi_\lambda}\bra{\psi_\lambda}\\
+\delta(x-x')=\sum_\lambda\psi_\lambda(x)\rho(x)\psi_\lambda(x')
+$$
+
+#### Problemas inhomogéneos
+
+Dado el problema:
+$$
+(L+\rho\mu)y=\rho f\ \ \ \ a<x<b
+$$
+Y sea $\lambda$ los autovalores del problema homogéneo, usando la completitud de sus autofunciones asociadas se puede desarrollar:
+$$
+\ket y =\sum_\lambda \ket{\psi_\lambda }\bra{\psi_\lambda} \ket y\\
+\ket f =\sum_\lambda \ket{\psi_\lambda }\bra{\psi_\lambda} \ket f
+$$
+Entonces remplazando en la ecuación y usando que $L\ket{{\psi_\lambda }}=-\lambda \rho\ket {\psi_\lambda }$:
+$$
+\sum_\lambda (L\ket {\psi_\lambda }+\rho\mu\ket {\psi_\lambda })\bra {\psi_\lambda }\ket y =\rho\sum_\lambda \ket {\psi_\lambda }\bra {\psi_\lambda }\ket f\\
+\Rightarrow
+\sum_\lambda (\mu-\lambda)\ket{\psi_\lambda }\bra{\psi_\lambda }\ket y =\sum_\lambda \ket {\psi_\lambda }\bra {\psi_\lambda }\ket f
+$$
+Igualando termino a termino:
+$$
+(\mu-\lambda)\bra{\psi_\lambda }\ket y=\bra {\psi_\lambda }\ket f
+$$
+Así:
+$$
+\ket y =\sum_\lambda \ket{\psi_\lambda }\frac{\ra{{\psi_\lambda }|f}}{(\mu-\lambda )}=
+\bigg(\sum_\lambda\frac{\ket {\psi_\lambda }\bra {\psi_\lambda }}{(\mu-\lambda )}\bigg)\ket f
+$$
+Entonces el siguiente operador es la inversa formal del operador $L+\rho\mu$:
+$$
+\sum_\lambda\frac{\ket {\psi_\lambda }\bra {\psi_\lambda }}{(\mu-\lambda )}
+$$
+
+## Funciones Especiales 
+
+### PSL para la ecuación armónica
+
+El PSL esta dado por:
+$$
+y''+\lambda y =0
+$$
+Se puede encontrar para $\lambda >0$ que las autofunciones son $\cos(k_nx)$ y $\sin(k_nx)$
+
+#### Desarrollo en autofunciones (Desarrollo de Fourier)
+
+$$
+f(x)=a_0+\sum_{n=1}^\infty[a_n\cos(k_nx)+b_n\sin(k_nx)]=\sum_{n=-\infty}^\infty c_ne^{ik_nx}
+$$
+
+Usando ortogonalidad:
+$$
+a_0=\frac{\ra{1,f}}{\ra{1,1}}\\
+a_n=\frac{\ra{\cos(k_nx),f}}{\ra{\cos(k_nx),\cos(k_nx)}}\\
+b_n=\frac{\ra{\sin(k_nx),f}}{\ra{\sin(k_nx),\sin(k_nx)}}\\
+c_n=\frac{\ra{e^{ik_nx},f}}{\ra{e^{ik_nx},e^{ik_nx}}}
 $$

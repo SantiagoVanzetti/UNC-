@@ -851,7 +851,7 @@ $$
 $$
 A partir de esto se puede demostrar que la función de Heaviside $\Theta$ cumple:
 $$
-\Theta'=\delta 
+\Theta'=\delta
 $$
 
 ##### Integración
@@ -882,7 +882,7 @@ Se puede decir que las distribuciones transforman como densidades escalares de p
 
 Si tomamos un espacio lineal de funciones en un intervalo $[a,b]$ a valores complejos, y se define un **producto interno** como:
 $$
-\ra{f,g}=\int_a^bf^*(x)g(x)dx 
+\ra{f,g}=\int_a^bf^*(x)g(x)dx
 $$
 En base a esta se define una **norma**:
 $$
@@ -932,7 +932,7 @@ f_n\overset{u}\rightarrow f\text{ si }\forall \epsilon>0\ \exist N/ \ n\geq N\Ri
 $$
 **Convergencia en $\mathcal L^2$**:
 $$
-f_n\overset{\mathcal L^2}\rightarrow f\text{ si } \lim_{n\rightarrow\infty }||f_n-f||=0 
+f_n\overset{\mathcal L^2}\rightarrow f\text{ si } \lim_{n\rightarrow\infty }||f_n-f||=0
 $$
 La convergencia uniforme implica la puntual y en $\mathcal L^2$, pero no al revés. 
 
@@ -942,7 +942,7 @@ La convergencia en $\mathcal L^2$ no implica la puntual ni al revés. Pero si un
 
 Un sucesión es de Cauchy si:
 $$
-\forall \epsilon>0\ \exist N/\ n,m\geq N\Rightarrow ||f_n-f_m||<\epsilon 
+\forall \epsilon>0\ \exist N/\ n,m\geq N\Rightarrow ||f_n-f_m||<\epsilon
 $$
 Y se cumple que toda sucesión convergente en $\mathcal L^2$ es de Cauchy. Además, para toda sucesión de Cauchy $f_n \in\mathcal L^2$ existe una función en $f\in\mathcal L^2$ tal que $f_n\overset{\mathcal L^2}\rightarrow f$ . Se puede demostrar que el conjunto de funciones continuas en $[a,b]$ es denso en $\mathcal L^2$.
 

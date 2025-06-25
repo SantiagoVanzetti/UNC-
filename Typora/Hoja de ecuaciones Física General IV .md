@@ -205,7 +205,7 @@ R=R\perp=R\parallel=\bigg(\frac{n_t-n_i}{n_t+n_i}\bigg)^2\\
 T=T\perp=T\parallel=\frac{4n_tn_i}{(n_t+n_i)^2}
 $$
 
-## Óptica geométrica
+## Óptica Geométrica
 
 $\bullet$ **Objeto**: cualquier cuerpo desde donde se irradia luz.
 $\bullet$ **Imagen**: figura formada por los rayos emitidos por un objeto luego de interactuar con el sistema óptico. Puede ser **real**, si es formada por rayos que emite el objeto que se intersecan; o **virtual** si se forma desde donde parecen venir los rayos. 
@@ -1132,33 +1132,33 @@ $$
 I(Y,Z)=I(0)\bigg[\frac{\sin(\beta')}{\beta'}\bigg]^2\bigg[\frac{\sin(\alpha')}{\alpha'}\bigg]^2\\
 \beta'=\frac{kbY}{2R}\\
 \alpha'=\frac{kaZ}{2R}\\
-I(0)=\frac{\epsilon_A^2A^2}{2R^2}
+I(0)=\frac{\epsilon_A^2A^2}{2R^2}\tag{101}
 $$
 Donde $k$ es el número de onda, $Y$ y $Z$ son los ejes de un sistema coordenado sobre una pantalla, $a$ es la longitud de la abertura a lo largo del eje $Z$ y $b$ es la longitud en el eje $Y$. El valor de $R$ es:
 $$
-R=\sqrt{X^2+Y^2+Z^2}
+R=\sqrt{X^2+Y^2+Z^2}\tag{102}
 $$
 Donde $X$ es la distancia de la abertura a la pantalla. Por otro lado el valor de $I(0)$ es la intensidad en el máximo central, la cuál está dada por:
 $$
-I(0)=\frac{\epsilon_A^2A^2}{2R^2}
+I(0)=\frac{\epsilon_A^2A^2}{2R^2}\tag{103}
 $$
 Donde $\epsilon_A$ es la eficacia de la fuente por unidad de área, y $A$ es el área de la abertura.
 
 Los mínimos de este patrón se dan cuando:
 $$
-\beta'\text{ ó  }\alpha'=m\pi\ \ \ m\neq0\Rightarrow I(Y,Z)=0
+\beta'\text{ ó  }\alpha'=m\pi\ \ \ m\neq0\Rightarrow I(Y,Z)=0\tag{104}
 $$
 Entonces los mínimos se dan cuando:
 $$
-Y=m\frac{\lambda R}{b}\ \text{ ó }\ Z=m\frac{\lambda R}{a}
+Y=m\frac{\lambda R}{b}\ \text{ ó }\ Z=m\frac{\lambda R}{a}\tag{105}
 $$
 Sobre el $\beta',\alpha'=0$ los máximos subsidiarios se dan cuando:
 $$
-\beta'_m=(2m+1)\frac{\pi}{2}
+\beta'_m=(2m+1)\frac{\pi}{2}\tag{106}
 $$
 Y su intensidad relativa será:
 $$
-\frac{I}{I(0)}=\frac{1}{\beta_m'^2 }
+\frac{I}{I(0)}=\frac{1}{\beta_m'^2 }\tag{107}
 $$
 Vale analogamente lo mismo en el eje $\alpha',\beta'=0$.
 
@@ -1166,31 +1166,348 @@ Vale analogamente lo mismo en el eje $\alpha',\beta'=0$.
 
 Si se tiene una abertura circular de radio $a$ el patrón de difracción sobre una pantalla a una distancia $X$ esta dado por:
 $$
-I(q)=I(0)\bigg[\frac{2J_1(\frac{kaq}{R})}{\frac{kaq}{R}}\bigg]^2
+I(q)=I(0)\bigg[\frac{2J_1(\frac{kaq}{R})}{\frac{kaq}{R}}\bigg]^2\tag{108}
 $$
 Donde $q$ es la doordenada radial sobre la pantalla, $J_1$ es la función de Bessel de orden 1, $k$ es el número de onda del la luz. El valor de $R$ es:
 $$
-R=\sqrt{X^2+q^2}
+R=\sqrt{X^2+q^2}\tag{109}
 $$
 $I(0)$ es la intensidad en el máximo central:
 $$
-I(0)=\frac{\epsilon_A^2A^2}{2R^2}
+I(0)=\frac{\epsilon_A^2A^2}{2R^2}\tag{110}
 $$
 Sea $\theta$ el angulo formado entre el eje óptico y una recta que une el centro de la abbertura con el punto en la pantalla, se puede ver que:
 $$
-\sin(\theta)=\frac{q}{R}
+\sin(\theta)=\frac{q}{R}\tag{111}
 $$
 Entonces el patrón de interferencia es:
 $$
-I(\theta)=I(0)\bigg\{\ \frac{2J_1[ka\sin(\theta) ]}{ka\sin(\theta)}\bigg\}^2
+I(\theta)=I(0)\bigg\{\ \frac{2J_1[ka\sin(\theta) ]}{ka\sin(\theta)}\bigg\}^2\tag{112}
 $$
 El maximo central forma un disco que esta dado por el primer cero de la funcion $J_1$. Este disco es llamado **Disco de Airy**. Su radio ($q_1$) es:
 $$
-q_1=1,22\frac{R\lambda}{2a}
+q_1=1,22\frac{R\lambda}{2a}\tag{113}
 $$
 Si a la rendija se le coloca una lente de distancia focal $f\simeq R$, entonces:
 $$
-q_1=1,22\frac{f\lambda}{2a}
+q_1=1,22\frac{f\lambda}{2a}\tag{114}
 $$
- pag.20
+ Para ceros de orden superior se iguala el argumento de la función $J_1$ a sus ceros de orden superior. Por otro lado los máximos secundarios estarán dados por los ceros de la función $J_2$ de Bessel.
 
+#### Resolución de imágenes: Criterio de Rayleigh
+
+Si se toma el semi-ancho angular del disco de Airy $\Delta\theta =q_1/f$, usando la ecuación (114):
+$$
+\Delta\theta=1,22\frac{\lambda}{D}\tag{115}
+$$
+Una imagen se dice que está resuelta si $\Delta \theta $ es menor que una separación angular máxima entre dos fuentes $\Delta\phi$ definida por algún criterio.
+
+Según el criterio de Rayleigh dos imágenes están resueltas si el centro del disco de Airy de una de ellas está ubicado en el primer mínimo del patrón de la segunda imagen, es decir:
+$$
+\Delta \phi_{\text{min}}=\Delta \theta =1,22\frac{\lambda }{D}\tag{116}
+$$
+Si $\Delta l$ es la separación entre los centros de cada imagen:
+$$
+\Delta l_{\text{min}}=1,22\frac{f\lambda }{D}\tag{117}
+$$
+Además se define el poder de resolución tal que menor sea el límite de resolución mayor definición tendrá la imagen:
+$$
+\frac{1}{\Delta \phi_{\text{min}}}\text{ ó }\frac{1}{\Delta l_{\text{min}}}\tag{118}
+$$
+
+## Física Moderna 
+
+Hasta el siglo XIX la física conocida se podría resumir la mecánica de Newton, el Electromagnetismo y la Termodinámica y la Teoría Cinética. Estas teorías son base de lo que se denomina Física Clásica. Sin embargo la Física Clásica no podía explicar distintos fenómenos observados experimentalmente:
+
++ **Espectros continuos**: Sólidos y líquidos calientes emiten radiación con espectros continuos  ($I(\lambda)$).
++ **Espectros de líneas**: Al producirse descargas eléctricas en una gas se emite un espectro discreto, debido a la estructura interna del átomo.
++ **Efecto Fotoeléctrico**: las superficies metálicas emiten electrones al ser iluminadas.
++ **Emisión de Rayos X**: al producirse descargas eléctricas en gases se observa la emisión de radiación muy penetrante (Rayos X).
+
+### Espectro continuo. Radiación térmica
+
+La radiación térmica es la radiación emitida por un cuerpo debido a su temperatura. Esta radiación se emite en todo el espectro pero dependiendo de la temperatura se emite mas de un tipo de longitud de onda. La curva es la misma para todas las temperaturas.
+
+##### Ley de Stefan
+
+La intensidad total radiada:
+$$
+I=\int_0^\infty I(\lambda)d\lambda = \sigma T^4\tag{119}
+$$
+Donde $T$ es la temperatura en Kelvin, y $\sigma $ es la constante de Stefan-Boltzmann:
+$$
+\sigma =5,67037\cdot 10^{-8}\frac{W}{m^2K^4}\tag{120}
+$$
+
+##### Ley de desplazamiento de Wien 
+
+Existe una relación entre la longitud de onda donde la irradiancia es máxima y la temperatura:
+$$
+\lambda_{\text{max}}T=2,8978\cdot 10^{-3}mK\tag{121}
+$$
+
+##### Cuerpo negro
+
+Este tipo de análisis depende de las características superficiales del objeto y de la cantidad de radiación que el medio refleja. Para simplificar esto se define un **Cuerpo Negro**. Un cuerpo negro es un superficie ideal que absorbe toda la radiación electromagnética de todas las longitudes de onda que inciden sobre él y no refleja nada. Además, emite radiación en cualquier longitud de onda. Por lo que se dice que un cuerpo negro es un **absorbente y emisor ideal**.
+
+Se puede fabricar teóricamente uno de estos cuerpos. Si se tiene una caja metálica en equilibrio térmico a temperatura $T$, llena de radiación que es emitida y reflejada por las paredes, con un orificio que permite que parte de la radiación escape. Entonces el orificio es un cuerpo negro, ya que toda la radiación que incide sobre este s pierde dentro de la caja y la radiación que emite es de todas las longitudes de onda dentro de la cavidad.
+
+Si la caja tiene una densidad volumétrica de energía por unidad de longitud de onda $u(\lambda)$. Para un instante la mita de la radiación en la caja se moverá alejándose del orificio y la otra acercándose a una velocidad $c$. Se puede demostrar haciendo un promedio sobre los ángulos de incidencia sobre el orificio que la energía fluyendo en dirección al orificio es:
+$$
+I(\lambda )=\frac{1}{4} c\ u(\lambda )\tag{122}
+$$
+Ahora si se realiza un análisis usando las teorías electromagnética y termodinámica clásica, el número de ondas estacionarias con longitud de onda entre $\lambda $ y $\lambda+d\lambda $ es:
+$$
+N(\lambda)=\frac{8\pi V }{\lambda ^4}\tag{123}
+$$
+Con $V$ el volumen de la caja. Del Principio de equipartición de la energía: $E_{prom}=k_BT$. Se obtiene que la densidad de energía de radiación es el numero de ondas estacionarias por unidad de volumen por la energía promedio. Con lo que se consigue la **Ley de Rayleigh-Jeans**:
+$$
+I(\lambda )=\frac{2\pi c }{\lambda ^4}kT\tag{124}
+$$
+Con lo que cuando la longitud de onda tiende a 0 la irradiancia diverge. Este problema teórico se llamó la catástrofe ultravioleta. Para poder explicarla se desarrollo la Teoría Cuántica.
+
+#### Teoría Cuántica
+
+Se propone que un átomo oscilando **solo puede absorber o emitir energía de manera discreta**:
+$$
+E_n=n\varepsilon\tag{125}
+$$
+ Donde $\varepsilon$ es la cantidad básica de energía llamada **cuanto**. La energía de este cuanto está determinada por la frecuencia:
+$$
+\varepsilon=h\nu\tag{126}
+$$
+Donde $h$ es la **constante de Planck:**
+$$
+h=6,6206696\cdot 10^{-34}Js\tag{127}
+$$
+Si se considera que la energía es discreta, el número de osciladores con energía $E_n$:
+$$
+N_n=N\bigg(1-\exp\bigg(-\frac{\varepsilon}{kT}\bigg)\bigg)\exp\bigg(-\frac{n\varepsilon}{kT}\bigg)\tag{128}
+$$
+Se puede demostrar que la energía promedio es:
+$$
+E_{prom}=\frac{h\nu}{e^{\frac{h\nu}{kT}}-1}\tag{129}
+$$
+Esta energía cumple que:
+$$
+\lim_{\lambda \rightarrow\infty}E_{prom}=kT \\
+\lim_{\lambda \rightarrow0}E_{prom}=0\tag{130}
+$$
+
+##### Ley de Radiación de Planck
+
+$$
+I(\lambda )=\frac{2\pi h c^2}{\lambda{^5}}\frac{1}{e^{\frac{hc}{\lambda kT}}-1}\tag{131}
+$$
+
+A partir de esta ley se pueden deducir las leyes de Wien y de Stefan con:
+$$
+\sigma=\frac{2\pi^5k^4}{15c^2h^3}\tag{132}
+$$
+Además cuando $\lambda \rightarrow\infty $ se obtiene la Ley de Rayleigh-Jeans.
+
+##### Poder emisivo
+
+Los cuerpos reales no son cuerpos negros perfectos, por lo que la Ley de Stefan se puede modificar:
+$$
+I=\varepsilon\sigma T^4\tag{133}
+$$
+Donde $\varepsilon $ es el **poder emisivo**:
+$$
+\varepsilon =\frac{\text{Radiación emitida}}{\text{Radiación emitida como si fuese un cuerpo negro}}
+$$
+
+### Efecto Fotoeléctrico 
+
+Este fenómeno se da cundo una superficie metálica es iluminada y emite electrones denominados **fotoelectrones**. Los resultados experimentales son:
+
++ Para una dad frecuencia de luz, la energía cinética máxima es independiente de la intensidad de la luz.
++ Ele efecto fotoeléctrico solo ocurre para la luz cuya frecuencia sea mayor que una dada **frecuencia umbral** $\nu_c$ , la cual depende del material.
++ Los fotoelectrones se emiten casi instantáneamente, con tiempo menores a $10^{-9}s$ desde que la luz incide.
+
+La teoría clásica realiza otras predicciones que no se corresponden a las observadas:
+
++ La energía cinética máxima debería ser proporcional a la intensidad de la luz.
++ El efecto debería ocurrir para luz de cualquier frecuencia.
++ El primer fotoelectrón debería ser emitido unos segundos después de que la superficie es iluminada.
+
+Einstein usando la idea de Planck, propuso que la energía de radiación electromagnética está concentrada en paquetes o cuantos denominados **fotones**, con energía:
+$$
+E=h\nu=\frac{hc}{\lambda}\tag{134}
+$$
+El fotón viaja a la velocidad de la luz $c$, su dirección de movimiento es la dirección de la propagación de la onda electromagnética, y tiene masa en reposo igual a cero, pero momento lineal:
+$$
+p=\frac{E}{c}=\frac{h\nu}{c}=\frac{h}{\lambda }\tag{135}
+$$
+Einstein propone que el fotoelectrón es emitido como resultado de la interacción con un solo fotón cuya energía se entrega instantáneamente.
+
+La **función trabajo** $\phi$ es la cantidad mínima de energía que el electrón debe ganar para escapar del material. Si $h\nu>\phi$ entonces:
+$$
+K_{max}=h\nu-\phi=\frac{1}{2}mv_{max}^2=eV_0\tag{136}
+$$
+Donde $V_0$ es el **potencial de frenado**. 
+
+Se tiene que:
+$$
+h\nu_c=\phi\Rightarrow K_{max}=0\tag{137}
+$$
+Entonces:
+$$
+\nu_c=\frac{\phi}{h}\tag{138}
+$$
+
+$$
+\lambda_c=\frac{hc}{\phi}\tag{139}
+$$
+
+### Espectro atómico de línea y niveles de energía
+
+Al realizar descargas eléctricas a un gas este emite luz en ciertas longitudes de onda, esto se conoce como espectro de emisión. Un fenómeno similar sucede si se atraviesa un gas con luz blanca, el gas absorberá todos el espectro excepto ciertas longitudes de onda, esto es denominado espectro de absorción. Las líneas que se observan en un patrón de absorción se corresponden a líneas de emisión, pero hay líneas de emisión que no se corresponden a líneas de absorción.
+
+Balmer encontró que las longitudes de onda del espectro de líneas de emisión del hidrógeno en el espectro visible se pueden agrupar como:
+$$
+\frac{1}{\lambda }=R\bigg(\frac{1}{2^2}-\frac{1}{n^2}\bigg) \text{ con }n=3,4,5...\tag{140}
+$$
+Donde R es la **Constante de Rydberg**:
+$$
+R=1,097\cdot 10^7m^{-1}\tag{141}
+$$
+Con $n=3$ $\lambda$ es la longitud de onda mas larga del espectro visible. Y cuando $n\rightarrow\infty$ la longitud de onda es la mínima.
+
+Posteriormente se encontró que:
+$$
+\lambda =\lambda_{\text{limite}}\frac{n^2}{n^2-n_0^2}\ \ n=n_0+1,n_0+2,n_0+3,...\tag{142}
+$$
+Se encontraron otras series para distintos rangos:
+
+**Serie de Lyman**: $n_0=1$, para el ultravioleta:
+$$
+\frac{1}{\lambda }=R\bigg(\frac{1}{1^2}-\frac{1}{n^2}\bigg) \text{ con }n=2,3,4 ...\tag{143}
+$$
+**Serie de Paschen**: $n_0=3$ para el infrarrojo:
+$$
+\frac{1}{\lambda }=R\bigg(\frac{1}{3^2}-\frac{1}{n^2}\bigg) \text{ con }n=4,5,6 ...\tag{144}
+$$
+**Serie de Brackett**: $n_0=4$
+$$
+\frac{1}{\lambda }=R\bigg(\frac{1}{4^2}-\frac{1}{n^2}\bigg) \text{ con }n=5,6,7 ...\tag{145}
+$$
+**Serie de Pfund** $n_0=5$
+$$
+\frac{1}{\lambda }=R\bigg(\frac{1}{5^2}-\frac{1}{n^2}\bigg) \text{ con }n=6,7,8 ...\tag{146}
+$$
+
+#### Átomo nuclear
+
+Se sabía que los átomos:
+
++ Eran más chicos que la longitud de onda del visible del orden de $10^{-10}m$.
++ Eran estables.
++ Casi toda la masa del átomo estaba asociada a la carga positiva.
++ Salvo el átomo de hidrógeno, todos los átomos tienen mas de un electrón.
++ Son eléctricamente neutros.
+
+##### Modelo atómico de Thomson
+
+El modelo consistía de una esfera uniforme de carga positiva con un diámetro de $10^{-10}m$ donde se encontraban embebidos los $Z$ electrones.
+
+Se realizaron experimentos de dispersión para determinar la distribución de carga eléctrica. Los que consistían en bombardear al átomo con partículas cargadas y medir el ángulo de deflexión con respecto a la dirección original. Se considera que el electrón hace una fuerza despreciable sobre la partícula, y la fuerza repulsiva debido a la carga positiva del núcleo no afecta al átomo.
+
+##### Modelo atómico de Rutherford 
+
+Rutherford observo que algunas partículas alfa eran deflactadas casi 180°, lo que no concordaba con el modelo. Por lo que la carga positiva debía estar concentrada en un espacio pequeño en el centro del átomo. El núcleo era una estructura pequeña y densa con un radio aproximado de $10^{-15}m$ que contiene toda la carga positiva y el 99,95% de la masa del átomo.
+
+Modelo de Bohr
+
+Propone que los electrones giran en orbitas alrededor del núcleo. Pero esto implica, según la teoría clásica electromagnética, como la carga esta acelerada debería emitir radiación lo que causa que el electro colapse hacia el núcleo, además de que la radiación seria continua.
+
+Bohr propone que los electrones solo se pueden mover en ciertas orbitas circulares alrededor del núcleo sin emitir radiación, llamados **estados estacionarios**. Cada orbita tiene definida una energía, y el átomo solo emite radiación cuando hay una transición de una orbita a otra en forma de un fotón:
+$$
+\Delta E=h\nu\tag{147}
+$$
+Además, el momento angular del electrón esta cuantizado:
+$$
+L_n=mv_nr_n=n\frac{h}{2\pi}=n\hbar\tag{148}
+$$
+Con:
+$$
+\hbar=\frac{h}{2\pi}\tag{149}
+$$
+Y donde $n$ es el **número cuántico principal**.
+
+A partir de esto para el átomo de hidrógeno se tiene que la fuerza eléctrica en una de las órbitas:
+$$
+F=\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r_n^2}=m\frac{v_n^2}{r_n}\tag{150}
+$$
+Donde $m$ es la masa del electrón, $v_n$ es la velocidad del electrón y $r_n$ es el radio orbital.
+
+Además del momento angular se puede obtener que:
+$$
+v_n=\frac{nh}{2\pi mr_n}\tag{151}
+$$
+Despejando se obtiene:
+$$
+r_n=\frac{\varepsilon_0}{m\pi}\bigg(\frac{nh}{e}\bigg)^2\tag{152}
+$$
+
+$$
+v_n=\frac{e^2}{2\varepsilon_0nh}\tag{153}
+$$
+
+La orbita mas pequeña corresponde a $n=1$, y su radio es conocido como **radio de Bohr**:
+$$
+a_0=\varepsilon_0\frac{h^2}{m\pi e^2}=5,29\cdot10^{-11}m\tag{154}
+$$
+El cual es consistente con las dimensiones atómicas. Además los demás radios son:
+$$
+r_n=a_0n^2\tag{155}
+$$
+Los **niveles de energía** para el hidrógeno en ese modelo están dados por:
+$$
+K_n=\frac{1}{2}mv_n^2=\frac{1}{\varepsilon_0^2}\frac{m e^4}{8n^2h^2}\tag{156}
+$$
+
+$$
+U_n=-\frac{1}{4\pi\varepsilon_0}\frac{e^2}{r_n}=-\frac{1}{\varepsilon_0^2}\frac{m e^4}{4n^2h^2}\tag{157}
+$$
+
+Entonces:
+$$
+E_n=U_n+K_n=-\frac{1}{\varepsilon_0^2}\frac{m e^4}{8n^2h^2}\tag{158}
+$$
+Así la transición de un estado n al estado $n=2$ corresponde a la serie de Balmer donde la diferencia de de energía entre los estados se emite como un fotón de longitud de onda $\lambda$:
+$$
+E_n-E_2=\frac{1}{\varepsilon_0^2}\frac{m e^4}{8h^2}\bigg(\frac{1}{2^2}-\frac{1}{n^2}\bigg)=\frac{hc}{\lambda}\tag{159}
+$$
+Del modelo se obtiene que la constante de Rydberg es:
+$$
+R=\frac{1}{\varepsilon_0^2}\frac{m e^4}{8h^3c}\tag{160}
+$$
+Lo que es una confirmación directa de la teoría de Bohr.
+
+##### Niveles de energía del Hidrógeno
+
+$$
+E_n=-\frac{13,6eV}{n^2}\tag{161}
+$$
+
+El **estado fundamental** con $n=1$ es $E_1=-13,6eV$.
+
+Los **estados excitados** son los correspondientes a $n>1$.
+
+La **energía de ionización** (necesaria para extraer el electrón) se define como la energía necesaria para pasar de el estado fundamental con $n=1$ a $n=\infty$. Por lo que la energía de ionización es $E=13,6eV$.
+
+El modelo de Bohr es capaz de explicar los valores experimentales dentro del 0,1%. Estos se pueden mejorar si se considera que el núcleo no esta en reposo, y realizando los cálculos con la masa reducida $m_r$.
+
+##### Átomos hidrogenoides
+
+El modelo de Bohr puede usarse para cualquier átomo con un solo electrón. Por lo que se puede utilizar para átomos hidrogenoides con $Z>1$ y un solo electrón. En estos casos:
+$$
+r_n=\frac{\varepsilon_0}{\pi mZ}\bigg(\frac{nh}{e}\bigg)^2=a_0\frac{n^2}{Z}\tag{162}
+$$
+
+$$
+E_n=-\frac{1}{\varepsilon_0^2}\frac{mZ^2e^4}{8n^2h^2}=-13,6eV\frac{Z^2}{n^2}\tag{163}
+$$
+
+En estos átomos las orbitas son más pequeñas y tiene mayor energía (negativa), por lo que los electrones están unidos más fuertemente al núcleo.

@@ -1074,7 +1074,7 @@ $$
 $$
 Entre cada mínimo subsidiario hay un máximo subsidiario, entonces hay $N-2$ máximos que se dan aproximadamente cuando:
 $$
-\alpha=\pm\frac{3\pi}{2N},\pm\frac{5\pi}{2N},...\tag{93}
+\alpha=\pm\frac{3\pi}{2N},\pm\frac{5\pi}{2N},...\tag{93}
 $$
 
 Vale para $N$ rendijas que para un ángulo $\theta _m$ en el que hay mínimo:
@@ -1124,3 +1124,73 @@ $$
 \boxed{R=\frac{\lambda}{\Delta\lambda}=mN}\tag{100}
 $$
 Donde N es la cantidad de líneas de la red y $m$ es el orden del máximo que se toma para calcular la resolución.
+
+#### Abertura rectangular
+
+Si se tiene una abertura rectangular cuyas dimensiones horizontales y verticales son comparables, el patrón obtenido es distinto al de una rendija. La intensidad del patrón de difracción es:
+$$
+I(Y,Z)=I(0)\bigg[\frac{\sin(\beta')}{\beta'}\bigg]^2\bigg[\frac{\sin(\alpha')}{\alpha'}\bigg]^2\\
+\beta'=\frac{kbY}{2R}\\
+\alpha'=\frac{kaZ}{2R}\\
+I(0)=\frac{\epsilon_A^2A^2}{2R^2}
+$$
+Donde $k$ es el número de onda, $Y$ y $Z$ son los ejes de un sistema coordenado sobre una pantalla, $a$ es la longitud de la abertura a lo largo del eje $Z$ y $b$ es la longitud en el eje $Y$. El valor de $R$ es:
+$$
+R=\sqrt{X^2+Y^2+Z^2}
+$$
+Donde $X$ es la distancia de la abertura a la pantalla. Por otro lado el valor de $I(0)$ es la intensidad en el máximo central, la cuál está dada por:
+$$
+I(0)=\frac{\epsilon_A^2A^2}{2R^2}
+$$
+Donde $\epsilon_A$ es la eficacia de la fuente por unidad de área, y $A$ es el área de la abertura.
+
+Los mínimos de este patrón se dan cuando:
+$$
+\beta'\text{ ó  }\alpha'=m\pi\ \ \ m\neq0\Rightarrow I(Y,Z)=0
+$$
+Entonces los mínimos se dan cuando:
+$$
+Y=m\frac{\lambda R}{b}\ \text{ ó }\ Z=m\frac{\lambda R}{a}
+$$
+Sobre el $\beta',\alpha'=0$ los máximos subsidiarios se dan cuando:
+$$
+\beta'_m=(2m+1)\frac{\pi}{2}
+$$
+Y su intensidad relativa será:
+$$
+\frac{I}{I(0)}=\frac{1}{\beta_m'^2 }
+$$
+Vale analogamente lo mismo en el eje $\alpha',\beta'=0$.
+
+#### Abertura circular
+
+Si se tiene una abertura circular de radio $a$ el patrón de difracción sobre una pantalla a una distancia $X$ esta dado por:
+$$
+I(q)=I(0)\bigg[\frac{2J_1(\frac{kaq}{R})}{\frac{kaq}{R}}\bigg]^2
+$$
+Donde $q$ es la doordenada radial sobre la pantalla, $J_1$ es la función de Bessel de orden 1, $k$ es el número de onda del la luz. El valor de $R$ es:
+$$
+R=\sqrt{X^2+q^2}
+$$
+$I(0)$ es la intensidad en el máximo central:
+$$
+I(0)=\frac{\epsilon_A^2A^2}{2R^2}
+$$
+Sea $\theta$ el angulo formado entre el eje óptico y una recta que une el centro de la abbertura con el punto en la pantalla, se puede ver que:
+$$
+\sin(\theta)=\frac{q}{R}
+$$
+Entonces el patrón de interferencia es:
+$$
+I(\theta)=I(0)\bigg\{\ \frac{2J_1[ka\sin(\theta) ]}{ka\sin(\theta)}\bigg\}^2
+$$
+El maximo central forma un disco que esta dado por el primer cero de la funcion $J_1$. Este disco es llamado **Disco de Airy**. Su radio ($q_1$) es:
+$$
+q_1=1,22\frac{R\lambda}{2a}
+$$
+Si a la rendija se le coloca una lente de distancia focal $f\simeq R$, entonces:
+$$
+q_1=1,22\frac{f\lambda}{2a}
+$$
+ pag.20
+

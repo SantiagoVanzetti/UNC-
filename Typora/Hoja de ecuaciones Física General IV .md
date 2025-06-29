@@ -109,9 +109,10 @@ $\bullet$ Si $\vec E(x_i)\ (\vec B(x_i))$ $\Rightarrow\ E_{x_i}=0\ (B_{x_i}=0)$.
 
 $\bullet$ Densidad de energía de los campos: $U_E=\frac{\varepsilon_0 E^2}{2}=U_B=\frac{B^2}{2\mu_0}$.
 $\bullet$ Densidad de energía de la onda: $U=\varepsilon_0E^2=\frac{B^2}{\mu_0}$
-$\bullet$ **Vector Poynting**: $\vec S=c^2\varepsilon_0\cdot \vec E\times\vec B$ (cantidad de energía por unidad de tiempo y área), $[|\vec S|]=\frac{W}{m^2s}$.
+$\bullet$ **Vector Poynting**: $\vec S=v^2\varepsilon\cdot \vec E\times\vec B$ (cantidad de energía por unidad de tiempo y área), $[|\vec S|]=\frac{W}{m^2s}$.
 $\bullet$ **Irradiancia**: $I=\langle S\rangle_T=\frac{c^2\varepsilon_0}{2}\cdot \langle |\vec E\times \vec B|\rangle_T=\varepsilon_0c\cdot\langle E^2\rangle $ (vale solo para ondas polarizadas linealmente). $[I]=\frac{W}{m^2}$.
 $\bullet$ Para cualquier medio: $I=v\varepsilon\langle E^2\rangle_T$
+Nota: Siempre que a parece $c$ y $\varepsilon_0$ se puede remplazar de forma mas general con $v$ y $\varepsilon$ respectivamente.
 
 #### Presión de radiación
 
@@ -318,6 +319,10 @@ Para la segunda superficie describiendo las distancias desde $V_2$, tal que $s_{
 $$
 \frac{n_l}{d-s_{i1}}+\frac{n_m}{s_{i2}}=\frac{n_m-n_l}{R_2}\tag{13}
 $$
+
+
+
+
 Si se suma (12) y (13) y $d\rightarrow0$ (pues es un lente delgado) se llega a la **ecuación de lentes delgadas** o formula del constructor de lentes:
 $$
 \boxed{\frac{1}{s_0}+\frac{1}{s_i}=\bigg(\frac{n_l}{n_m}-1\bigg)\bigg(\frac{1}{R_1}-\frac{1}{R_2}\bigg)}\tag{14}
@@ -695,6 +700,10 @@ $$
 \frac{E_y}{E_{0y}}=\cos(kz-\omega t)\cos({\varepsilon})-\sin(kz-\omega t)\sin({\varepsilon})\\
 \Rightarrow \frac{E_y}{E_{0y}}- \frac{E_x}{E_{0x}}\cos(\varepsilon)=-\sin (kz-\omega t)\sin(\varepsilon)\tag{40}
 $$
+
+
+
+
 También se tiene que 
 $$
 \sin (kz-\omega t)=\sqrt{1-\cos^2(kz-\omega t)}=\sqrt{1-\bigg(\frac{E_x}{E_{0x}}\bigg)^2}\tag{41}
@@ -1129,14 +1138,13 @@ Donde N es la cantidad de líneas de la red y $m$ es el orden del máximo que se
 
 Si se tiene una abertura rectangular cuyas dimensiones horizontales y verticales son comparables, el patrón obtenido es distinto al de una rendija. La intensidad del patrón de difracción es:
 $$
-I(Y,Z)=I(0)\bigg[\frac{\sin(\beta')}{\beta'}\bigg]^2\bigg[\frac{\sin(\alpha')}{\alpha'}\bigg]^2\\
-\beta'=\frac{kbY}{2R}\\
-\alpha'=\frac{kaZ}{2R}\\
-I(0)=\frac{\epsilon_A^2A^2}{2R^2}\tag{101}
+\boxed {I(Y,Z)=I(0)\bigg[\frac{\sin(\beta')}{\beta'}\bigg]^2\bigg[\frac{\sin(\alpha')}{\alpha'}\bigg]^2}\\
+\boxed{\beta'=\frac{kbY}{2R}}\\
+\boxed{\alpha'=\frac{kaZ}{2R}}\\
 $$
 Donde $k$ es el número de onda, $Y$ y $Z$ son los ejes de un sistema coordenado sobre una pantalla, $a$ es la longitud de la abertura a lo largo del eje $Z$ y $b$ es la longitud en el eje $Y$. El valor de $R$ es:
 $$
-R=\sqrt{X^2+Y^2+Z^2}\tag{102}
+\boxed{R=\sqrt{X^2+Y^2+Z^2}}\tag{102}
 $$
 Donde $X$ es la distancia de la abertura a la pantalla. Por otro lado el valor de $I(0)$ es la intensidad en el máximo central, la cuál está dada por:
 $$
@@ -1148,6 +1156,10 @@ Los mínimos de este patrón se dan cuando:
 $$
 \beta'\text{ ó  }\alpha'=m\pi\ \ \ m\neq0\Rightarrow I(Y,Z)=0\tag{104}
 $$
+
+
+
+
 Entonces los mínimos se dan cuando:
 $$
 Y=m\frac{\lambda R}{b}\ \text{ ó }\ Z=m\frac{\lambda R}{a}\tag{105}
@@ -1156,17 +1168,17 @@ Sobre el $\beta',\alpha'=0$ los máximos subsidiarios se dan cuando:
 $$
 \beta'_m=(2m+1)\frac{\pi}{2}\tag{106}
 $$
-Y su intensidad relativa será:
+Y su intensidad relativa de los máximos subsidiarios será:
 $$
 \frac{I}{I(0)}=\frac{1}{\beta_m'^2 }\tag{107}
 $$
-Vale analogamente lo mismo en el eje $\alpha',\beta'=0$.
+Vale análogamente lo mismo en el eje $\alpha',\beta'=0$.
 
 #### Abertura circular
 
 Si se tiene una abertura circular de radio $a$ el patrón de difracción sobre una pantalla a una distancia $X$ esta dado por:
 $$
-I(q)=I(0)\bigg[\frac{2J_1(\frac{kaq}{R})}{\frac{kaq}{R}}\bigg]^2\tag{108}
+\boxed{I(q)=I(0)\bigg[\frac{2J_1(\frac{kaq}{R})}{\frac{kaq}{R}}\bigg]^2}\tag{108}
 $$
 Donde $q$ es la doordenada radial sobre la pantalla, $J_1$ es la función de Bessel de orden 1, $k$ es el número de onda del la luz. El valor de $R$ es:
 $$
@@ -1176,7 +1188,7 @@ $I(0)$ es la intensidad en el máximo central:
 $$
 I(0)=\frac{\epsilon_A^2A^2}{2R^2}\tag{110}
 $$
-Sea $\theta$ el angulo formado entre el eje óptico y una recta que une el centro de la abbertura con el punto en la pantalla, se puede ver que:
+Sea $\theta$ el ángulo formado entre el eje óptico y una recta que une el centro de la abertura con el punto en la pantalla, se puede ver que:
 $$
 \sin(\theta)=\frac{q}{R}\tag{111}
 $$
@@ -1186,7 +1198,7 @@ I(\theta)=I(0)\bigg\{\ \frac{2J_1[ka\sin(\theta) ]}{ka\sin(\theta)}\bigg\}^2\tag
 $$
 El maximo central forma un disco que esta dado por el primer cero de la funcion $J_1$. Este disco es llamado **Disco de Airy**. Su radio ($q_1$) es:
 $$
-q_1=1,22\frac{R\lambda}{2a}\tag{113}
+\boxed{q_1=1,22\frac{R\lambda}{2a}}\tag{113}
 $$
 Si a la rendija se le coloca una lente de distancia focal $f\simeq R$, entonces:
 $$
@@ -1202,15 +1214,15 @@ $$
 $$
 Una imagen se dice que está resuelta si $\Delta \theta $ es menor que una separación angular máxima entre dos fuentes $\Delta\phi$ definida por algún criterio.
 
-Según el criterio de Rayleigh dos imágenes están resueltas si el centro del disco de Airy de una de ellas está ubicado en el primer mínimo del patrón de la segunda imagen, es decir:
+Según el **criterio de Rayleigh** dos imágenes están resueltas si el centro del disco de Airy de una de ellas está ubicado en el primer mínimo del patrón de la segunda imagen, es decir:
 $$
-\Delta \phi_{\text{min}}=\Delta \theta =1,22\frac{\lambda }{D}\tag{116}
+\boxed{\Delta \phi_{\text{min}}=\Delta \theta =1,22\frac{\lambda }{D}}\tag{116}
 $$
 Si $\Delta l$ es la separación entre los centros de cada imagen:
 $$
 \Delta l_{\text{min}}=1,22\frac{f\lambda }{D}\tag{117}
 $$
-Además se define el poder de resolución tal que menor sea el límite de resolución mayor definición tendrá la imagen:
+Además se define el **poder de resolución** tal que menor sea el límite de resolución mayor definición tendrá la imagen:
 $$
 \frac{1}{\Delta \phi_{\text{min}}}\text{ ó }\frac{1}{\Delta l_{\text{min}}}\tag{118}
 $$
@@ -1232,8 +1244,12 @@ La radiación térmica es la radiación emitida por un cuerpo debido a su temper
 
 La intensidad total radiada:
 $$
-I=\int_0^\infty I(\lambda)d\lambda = \sigma T^4\tag{119}
+\boxed{I=\int_0^\infty I(\lambda)d\lambda = \sigma T^4}\tag{119}
 $$
+
+
+
+
 Donde $T$ es la temperatura en Kelvin, y $\sigma $ es la constante de Stefan-Boltzmann:
 $$
 \sigma =5,67037\cdot 10^{-8}\frac{W}{m^2K^4}\tag{120}
@@ -1243,7 +1259,7 @@ $$
 
 Existe una relación entre la longitud de onda donde la irradiancia es máxima y la temperatura:
 $$
-\lambda_{\text{max}}T=2,8978\cdot 10^{-3}mK\tag{121}
+\boxed{\lambda_{\text{max}}T=2,8978\cdot 10^{-3}mK}\tag{121}
 $$
 
 ##### Cuerpo negro
@@ -1262,9 +1278,19 @@ N(\lambda)=\frac{8\pi V }{\lambda ^4}\tag{123}
 $$
 Con $V$ el volumen de la caja. Del Principio de equipartición de la energía: $E_{prom}=k_BT$. Se obtiene que la densidad de energía de radiación es el numero de ondas estacionarias por unidad de volumen por la energía promedio. Con lo que se consigue la **Ley de Rayleigh-Jeans**:
 $$
-I(\lambda )=\frac{2\pi c }{\lambda ^4}kT\tag{124}
+\boxed{I(\lambda )=\frac{2\pi c }{\lambda ^4}kT}\tag{124}
 $$
 Con lo que cuando la longitud de onda tiende a 0 la irradiancia diverge. Este problema teórico se llamó la catástrofe ultravioleta. Para poder explicarla se desarrollo la Teoría Cuántica.
+
+
+
+
+
+
+
+
+
+
 
 #### Teoría Cuántica
 
@@ -1272,13 +1298,13 @@ Se propone que un átomo oscilando **solo puede absorber o emitir energía de ma
 $$
 E_n=n\varepsilon\tag{125}
 $$
- Donde $\varepsilon$ es la cantidad básica de energía llamada **cuanto**. La energía de este cuanto está determinada por la frecuencia:
+Donde $\varepsilon$ es la cantidad básica de energía llamada **cuanto**. La energía de este cuanto está determinada por la frecuencia:
 $$
 \varepsilon=h\nu\tag{126}
 $$
 Donde $h$ es la **constante de Planck:**
 $$
-h=6,6206696\cdot 10^{-34}Js\tag{127}
+\boxed{h=6,6206696\cdot 10^{-34}Js}\tag{127}
 $$
 Si se considera que la energía es discreta, el número de osciladores con energía $E_n$:
 $$
@@ -1297,7 +1323,7 @@ $$
 ##### Ley de Radiación de Planck
 
 $$
-I(\lambda )=\frac{2\pi h c^2}{\lambda{^5}}\frac{1}{e^{\frac{hc}{\lambda kT}}-1}\tag{131}
+\boxed{I(\lambda )=\frac{2\pi h c^2}{\lambda{^5}}\frac{1}{e^{\frac{hc}{\lambda kT}}-1}}\tag{131}
 $$
 
 A partir de esta ley se pueden deducir las leyes de Wien y de Stefan con:
@@ -1310,7 +1336,7 @@ Además cuando $\lambda \rightarrow\infty $ se obtiene la Ley de Rayleigh-Jeans.
 
 Los cuerpos reales no son cuerpos negros perfectos, por lo que la Ley de Stefan se puede modificar:
 $$
-I=\varepsilon\sigma T^4\tag{133}
+\boxed{I=\varepsilon\sigma T^4}\tag{133}
 $$
 Donde $\varepsilon $ es el **poder emisivo**:
 $$
@@ -1333,7 +1359,7 @@ La teoría clásica realiza otras predicciones que no se corresponden a las obse
 
 Einstein usando la idea de Planck, propuso que la energía de radiación electromagnética está concentrada en paquetes o cuantos denominados **fotones**, con energía:
 $$
-E=h\nu=\frac{hc}{\lambda}\tag{134}
+\boxed{E=h\nu=\frac{hc}{\lambda}}\tag{134}
 $$
 El fotón viaja a la velocidad de la luz $c$, su dirección de movimiento es la dirección de la propagación de la onda electromagnética, y tiene masa en reposo igual a cero, pero momento lineal:
 $$
@@ -1343,7 +1369,7 @@ Einstein propone que el fotoelectrón es emitido como resultado de la interacci�
 
 La **función trabajo** $\phi$ es la cantidad mínima de energía que el electrón debe ganar para escapar del material. Si $h\nu>\phi$ entonces:
 $$
-K_{max}=h\nu-\phi=\frac{1}{2}mv_{max}^2=eV_0\tag{136}
+\boxed{K_{max}=h\nu-\phi=\frac{1}{2}mv_{max}^2=eV_0}\tag{136}
 $$
 Donde $V_0$ es el **potencial de frenado**. 
 
@@ -1353,20 +1379,20 @@ h\nu_c=\phi\Rightarrow K_{max}=0\tag{137}
 $$
 Entonces:
 $$
-\nu_c=\frac{\phi}{h}\tag{138}
+\boxed{\nu_c=\frac{\phi}{h}}\tag{138}
 $$
 
 $$
-\lambda_c=\frac{hc}{\phi}\tag{139}
+\boxed{\lambda_c=\frac{hc}{\phi}}\tag{139}
 $$
 
 ### Espectro atómico de línea y niveles de energía
 
-Al realizar descargas eléctricas a un gas este emite luz en ciertas longitudes de onda, esto se conoce como espectro de emisión. Un fenómeno similar sucede si se atraviesa un gas con luz blanca, el gas absorberá todos el espectro excepto ciertas longitudes de onda, esto es denominado espectro de absorción. Las líneas que se observan en un patrón de absorción se corresponden a líneas de emisión, pero hay líneas de emisión que no se corresponden a líneas de absorción.
+Al realizar descargas eléctricas a un gas este emite luz en ciertas longitudes de onda, esto se conoce como espectro de emisión. Un fenómeno similar sucede si se atraviesa un gas con luz blanca, el gas absorberá todos el espectro excepto ciertas longitudes de onda, esto es denominado espectro de absorción. Además **en el patrón de emisión hay mas líneas que en un patrón de absorción**.
 
-Balmer encontró que las longitudes de onda del espectro de líneas de emisión del hidrógeno en el espectro visible se pueden agrupar como:
+Balmer encontró que las longitudes de onda del espectro de líneas de **absorción** del **hidrógeno** en el **espectro visible** se pueden agrupar como:
 $$
-\frac{1}{\lambda }=R\bigg(\frac{1}{2^2}-\frac{1}{n^2}\bigg) \text{ con }n=3,4,5...\tag{140}
+\boxed{\frac{1}{\lambda }=R\bigg(\frac{1}{2^2}-\frac{1}{n^2}\bigg)} \text{ con }n=3,4,5...\tag{140}
 $$
 Donde R es la **Constante de Rydberg**:
 $$
@@ -1374,11 +1400,11 @@ R=1,097\cdot 10^7m^{-1}\tag{141}
 $$
 Con $n=3$ $\lambda$ es la longitud de onda mas larga del espectro visible. Y cuando $n\rightarrow\infty$ la longitud de onda es la mínima.
 
-Posteriormente se encontró que:
+Posteriormente se encontró que para una longitud de onda mínima $\lambda_{\text{limite}}$:
 $$
-\lambda =\lambda_{\text{limite}}\frac{n^2}{n^2-n_0^2}\ \ n=n_0+1,n_0+2,n_0+3,...\tag{142}
+\boxed{\lambda =\lambda_{\text{limite}}\frac{n^2}{n^2-n_0^2}}\ \ n=n_0+1,n_0+2,n_0+3,...\tag{142}
 $$
-Se encontraron otras series para distintos rangos:
+Con lo que se obtuvieron otras series para distintos rangos del espectro electromagnético:
 
 **Serie de Lyman**: $n_0=1$, para el ultravioleta:
 $$
@@ -1423,15 +1449,15 @@ Propone que los electrones giran en orbitas alrededor del núcleo. Pero esto imp
 
 Bohr propone que los electrones solo se pueden mover en ciertas orbitas circulares alrededor del núcleo sin emitir radiación, llamados **estados estacionarios**. Cada orbita tiene definida una energía, y el átomo solo emite radiación cuando hay una transición de una orbita a otra en forma de un fotón:
 $$
-\Delta E=h\nu\tag{147}
+\boxed{\Delta E=h\nu}\tag{147}
 $$
 Además, el momento angular del electrón esta cuantizado:
 $$
-L_n=mv_nr_n=n\frac{h}{2\pi}=n\hbar\tag{148}
+\boxed{L_n=mv_nr_n=n\frac{h}{2\pi}=n\hbar}\tag{148}
 $$
 Con:
 $$
-\hbar=\frac{h}{2\pi}\tag{149}
+\boxed{\hbar=\frac{h}{2\pi}}\tag{149}
 $$
 Y donde $n$ es el **número cuántico principal**.
 
@@ -1445,18 +1471,24 @@ Además del momento angular se puede obtener que:
 $$
 v_n=\frac{nh}{2\pi mr_n}\tag{151}
 $$
+
+
+
+
+
+
 Despejando se obtiene:
 $$
-r_n=\frac{\varepsilon_0}{m\pi}\bigg(\frac{nh}{e}\bigg)^2\tag{152}
+\boxed{r_n=\frac{\varepsilon_0}{m\pi}\bigg(\frac{nh}{e}\bigg)^2}\tag{152}
 $$
 
 $$
-v_n=\frac{e^2}{2\varepsilon_0nh}\tag{153}
+\boxed{v_n=\frac{e^2}{2\varepsilon_0nh}}\tag{153}
 $$
 
 La orbita mas pequeña corresponde a $n=1$, y su radio es conocido como **radio de Bohr**:
 $$
-a_0=\varepsilon_0\frac{h^2}{m\pi e^2}=5,29\cdot10^{-11}m\tag{154}
+\boxed{a_0=\varepsilon_0\frac{h^2}{m\pi e^2}=5,29\cdot10^{-11}m}\tag{154}
 $$
 El cual es consistente con las dimensiones atómicas. Además los demás radios son:
 $$
@@ -1473,7 +1505,7 @@ $$
 
 Entonces:
 $$
-E_n=U_n+K_n=-\frac{1}{\varepsilon_0^2}\frac{m e^4}{8n^2h^2}\tag{158}
+\boxed{E_n=U_n+K_n=-\frac{1}{\varepsilon_0^2}\frac{m e^4}{8n^2h^2}}\tag{158}
 $$
 Así la transición de un estado n al estado $n=2$ corresponde a la serie de Balmer donde la diferencia de de energía entre los estados se emite como un fotón de longitud de onda $\lambda$:
 $$
@@ -1485,10 +1517,12 @@ R=\frac{1}{\varepsilon_0^2}\frac{m e^4}{8h^3c}\tag{160}
 $$
 Lo que es una confirmación directa de la teoría de Bohr.
 
+Además el modelo de Bohr puede explicar porque el espectro de emisión tiene mas líneas que el espectro de absorción. Cuando un átomo absorbe luz este se excita y sube el nivel de energía de un electrón a partir del estado fundamental, mientras para emitir fotones se produce una caída en el nivel de energía que puede darse desde cualquier nivel de energía a cualquier otro menor. Las series vistas solo describen el espectro de absorción por este motivo, solo dan las líneas que se producen por un cambio de nivel de energía que involucra al estado fundamental.
+
 ##### Niveles de energía del Hidrógeno
 
 $$
-E_n=-\frac{13,6eV}{n^2}\tag{161}
+\boxed{E_n=-\frac{13,6eV}{n^2}}\tag{161}
 $$
 
 El **estado fundamental** con $n=1$ es $E_1=-13,6eV$.
@@ -1503,11 +1537,123 @@ El modelo de Bohr es capaz de explicar los valores experimentales dentro del 0,1
 
 El modelo de Bohr puede usarse para cualquier átomo con un solo electrón. Por lo que se puede utilizar para átomos hidrogenoides con $Z>1$ y un solo electrón. En estos casos:
 $$
-r_n=\frac{\varepsilon_0}{\pi mZ}\bigg(\frac{nh}{e}\bigg)^2=a_0\frac{n^2}{Z}\tag{162}
+\boxed{r_n=\frac{\varepsilon_0}{\pi mZ}\bigg(\frac{nh}{e}\bigg)^2=a_0\frac{n^2}{Z}}\tag{162}
 $$
 
 $$
-E_n=-\frac{1}{\varepsilon_0^2}\frac{mZ^2e^4}{8n^2h^2}=-13,6eV\frac{Z^2}{n^2}\tag{163}
+\boxed{E_n=-\frac{1}{\varepsilon_0^2}\frac{mZ^2e^4}{8n^2h^2}=-13,6eV\frac{Z^2}{n^2}}\tag{163}
 $$
 
 En estos átomos las orbitas son más pequeñas y tiene mayor energía (negativa), por lo que los electrones están unidos más fuertemente al núcleo.
+
+#### Experimento de Frank-Hertz
+
+Se estudio el movimiento de electrones a través de vapore de mercurio bajo la acción de un campo eléctrico. Se observo que al ir variando el voltaje la tensión subía y llegado a un voltaje especifico descendía. Esto debido a que llegado a un voltaje que es múltiplo de $4,9V$ los átomos pueden absorber energía de los electrones lo que baja la corriente. Este experimento fue una confirmación de que la energía que puede absorber un átomo esta cuantizada.
+
+El modelo de Bohr combino elementos de la física clásica con nuevos postulados inconsistentes con esta. El modelo:
+
++ No es capaz de explicar que sucede durante cada transición entre orbitas.
++ No puede modelar átomos de mas de un electrón.
++ Un electrón girando forma un momento magnético pero el átomo de hidrógeno no tiene momento magnético en su estado fudamental.
++ Viola el Principio de Incertidumbre de Heisenberg.
++ No puede explicar dobletes de las líneas espectrales.
+
+### Producción y dispersión de Rayos X
+
+Rutge realizo experimentos similares a los de Frank-Hertz pero utilizando voltajes cercanos a los $10^5V$ y observó que se emitía una radiación muy penetrante, los Rayos X.
+
+La emisión de rayos X se produce por dos efectos, la radiación de frenado la cual resulta en un espectro continuo y la transición electrónica que es característica del elemento y da un espectro discreto. 
+
+#### Radiación de frenado
+
+Esta se produce a la deflexión de electrones debido a la interacción con los átomos. Al acelerarse el electrón emite un fotón con longitud de onda:
+$$
+\lambda_{min}=\frac{hc}{K}=\frac{hc}{e\Delta V}\tag{164}
+$$
+Donde $K$ es la energía cinética del electrón.
+
+#### Transición electrónica, radiación característica
+
+Esta se produce cuando el electrón "libre" interactúa con un electrón del átomo lo que genera la emisión de un fotón y la deflexión del electrón. El fotón emitido es debido a que un electrón de una capa superior ocupa el hueco del electrón expulsado.
+
+##### Efecto Compton 
+
+El efecto se produce cuando un fotón incide sobre un electrón, lo que produce la dispersión del fotón y del electrón. Para el análisis se considera la colisión de un solo fotón con un solo electrón el cual se supone en reposo. 
+
+Si incide un fotón con longitud de onda $\lambda $, y este se dispersa con un ángulo $\theta$ respecto a su dirección original, y con longitud de onda $\lambda '$ se tiene que la energía del fotón luego de la colisión es:
+$$
+\boxed{\frac{1}{E'}-\frac{1}{E}=\frac{1}{m_ec^2}[1-\cos(\theta)]}\ \text{  con } E'\leq E\tag{165}
+$$
+Y las longitudes de onda se relacionan:
+$$
+\boxed{\lambda'-\lambda =\frac{h}{m_ec}[1-\cos(\theta)]}\ \text{  con }\lambda'\geq \lambda\tag{166}
+$$
+Para el electrón se define una longitud de onda de Compton:
+$$
+\boxed{\lambda _C =\frac{h}{m_ec}=2,426pm}\tag{167}
+$$
+La energía cinética del electrón luego de la colisión:
+$$
+K_e=E-E'\tag{168}
+$$
+Y el ángulo de salida es:
+$$
+\boxed{\tan(\phi)=\frac{p'\sin(\theta)}{p-p'\cos(\theta)}=\frac{E'\sin(\theta)}{E-E'\cos(\theta)}}\tag{169}
+$$
+Nota: Dependiendo la velocidad que tenga el electrón luego del choque dependerá si es necesario tratar la energía cinética con mecánica clásica o relativista.
+
+### Dualidad onda-partícula
+
+La luz presenta comportamientos tanto de onda (interferencia y difracción), como comportamiento de partícula (efecto fotoeléctrico, producción de Rayos X, espectros de línea). Por lo que la luz no es ni una onda ni una partícula sino es ambas, y muestra un naturaleza o la otra dependiendo el experimento. Ambas descripciones son necesarias para completar el modelo de la naturaleza y son complementarias, aunque nunca se necesita de ambas descripciones al mismo tiempo para poder explicar un fenómeno.
+
+##### Principio de complementariedad o correspondencia 
+
+Bohr propuso este principio que dicta que la teoría cuántica debe acordar con la teoría clásica en ele límite en el cuál la teoría clásica esta de acuerdo con los experimentos, es decir cuando los números cuánticos son grandes.
+
+Esto sucede en todo lo que hasta aquí se ha desarrollado. 
+
+#### Ondas de De Broglie
+
+De Broglie postuló que **cualquier partícula libre con momento lineal $p$ tiene asociada una longitud de onda $\lambda$:
+$$
+\lambda =\frac{h}{p}\tag{170}
+$$
+Para partículas no relativistas:
+$$
+\boxed{\lambda=\frac{h}{mv}}\tag{171}
+$$
+Esta suposición implica que una partícula no es un punto geométrico sino una entidad repartida por el espacio cuya distribución espacial es una función de onda como las usadas para ondas electromagnéticas.
+
+A partir del postulado de De Broglie se puede pensar que en el modelo de Bohr el electrón es una onda estacionaria ajustada a un circulo de radio igual al radio de Bohr:
+$$
+2\pi r=n\lambda=n\frac{h}{mv}\\
+\Rightarrow mvr =n\hbar\tag{172}
+$$
+Este comportamiento ondulatorio de partículas ha sido comprobado en muchas partículas, con las que se puede realizar interferencia y difracción. Estos fenómenos se comportan igual que la luz solo que se utiliza la longitud de onda de De Broglie.
+
+#### Probabilidad e incertidumbre 
+
+Mientes que en la mecánica clásica es posible describir la posición y el estado de movimiento de una partícula en cualquier instante, en mecánica cuántica hay limitaciones en la precisión con la que se puede determinar la posición y velocidad de una partícula, por lo que se trabaja con probabilidades.
+
+En mecánica cuántica no es posible hacer una determinación simultanea de la posición y el momento de una partícula con precisión ilimitada. Esto se conoce como el Principio de Incertidumbre de Heisenberg:
+$$
+\Delta x\Delta p_x\geq\frac{\hbar}{2}\tag{173}
+$$
+Donde $x$ es cualquier coordenada cartesiana. 
+
+El principio se puede escribir también como:
+$$
+\boxed{\Delta x\Delta p_x\geq\hbar}\tag{174}
+$$
+El modelo de Bohr viola el principio de incertidumbre pues el electrón describe una orbita exacta a una velocidad exacta.
+
+La segunda relación del principio de incertidumbre de Heisenberg:
+$$
+\boxed{\Delta E\Delta t \geq \hbar}\tag{175}
+$$
+Este principio implica que existe un limite impuesto por la naturaleza (no por nuestra capacidad de medición) en la precisión con la cual podemos realizar experimentos.
+
+Se puede demostrar que si $|\Delta \lambda/\lambda|\ll 1$ entonces: 
+$$
+\bigg|\frac{\Delta E}{E}\bigg|=\bigg|\frac{\Delta \lambda }{\lambda}\bigg|\tag{176}
+$$

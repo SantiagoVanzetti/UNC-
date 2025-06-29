@@ -1152,6 +1152,8 @@ I(0)=\frac{\epsilon_A^2A^2}{2R^2}\tag{103}
 $$
 Donde $\epsilon_A$ es la eficacia de la fuente por unidad de área, y $A$ es el área de la abertura.
 
+
+
 Los mínimos de este patrón se dan cuando:
 $$
 \beta'\text{ ó  }\alpha'=m\pi\ \ \ m\neq0\Rightarrow I(Y,Z)=0\tag{104}
@@ -1477,6 +1479,8 @@ $$
 
 
 
+
+
 Despejando se obtiene:
 $$
 \boxed{r_n=\frac{\varepsilon_0}{m\pi}\bigg(\frac{nh}{e}\bigg)^2}\tag{152}
@@ -1656,4 +1660,41 @@ Este principio implica que existe un limite impuesto por la naturaleza (no por n
 Se puede demostrar que si $|\Delta \lambda/\lambda|\ll 1$ entonces: 
 $$
 \bigg|\frac{\Delta E}{E}\bigg|=\bigg|\frac{\Delta \lambda }{\lambda}\bigg|\tag{176}
+$$
+
+### Anexo 
+
+Algunas relaciones trigonométricas:
+
++ $\sin(x\pm y)=\sin(x)\cos(y)\pm\sin(y)\cos(x)$
++ $\cos(x\pm y)=\cos(x)\cos(y)\mp\sin(x)\sin(y)$
++ $\cos(2x)=\cos^2(x)-\sin^2(x)$
++ $\sin(2x)=2\sin(x)\cos(x)$
++ $\sin(x+\frac{\pi}{2})=\cos(x)$
++ $\cos(x-\frac{\pi}{2})=\sin(x)$
+
+Ley del coseno
+$$
+c^2=a^2+b^2-2ab\cos(\alpha)
+$$
+Donde $\alpha $ es el ángulo entre los lados $a$ y $b$.
+
+##### Sistema métrico decimal
+
+![prefijos sistema internacional de unidades](D:\Administrador\Escritorio\UNC-\Typora\Typora Images\prefijos sistema internacional de unidades.jpg)
+
+##### Reflexión entre espejos
+
+Si se tienen dos espejos planos unidos en un vértice y forman un ángulo $\alpha $, el ángulo de desviación entre el ángulo de salida y el incidente es $\delta=2\alpha$.
+
+Si se tiene una onda electromagnética descripta en forma compleja la irradiancia es:
+$$
+I=c\varepsilon_0\langle\vec E\cdot \vec E^* \rangle
+$$
+
+##### Espejo de Lloyd 
+
+La irradiancia del patrón de interferencia de un espejo de Lloyd es:
+$$
+I=4I_0\sin^2\bigg(\frac{\pi a y }{s\lambda}\bigg)
 $$

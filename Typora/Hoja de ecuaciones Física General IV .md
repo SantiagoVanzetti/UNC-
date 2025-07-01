@@ -1268,9 +1268,9 @@ $$
 
 Este tipo de análisis depende de las características superficiales del objeto y de la cantidad de radiación que el medio refleja. Para simplificar esto se define un **Cuerpo Negro**. Un cuerpo negro es un superficie ideal que absorbe toda la radiación electromagnética de todas las longitudes de onda que inciden sobre él y no refleja nada. Además, emite radiación en cualquier longitud de onda. Por lo que se dice que un cuerpo negro es un **absorbente y emisor ideal**.
 
-Se puede fabricar teóricamente uno de estos cuerpos. Si se tiene una caja metálica en equilibrio térmico a temperatura $T$, llena de radiación que es emitida y reflejada por las paredes, con un orificio que permite que parte de la radiación escape. Entonces el orificio es un cuerpo negro, ya que toda la radiación que incide sobre este s pierde dentro de la caja y la radiación que emite es de todas las longitudes de onda dentro de la cavidad.
+Se puede fabricar teóricamente uno de estos cuerpos. Si se tiene una caja metálica en equilibrio térmico a temperatura $T$, llena de radiación que es emitida y reflejada por las paredes, con un orificio que permite que parte de la radiación escape. Entonces el orificio es un cuerpo negro, ya que toda la radiación que incide sobre este se pierde dentro de la caja y la radiación que emite es de todas las longitudes de onda dentro de la cavidad.
 
-Si la caja tiene una densidad volumétrica de energía por unidad de longitud de onda $u(\lambda)$. Para un instante la mita de la radiación en la caja se moverá alejándose del orificio y la otra acercándose a una velocidad $c$. Se puede demostrar haciendo un promedio sobre los ángulos de incidencia sobre el orificio que la energía fluyendo en dirección al orificio es:
+Si la caja tiene una densidad volumétrica de energía por unidad de longitud de onda $u(\lambda)$. Para un instante la mitad de la radiación en la caja se moverá alejándose del orificio y la otra acercándose a una velocidad $c$. Se puede demostrar haciendo un promedio sobre los ángulos de incidencia sobre el orificio que la energía fluyendo en dirección al orificio es:
 $$
 I(\lambda )=\frac{1}{4} c\ u(\lambda )\tag{122}
 $$
@@ -1306,7 +1306,7 @@ $$
 $$
 Donde $h$ es la **constante de Planck:**
 $$
-\boxed{h=6,6206696\cdot 10^{-34}Js}\tag{127}
+\boxed{h=6,6260696\cdot 10^{-34}Js}\tag{127}
 $$
 Si se considera que la energía es discreta, el número de osciladores con energía $E_n$:
 $$
@@ -1698,3 +1698,32 @@ La irradiancia del patrón de interferencia de un espejo de Lloyd es:
 $$
 I=4I_0\sin^2\bigg(\frac{\pi a y }{s\lambda}\bigg)
 $$
+
+##### Ceros de la funciones de Bessel
+
+Ceros de $J_1$:
+
++ $\kappa_{11}=3.8317$
++ $\kappa_{12}=7.0156$
++ $\kappa_{13}=10.1735$
+
+Ceros de $J_2$:
+
++ $\kappa_{21}=5.1356$
++ $\kappa_{22}=8.4172$
++ $\kappa_{23}=11.6198$
+
+##### Soluciones de la ecuación $\tan(x)=x$
+
+$$
+x=\pi a\\
+a=\pm 1.4303; \pm2.4590;\pm3.4709
+$$
+
+##### Constantes 
+
++ $e=1.602 176 634 \cdot 10^{−19}C$
++ $m_e=9.109 383 701 5\cdot 10^{-31}kg$
++ $k_B=1.380649\cdot 10^{−23} J/K$
++ $\varepsilon_0=8.854 187 8128\cdot10^{−12}\frac{C^2}{Nm^2}; \frac{C}{Vm}$
++ $\mu_0=1.256 637 06212\cdot10^{−6}\frac{N}{A^2}=4\pi\cdot 10^{-7}\frac{H}{m};\frac{T\cdot m}{A}$

@@ -915,4 +915,40 @@ I_\nu(x)=i^{-\nu}J_\nu(ix)\\
 K_\nu(x)=\frac{\pi}{2}i^{\nu+1}H^{(1)}_\nu(ix)\tag{95}
 $$
 
+## Desarrollo multipolar 
 
+Si se desarrolla por serie de Taylor la función $|\vec r-\vec r'|^{-1}$. Si se desarrolla una función $f(x)$:
+$$
+f(x)=\sum_{n=0}^{\infty }\frac{f^{(n)}(x')}{n!}(x-x')^{(n)}\\
+\Rightarrow\bigg[1+(x-x')\par{}{x}+(x-x')^2\par{^2}{x^2}+...\bigg]f(x)\bigg|_{x=x'} \\
+$$
+Se puede pensar como el operador:
+$$
+\sum_{n=0}^{\infty}\frac{1}{n!}\bigg(\varepsilon\par{}{x}\bigg)^n=e^{\varepsilon\par{}{x}}
+$$
+En tres dimensiones:
+$$
+f(\vec x+\vec \varepsilon)=e^{\vec \varepsilon\cdot \nabla}f(\vec x)\\\Rightarrow
+f(\vec r-\vec r')=\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}(\vec r'\cdot\nabla)^nf(\vec r)
+$$
+Para lo cual $\varepsilon$ debe ser pequeño, por lo que $\vec r'=\varepsilon$ debe ser mucho mas pequeño que $\vec r$.  Utilizando esto se desarrolla:
+$$
+\frac{1}{|\vec r-\vec r'|}=\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}(\vec r'\cdot\nabla)^n\frac{1}{r}
+$$
+Así el potencial electrostático:
+$$
+\phi(\vec r)=\frac{1}{4\pi\varepsilon_0}\int _V\frac{\rho(\vec r')}{|\vec r-\vec r'|}d^3r'\\
+\Rightarrow \phi(\vec r)=\frac{1}{4\pi\varepsilon_0}\sum_{n=0}^{\infty}\frac{(-1)^n}{n!}\int_V\rho(\vec r')(\vec r'\cdot \nabla )^n\frac{1}{r}d^3r'
+$$
+Con esto se definen los multipolos:
+$$
+Q_{1..m}=\int_V\rho(\vec r')r_1'...r_m'd^3r'
+$$
+El primero llamada monopolo es la carga total:
+$$
+\int \rho d^3r=Q
+$$
+El segundo llamado dipolo:
+$$
+\vec p=\int_V\rho(\vec r')\vec r'd^3r'
+$$
